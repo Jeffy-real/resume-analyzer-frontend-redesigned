@@ -1,0 +1,41 @@
+{
+  "categories": {
+    "software_engineering": [
+      "software development", "algorithms", "data structures", "object-oriented programming",
+      "OOP", "design patterns", "API development", "RESTful services", "microservices",
+      "unit testing", "integration testing", "code review", "debugging", "refactoring",
+      "version control", "agile", "scrum", "sprint", "CI/CD", "code quality"
+    ],
+    "web_development": [
+      "frontend", "backend", "full-stack", "responsive design", "web applications",
+      "single page application", "SPA", "progressive web app", "PWA", "SEO",
+      "cross-browser compatibility", "web performance", "accessibility", "WCAG",
+      "HTML5", "CSS3", "ES6", "webpack", "bundling"
+    ],
+    "data_analytics": [
+      "data analysis", "data visualization", "business intelligence", "reporting",
+      "dashboards", "KPI", "metrics", "data-driven", "insights", "trends",
+      "data cleaning", "data wrangling", "ETL", "data pipeline", "analytics"
+    ],
+    "artificial_intelligence": [
+      "machine learning", "deep learning", "neural networks", "artificial intelligence",
+      "model training", "inference", "feature engineering", "hyperparameter tuning",
+      "supervised learning", "unsupervised learning", "reinforcement learning",
+      "NLP", "computer vision", "transfer learning", "model deployment", "MLOps"
+    ],
+    "cloud_computing": [
+      "cloud infrastructure", "cloud architecture", "DevOps", "infrastructure as code",
+      "IaC", "containers", "orchestration", "serverless", "high availability",
+      "disaster recovery", "load balancing", "auto-scaling", "monitoring", "logging"
+    ]
+  },
+  "action_verbs": [
+    "developed", "implemented", "designed", "built", "created", "managed", "led",
+    "optimized", "improved", "deployed", "automated", "integrated", "analyzed",
+    "delivered", "achieved", "reduced", "increased", "streamlined", "collaborated"
+  ],
+  "quantifiers": [
+    "increased by", "reduced by", "improved by", "resulted in", "delivered",
+    "managed", "led", "developed", "implemented", "optimized"
+  ]
+}

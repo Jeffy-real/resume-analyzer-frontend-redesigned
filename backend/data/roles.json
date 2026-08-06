@@ -1,0 +1,52 @@
+{
+  "Software Engineer": {
+    "name": "Software Engineer",
+    "category": "Software Engineering",
+    "required_skills": ["Python", "Java", "JavaScript", "SQL", "Git"],
+    "preferred_skills": ["C++", "Go", "Rust", "Docker", "Kubernetes"],
+    "keywords": ["software development", "algorithms", "data structures", "OOP", "design patterns", "API", "testing", "debugging"],
+    "tools": ["Git", "Docker", "Jenkins", "Jira", "VS Code", "IntelliJ"],
+    "frameworks": ["Spring", "Django", "Flask", "Express.js", ".NET"],
+    "certifications": ["AWS Certified Developer", "Oracle Certified Professional", "Google Cloud Professional"]
+  },
+  "Web Developer": {
+    "name": "Web Developer",
+    "category": "Web Development",
+    "required_skills": ["JavaScript", "HTML", "CSS", "React", "Node.js"],
+    "preferred_skills": ["TypeScript", "Vue.js", "Angular", "Next.js", "GraphQL"],
+    "keywords": ["frontend", "backend", "responsive design", "web applications", "UI/UX", "REST API", "single page application"],
+    "tools": ["VS Code", "Git", "Webpack", "npm", "Chrome DevTools"],
+    "frameworks": ["React", "Angular", "Vue.js", "Next.js", "Express.js"],
+    "certifications": ["AWS Certified Developer", "Meta Front-End Developer", "Google Cloud Certified"]
+  },
+  "Data Analyst": {
+    "name": "Data Analyst",
+    "category": "Data Science",
+    "required_skills": ["SQL", "Python", "Excel", "Statistics", "Data Analysis"],
+    "preferred_skills": ["Tableau", "Power BI", "R", "Spark", "Machine Learning"],
+    "keywords": ["data analysis", "data visualization", "reporting", "business intelligence", "ETL", "dashboards", "KPI"],
+    "tools": ["Excel", "Tableau", "Power BI", "SQL", "Python", "Jupyter"],
+    "frameworks": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
+    "certifications": ["Google Data Analytics", "Microsoft Power BI", "Tableau Desktop Specialist"]
+  },
+  "AI Engineer": {
+    "name": "AI Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": ["Python", "Machine Learning", "TensorFlow", "PyTorch", "Deep Learning"],
+    "preferred_skills": ["NLP", "Computer Vision", "MLOps", "CUDA", "Docker"],
+    "keywords": ["machine learning", "deep learning", "neural networks", "AI", "model training", "feature engineering", "hyperparameter tuning"],
+    "tools": ["TensorFlow", "PyTorch", "Jupyter", "Docker", "MLflow", "Kubeflow"],
+    "frameworks": ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Hugging Face"],
+    "certifications": ["AWS Machine Learning Specialty", "Google Cloud ML Engineer", "Azure AI Engineer"]
+  },
+  "Cloud Engineer": {
+    "name": "Cloud Engineer",
+    "category": "Cloud Computing",
+    "required_skills": ["AWS", "Azure", "Docker", "Kubernetes", "Linux"],
+    "preferred_skills": ["Terraform", "Ansible", "Jenkins", "Python", "GCP"],
+    "keywords": ["cloud infrastructure", "DevOps", "CI/CD", "infrastructure as code", "containers", "microservices", "high availability"],
+    "tools": ["AWS Console", "Azure Portal", "Terraform", "Ansible", "Docker", "Kubernetes"],
+    "frameworks": ["Serverless Framework", "Terraform", "CloudFormation", "ARM Templates"],
+    "certifications": ["AWS Solutions Architect", "Azure Administrator", "Google Cloud Engineer", "Kubernetes Administrator"]
+  }
+}
