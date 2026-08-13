@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "installCommand": "npm install --prefix resume-analyzer-frontend",
   "buildCommand": "npm run build --prefix resume-analyzer-frontend",
   "outputDirectory": "resume-analyzer-frontend/dist",
   "rewrites": [
