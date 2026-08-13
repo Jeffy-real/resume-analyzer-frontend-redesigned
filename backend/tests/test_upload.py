@@ -9,8 +9,8 @@ class TestValidators:
         assert allowed_file("resume.docx") == True
 
     def test_allowed_file_invalid(self):
-        assert allowed_file("resume.txt") == False
-        assert allowed_file("resume.jpg") == False
+        assert allowed_file("resume.exe") == False
+        assert allowed_file("resume.zip") == False
         assert allowed_file("resume") == False
 
     def test_get_file_extension(self):

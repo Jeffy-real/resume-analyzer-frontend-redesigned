@@ -1,5 +1,5 @@
-ALLOWED_EXTENSIONS = {'pdf', 'docx'}
-MAX_FILE_SIZE = 10 * 1024 * 1024  # 10MB
+ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt', 'rtf', 'png', 'jpg', 'jpeg', 'webp', 'svg'}
+MAX_FILE_SIZE = 15 * 1024 * 1024  # 15MB
 
 SECTION_KEYWORDS = {
     'contact': ['contact', 'email', 'phone', 'address', 'linkedin', 'github'],

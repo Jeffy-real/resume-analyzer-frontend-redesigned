@@ -1,103 +1,186 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Icon } from './Icon';
 
-const navLinks = [
-  { href: '#overview', label: 'Overview' },
-  { href: '#upload', label: 'Upload & Parse' },
-  { href: '#features', label: 'ATS Evaluation' },
-  { href: '#results', label: 'Dashboard' },
+const navItems = [
+  { id: 'dashboard', label: 'Dashboard', icon: 'bar-chart-3' },
+  { id: 'upload', label: 'Upload Resume', icon: 'upload' },
+  { id: 'history', label: 'Analysis History', icon: 'clock' },
+  { id: 'reports', label: 'Reports', icon: 'file-text' },
+  { id: 'settings', label: 'Settings', icon: 'settings' },
+  { id: 'profile', label: 'Profile', icon: 'user' },
 ];
 
-export function Navbar({ loadSampleResume }) {
+export function Navbar({ view, onViewChange, hasAnalysis, loadSampleResume, isAnalyzing = false }) {
   const [showMenu, setShowMenu] = useState(false);
+  const menuButtonRef = useRef(null);
+  const drawerRef = useRef(null);
+
+  // Keep Tab / Shift+Tab within the drawer.
+  const handleDrawerKeyDown = (e) => {
+    if (e.key !== 'Tab') return;
+    const nodes = drawerRef.current?.querySelectorAll(
+      'a[href], button:not([disabled]), input:not([disabled]), [tabindex]:not([tabindex="-1"])'
+    );
+    if (!nodes || nodes.length === 0) return;
+    const first = nodes[0];
+    const last = nodes[nodes.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
+  // When the drawer opens: focus its first control, lock background scroll,
+  // and close on Escape. On close: restore scroll and return focus to the menu button.
+  useEffect(() => {
+    if (!showMenu) return;
+    document.body.style.overflow = 'hidden';
+    const timer = window.setTimeout(() => {
+      const firstControl = drawerRef.current?.querySelector('button:not([disabled])');
+      firstControl?.focus();
+    }, 30);
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setShowMenu(false);
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      window.clearTimeout(timer);
+      document.body.style.overflow = '';
+      document.removeEventListener('keydown', onKeyDown);
+      menuButtonRef.current?.focus();
+    };
+  }, [showMenu]);
+
+  const handleNavClick = (itemId) => {
+    if ((itemId === 'dashboard' || itemId === 'reports') && !hasAnalysis) {
+      onViewChange('upload');
+      return;
+    }
+    onViewChange(itemId);
+    setShowMenu(false);
+  };
 
   return (
-    <header className="sticky top-0 z-50 nav-glass">
+    <header className="sticky top-0 z-50 border-b border-outline-variant bg-surface-container-lowest/95 backdrop-blur-sm">
       <div className="shell h-[72px] flex items-center justify-between">
         {/* Brand Logo */}
-        <a href="#top" className="inline-flex items-center gap-3 group">
-          <span
-            className="w-9 h-9 grid place-items-center rounded-xl text-[#04050c] shadow-[0_0_20px_-4px_rgba(124,92,255,0.65)] transition-transform group-hover:scale-105"
-            style={{ backgroundImage: 'var(--gradient-signal)' }}
-          >
-            <Icon name="sparkle" size={17} />
+        <a href="#top" className="inline-flex items-center gap-3 group" aria-label="Resume Analyzer Home">
+          <span className="w-9 h-9 grid place-items-center rounded-xl bg-primary text-on-primary">
+            <Icon name="file-text" size={18} />
           </span>
-          <div className="flex flex-col">
-            <span className="text-base font-heading font-bold text-[var(--text-primary)] tracking-tight leading-none">
-              Smart Resume Analyzer
-            </span>
-            <span className="text-[10px] font-mono text-[var(--accent-cyan)] font-medium mt-1 tracking-wide">
-              AI CAPSTONE PROJECT
-            </span>
-          </div>
+          <span className="text-base font-semibold text-on-surface tracking-tight">
+            JobFirst
+          </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8 text-[var(--text-secondary)] text-xs font-semibold" aria-label="Primary navigation">
-          {navLinks.map((link) => (
-            <a key={link.href} href={link.href} className="relative py-1 group transition-colors hover:text-[var(--text-primary)]">
-              {link.label}
-              <span className="absolute left-0 -bottom-0.5 h-[1.5px] w-0 group-hover:w-full transition-all duration-300" style={{ backgroundImage: 'var(--gradient-signal)' }} />
-            </a>
-          ))}
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Primary navigation" role="navigation">
+          {navItems.map((item) => {
+            const isActive = view === item.id;
+            const isDisabled = (item.id === 'dashboard' || item.id === 'reports') && !hasAnalysis;
+            return (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => handleNavClick(item.id)}
+                disabled={isDisabled}
+                className={`inline-flex items-center gap-2 px-4 py-2.5 text-sm font-medium rounded-lg transition-all duration-150 ${
+                  isActive
+                    ? 'bg-primary text-on-primary'
+                    : isDisabled
+                    ? 'text-outline cursor-not-allowed'
+                    : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low'
+                }`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                <Icon name={item.icon} size={16} />
+                <span>{item.label}</span>
+              </button>
+            );
+          })}
         </nav>
 
-        {/* Action Button & Mobile Menu Toggle */}
+        {/* Action Buttons */}
         <div className="flex items-center gap-3">
           <button
             type="button"
+            className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm btn-secondary cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed"
             onClick={loadSampleResume}
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-3.5 py-2 text-xs btn-ghost cursor-pointer"
+            disabled={isAnalyzing}
           >
             <Icon name="file" size={14} />
-            <span>Load Sample Resume</span>
+            <span>{isAnalyzing ? 'Analyzing…' : 'Load Sample'}</span>
           </button>
-
-          <a
-            href="#upload"
-            className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2 text-xs btn-signal"
-          >
-            <Icon name="upload" size={14} />
-            <span>Analyze Resume</span>
-          </a>
 
           <button
             type="button"
-            className="md:hidden p-2 text-[var(--text-secondary)] hover:bg-white/5 rounded-lg transition-colors"
+            ref={menuButtonRef}
+            className="lg:hidden p-2.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low rounded-lg transition-colors"
             onClick={() => setShowMenu(!showMenu)}
             aria-label="Toggle navigation"
+            aria-expanded={showMenu}
           >
-            <Icon name={showMenu ? 'close' : 'menu'} size={20} />
+            <Icon name={showMenu ? 'close' : 'menu'} size={22} />
           </button>
         </div>
       </div>
 
       {/* Mobile Navigation Drawer */}
-      {showMenu && (
-        <div className="md:hidden border-t border-[var(--border-hair)] bg-[var(--bg-deep)]/95 px-6 py-4 space-y-3 shadow-2xl">
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              onClick={() => setShowMenu(false)}
-              className="block text-xs font-semibold text-[var(--text-secondary)] hover:text-[var(--text-primary)] py-1"
-            >
-              {link.label}
-            </a>
-          ))}
-          <button
-            type="button"
-            onClick={() => {
-              setShowMenu(false);
-              loadSampleResume();
-            }}
-            className="flex items-center justify-center gap-2 w-full mt-2 py-2 text-xs btn-ghost"
+      <AnimatePresence>
+        {showMenu && (
+          <motion.div
+            ref={drawerRef}
+            onKeyDown={handleDrawerKeyDown}
+            className="lg:hidden border-t border-outline-variant bg-surface-container-lowest px-6 py-5 space-y-2 shadow-lg"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.2 }}
           >
-            <Icon name="file" size={14} />
-            <span>Load Sample Resume</span>
-          </button>
-        </div>
-      )}
+            {navItems.map((item) => {
+              const isActive = view === item.id;
+              const isDisabled = (item.id === 'dashboard' || item.id === 'reports') && !hasAnalysis;
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => handleNavClick(item.id)}
+                  disabled={isDisabled}
+                  className={`w-full flex items-center gap-3 px-4 py-3 text-base font-medium rounded-lg transition-all duration-150 ${
+                    isActive
+                      ? 'bg-primary text-on-primary'
+                      : isDisabled
+                      ? 'text-outline cursor-not-allowed'
+                      : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low'
+                  }`}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  <Icon name={item.icon} size={20} />
+                  <span>{item.label}</span>
+                </button>
+              );
+            })}
+            <button
+              type="button"
+              onClick={() => {
+                setShowMenu(false);
+                loadSampleResume();
+              }}
+              disabled={isAnalyzing}
+              className="w-full flex items-center justify-center gap-2 mt-2 py-3 text-sm btn-secondary disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+              <Icon name="file" size={16} />
+              <span>{isAnalyzing ? 'Analyzing…' : 'Load Sample Resume'}</span>
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

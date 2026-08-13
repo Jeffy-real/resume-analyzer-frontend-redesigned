@@ -58,7 +58,7 @@ class TestUploadEndpoint:
     def test_upload_unsupported_type(self, client):
         resp = client.post(
             '/api/upload',
-            data={'file': (io.BytesIO(b'data'), 'resume.txt')},
+            data={'file': (io.BytesIO(b'data'), 'resume.exe')},
             content_type='multipart/form-data'
         )
         assert resp.status_code == 400

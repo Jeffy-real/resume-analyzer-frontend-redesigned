@@ -4,8 +4,11 @@ from models.resume import Resume
 from models.analysis import Analysis
 from services.ats_checker import ATSChecker
 
+from services.ai_analyzer import AIAnalyzer
+
 ats_bp = Blueprint('ats', __name__)
 ats_checker = ATSChecker()
+ai_analyzer = AIAnalyzer()
 
 @ats_bp.route('/ats', methods=['POST'])
 def check_ats():
@@ -31,40 +34,48 @@ def check_ats():
         return jsonify({'error': 'No text found in resume'}), 400
 
     try:
+        parsed_data = resume.get_parsed_data()
         ats_result = ats_checker.check_resume(resume.extracted_text, target_role)
 
         if 'error' in ats_result:
             return jsonify({'error': ats_result['error']}), 400
 
+        ai_result = ai_analyzer.analyze(
+            resume_text=resume.extracted_text,
+            target_role=target_role,
+            parsed_data=parsed_data
+        )
+
         analysis = Analysis.query.filter_by(resume_id=resume_id).first()
         if analysis:
             analysis.target_role = target_role
-            analysis.ats_score = ats_result['ats_score']
-            analysis.set_matched_skills(ats_result['matched_skills'])
-            analysis.set_missing_skills(ats_result['missing_skills'])
+            analysis.ats_score = ai_result['ats_score']
+            analysis.overall_score = ai_result['overall_score']
+            analysis.set_matched_skills(ai_result['matched_skills'])
+            analysis.set_missing_skills(ai_result['missing_skills'])
+            analysis.set_ai_analysis(ai_result)
         else:
             analysis = Analysis(
                 resume_id=resume_id,
                 target_role=target_role,
-                ats_score=ats_result['ats_score']
+                overall_score=ai_result['overall_score'],
+                ats_score=ai_result['ats_score']
             )
-            analysis.set_matched_skills(ats_result['matched_skills'])
-            analysis.set_missing_skills(ats_result['missing_skills'])
+            analysis.set_ai_analysis(ai_result)
             db.session.add(analysis)
 
         db.session.commit()
 
-        return jsonify({
+        response_payload = {
             'message': 'ATS check completed successfully',
             'analysis_id': analysis.id,
-            'target_role': ats_result['target_role'],
-            'category': ats_result['category'],
-            'ats_score': ats_result['ats_score'],
-            'matched_skills': ats_result['matched_skills'],
-            'missing_skills': ats_result['missing_skills'],
-            'matched_keywords': ats_result['matched_keywords'],
-            'required_skills_match': ats_result['required_skills_match']
-        }), 200
+            'category': ats_result.get('category', 'General'),
+            'matched_keywords': ats_result.get('matched_keywords', []),
+            'required_skills_match': ats_result.get('required_skills_match', {})
+        }
+        response_payload.update(ai_result)
+
+        return jsonify(response_payload), 200
 
     except Exception as e:
         db.session.rollback()
@@ -72,8 +83,9 @@ def check_ats():
 
 @ats_bp.route('/roles', methods=['GET'])
 def get_roles():
+    """Return full role metadata for frontend filtering/browsing."""
     return jsonify({
-        'roles': ats_checker.get_available_roles()
+        'roles': ats_checker.roles_data
     }), 200
 
 @ats_bp.route('/suggest-roles/<int:resume_id>', methods=['GET'])

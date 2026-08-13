@@ -7,7 +7,7 @@ def create_app(config_name='development'):
     app = Flask(__name__)
     app.config.from_object(config_by_name[config_name])
 
-    CORS(app, origins=['http://localhost:5173', 'http://127.0.0.1:5173'])
+    CORS(app, resources={r"/api/*": {"origins": "*"}}, supports_credentials=True)
 
     init_db(app)
 
@@ -17,6 +17,7 @@ def create_app(config_name='development'):
     from routes.feedback import feedback_bp
     from routes.dashboard import dashboard_bp
     from routes.health import health_bp
+    from routes.auth import auth_bp
 
     app.register_blueprint(upload_bp, url_prefix='/api')
     app.register_blueprint(analysis_bp, url_prefix='/api')
@@ -24,6 +25,7 @@ def create_app(config_name='development'):
     app.register_blueprint(feedback_bp, url_prefix='/api')
     app.register_blueprint(dashboard_bp, url_prefix='/api')
     app.register_blueprint(health_bp, url_prefix='/api')
+    app.register_blueprint(auth_bp, url_prefix='/api')
 
     @app.errorhandler(413)
     def too_large(e):
@@ -37,4 +39,4 @@ def create_app(config_name='development'):
 
 if __name__ == '__main__':
     app = create_app('development')
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True, use_reloader=False)

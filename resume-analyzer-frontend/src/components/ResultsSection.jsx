@@ -1,261 +1,251 @@
 import React from 'react';
+import { motion, AnimatePresence } from 'motion/react';
 import { Icon } from './Icon';
-import { ScoreRing } from './ScoreRing';
-import { Reveal } from './Reveal';
+import { ChartCard, BarChart } from './Charts';
 
-export function ResultsSection({ hasAnalysis, visibleName, analysis, selectedRole }) {
+// M3 semantic colors per section status. Text/badge tint and the progress-bar
+// fill each get their own value so inline styles never need CSS-var opacity.
+function statusColor(status) {
+  if (status === 'complete') {
+    return { text: 'var(--tertiary)', bg: 'rgba(0, 83, 56, 0.10)', bar: 'var(--tertiary)' };
+  }
+  if (status === 'review') {
+    return { text: 'var(--secondary)', bg: 'rgba(80, 95, 118, 0.10)', bar: 'var(--secondary)' };
+  }
+  return { text: 'var(--outline)', bg: 'rgba(119, 117, 135, 0.10)', bar: 'var(--outline)' };
+}
+
+function statusLabel(status) {
+  if (status === 'complete') return 'Complete';
+  if (status === 'review') return 'Review';
+  return 'Missing';
+}
+
+export function ResultsSection({ hasAnalysis, visibleName, analysis, selectedRole, title = 'Analysis Detail' }) {
   return (
-    <section className="py-16 sm:py-20 results-section" id="results">
+    <section className="py-12 md:py-20 results-section" id="results">
       <div className="shell">
-        {/* Results Heading Bar */}
-        <Reveal className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+        {/* Header */}
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-mono font-medium text-[var(--accent-cyan)] uppercase tracking-wider">
-                MODULES 2, 3, 4 &amp; 5
-              </span>
-              <span className="text-[var(--text-muted)]">•</span>
-              <span className="text-xs text-[var(--text-secondary)] font-medium">Evaluation Dashboard &amp; Report</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-heading font-bold text-[var(--text-primary)]">
-              {hasAnalysis ? 'Resume analysis results & report' : 'Sample analysis dashboard preview'}
+            <h2 className="text-2xl md:text-3xl font-bold text-on-surface tracking-tight">
+              {title}
             </h2>
-          </div>
-
-          <div className="inline-flex items-center gap-2 max-w-full sm:max-w-[300px] px-3.5 py-1.5 rounded-lg card-solid text-xs font-mono text-[var(--text-secondary)] truncate">
-            <span className="shrink-0 text-[var(--accent-cyan)]">
-              <Icon name="file" size={15} />
-            </span>
-            <span className="truncate">{visibleName}</span>
-          </div>
-        </Reveal>
-
-        {/* Top 3 Metrics Grid (Module 2 & 3) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4">
-          {/* Main Score Card (5 cols) */}
-          <Reveal as="article" delay={0} className="md:col-span-5 card-glass card-glass-interactive p-6 flex items-center justify-between gap-4">
-            <div className="space-y-2">
-              <span className="text-[10px] font-mono font-semibold text-[var(--accent-violet)] uppercase tracking-wider">
-                OVERALL RESUME SCORE
-              </span>
-              <h3 className="text-xl font-heading font-bold text-[var(--text-primary)] leading-tight">
-                {analysis.score >= 80 ? 'Strong Candidate Resume' : 'Moderate Match'}
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] leading-relaxed max-w-[220px]">
-                Evaluated against structure, skills, education, projects, contact info, and completeness parameters.
-              </p>
-            </div>
-            <div className="shrink-0">
-              <ScoreRing value={analysis.score} label="Overall resume score" />
-            </div>
-          </Reveal>
-
-          {/* ATS Card (3 cols) */}
-          <Reveal as="article" delay={80} className="md:col-span-3 card-glass card-glass-interactive p-6 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-2 mb-3">
-                <span className="text-[10px] font-mono font-semibold uppercase tracking-wider" style={{ color: 'var(--color-success)' }}>
-                  ATS MATCH RATE
-                </span>
-                <span className="badge badge-emerald px-2 py-0.5 text-[10px]">
-                  {analysis.ats >= 75 ? 'Pass Grade' : 'Review'}
-                </span>
-              </div>
-              <div className="text-3xl font-heading font-bold text-[var(--text-primary)] my-1">
-                {analysis.ats}%
-                <span className="text-xs font-normal text-[var(--text-muted)] ml-1.5">keyword match</span>
-              </div>
-              <div className="progress-track h-2 my-3">
-                <div
-                  className="progress-fill"
-                  style={{ width: `${analysis.ats}%` }}
-                />
-              </div>
-            </div>
-            <p className="text-xs text-[var(--text-secondary)]">
-              Role target: <strong className="text-[var(--text-primary)]">{selectedRole}</strong>
+            <p className="mt-1 text-on-surface-variant">
+              {visibleName} &middot; {selectedRole}
             </p>
-          </Reveal>
-
-          {/* Parameters Summary (4 cols) */}
-          <Reveal as="article" delay={160} className="md:col-span-4 card-glass card-glass-interactive p-6">
-            <span className="block text-[10px] font-mono font-semibold text-[var(--text-muted)] uppercase tracking-wider mb-3">
-              EVALUATION PARAMETERS (MODULE 2)
-            </span>
-            <div className="space-y-2">
-              {analysis.sections.slice(0, 3).map((item) => (
-                <div key={item.label} className="flex items-center justify-between text-xs border-b border-[var(--border-hair)] pb-2 last:border-0 last:pb-0">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`w-4 h-4 grid place-items-center rounded text-[9px] font-bold ${
-                        item.status === 'complete'
-                          ? 'badge-emerald'
-                          : 'badge-amber'
-                      }`}
-                    >
-                      {item.status === 'complete' ? <Icon name="check" size={10} /> : '!'}
-                    </span>
-                    <span className="font-medium text-[var(--text-primary)]">{item.label}</span>
-                  </div>
-                  <small className="text-[10px] text-[var(--text-muted)] font-mono">{item.pts}/{item.max} pts</small>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-
-        {/* Detail Grid (Skill Gap + Sections) */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 mt-4">
-          {/* Module 3: Skill Gap Analysis Card (7 cols) */}
-          <Reveal as="article" className="md:col-span-7 card-glass card-glass-interactive p-6">
-            <div className="flex items-start justify-between gap-4 mb-5">
-              <div>
-                <span className="text-[10px] font-mono font-semibold text-[var(--accent-violet)] uppercase tracking-wider block">
-                  MODULE 3: ATS KEYWORD CHECKER
-                </span>
-                <h3 className="text-base font-heading font-bold text-[var(--text-primary)] mt-1">
-                  Required skills &amp; keyword comparison ({selectedRole})
-                </h3>
-              </div>
-              <span className="badge badge-violet px-2.5 py-1 text-xs shrink-0">
-                {selectedRole}
-              </span>
-            </div>
-
-            {/* Matched Skills */}
-            <div className="mb-5">
-              <p className="text-xs font-semibold text-[var(--text-secondary)] mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-success)' }} />
-                <span>Extracted &amp; matched keywords ({analysis.matchedSkills.length})</span>
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {analysis.matchedSkills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="chip chip-matched px-2.5 py-1 text-xs"
-                  >
-                    <Icon name="check" size={12} />
-                    <span>{skill}</span>
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* Missing Skills */}
-            <div>
-              <p className="text-xs font-semibold text-[var(--text-secondary)] mb-2 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full" style={{ backgroundColor: 'var(--color-warning)' }} />
-                <span>Missing industry keywords ({analysis.missingSkills.length})</span>
-              </p>
-              <div className="flex flex-wrap gap-2">
-                {analysis.missingSkills.map((skill) => (
-                  <span
-                    key={skill}
-                    className="chip chip-missing px-2.5 py-1 text-xs"
-                  >
-                    <Icon name="plus" size={12} />
-                    <span>{skill}</span>
-                  </span>
-                ))}
-              </div>
-            </div>
-          </Reveal>
-
-          {/* Module 2 Parameters Check Card (5 cols) */}
-          <Reveal as="article" delay={100} className="md:col-span-5 card-glass card-glass-interactive p-6">
-            <div className="flex items-start justify-between gap-4 mb-5">
-              <div>
-                <span className="text-[10px] font-mono font-semibold text-[var(--text-muted)] uppercase tracking-wider block">
-                  MODULE 2: PARAMETER AUDIT
-                </span>
-                <h3 className="text-base font-heading font-bold text-[var(--text-primary)] mt-1">
-                  Section completeness check
-                </h3>
-              </div>
-              <span className="px-2.5 py-1 text-xs font-mono text-[var(--text-secondary)] bg-white/5 rounded border border-[var(--border-hair)] shrink-0">
-                Score Breakdown
-              </span>
-            </div>
-
-            <div className="space-y-2.5">
-              {analysis.sections.map((item) => (
-                <div key={item.label} className="flex items-center justify-between text-xs py-1 border-b border-[var(--border-hair)]/70 last:border-0">
-                  <div className="flex items-center gap-2">
-                    <span
-                      className={`w-4 h-4 grid place-items-center rounded text-[9px] font-bold ${
-                        item.status === 'complete'
-                          ? 'badge-emerald'
-                          : 'badge-amber'
-                      }`}
-                    >
-                      {item.status === 'complete' ? <Icon name="check" size={10} /> : '!'}
-                    </span>
-                    <span className="font-medium text-[var(--text-primary)]">{item.label}</span>
-                  </div>
-                  <span className="text-[11px] font-mono text-[var(--text-muted)]">
-                    {item.pts}/{item.max} pts
-                  </span>
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </div>
-
-        {/* Module 4 & 5: Smart Feedback System & Report Export */}
-        <Reveal as="article" className="mt-4 rounded-xl card-glass p-6 sm:p-8 space-y-6 feedback-card">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[var(--border-hair)] pb-6">
-            <div>
-              <span className="text-[10px] font-mono font-semibold text-[var(--accent-violet)] uppercase tracking-wider block mb-1">
-                MODULE 4 &amp; 5: SMART FEEDBACK &amp; REPORT GENERATION
-              </span>
-              <h3 className="text-xl sm:text-2xl font-heading font-bold text-[var(--text-primary)]">
-                Personalized improvement suggestions
-              </h3>
-              <p className="text-xs text-[var(--text-secondary)] mt-1">
-                Review tailored suggestions ranked by priority and export a print-ready report.
-              </p>
-            </div>
-
-            <button
-              className="no-print inline-flex items-center justify-center gap-2 px-4 py-2.5 text-xs btn-signal cursor-pointer"
-              type="button"
-              onClick={() => window.print()}
-            >
-              <Icon name="download" size={15} />
-              <span>Export PDF Report</span>
-            </button>
           </div>
+          <button
+            type="button"
+            onClick={() => window.print()}
+            className="no-print inline-flex items-center justify-center gap-2 px-4 py-2.5 text-sm btn-secondary cursor-pointer self-start"
+          >
+            <Icon name="download" size={16} />
+            <span>Download Report</span>
+          </button>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {analysis.tips.map((tip, idx) => (
-              <div
-                key={tip.number}
-                className="relative p-4 bg-white/[0.02] border border-[var(--border-hair)] rounded-lg space-y-2 overflow-hidden transition-colors hover:border-[var(--border-strong)]"
-              >
-                <span
-                  className="absolute -top-3 -right-2 text-[52px] font-heading font-black leading-none opacity-[0.06] select-none"
-                  aria-hidden="true"
+        {/* Score Summary */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+          <div className="card">
+            <div className="text-3xl font-bold text-on-surface tabular-nums">
+              {analysis.score}
+              <span className="text-sm text-outline tabular-nums">/100</span>
+            </div>
+            <p className="text-xs text-on-surface-variant mt-1">Overall Resume Score</p>
+          </div>
+          <div className="card">
+            <div className="text-3xl font-bold text-tertiary tabular-nums">
+              {analysis.ats}
+              <span className="text-sm text-outline tabular-nums">/100</span>
+            </div>
+            <p className="text-xs text-on-surface-variant mt-1">ATS Compatibility</p>
+          </div>
+          <div className="card">
+            <div className="text-3xl font-bold text-primary tabular-nums">
+              {analysis.matchedSkills.length}
+            </div>
+            <p className="text-xs text-on-surface-variant mt-1">Matched Skills</p>
+          </div>
+          <div className="card">
+            <div className="text-3xl font-bold text-secondary tabular-nums">
+              {analysis.missingSkills.length}
+            </div>
+            <p className="text-xs text-on-surface-variant mt-1">Missing Skills</p>
+          </div>
+        </div>
+
+        {/* Resume Sections Table */}
+        <div className="card mb-8">
+          <div className="mb-5">
+            <h3 className="text-sm font-semibold text-on-surface">Resume Sections</h3>
+            <p className="text-xs text-outline mt-1">
+              Completeness check for each major section
+            </p>
+          </div>
+          <div className="space-y-2">
+            {analysis.sections.map((item, idx) => {
+              const pct = item.max > 0 ? Math.round((item.pts / item.max) * 100) : 0;
+              const color = statusColor(item.status);
+              return (
+                <motion.div
+                  key={item.label}
+                  initial={{ opacity: 0, x: -12 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: idx * 0.04, duration: 0.3 }}
+                  className="flex items-center gap-4 p-3 rounded-lg hover:bg-surface-container-low transition-colors"
                 >
-                  {tip.number}
-                </span>
-                <div className="flex items-center justify-between relative">
-                  <span className="badge badge-violet px-2 py-0.5 text-[10px] font-semibold">
-                    {tip.category || 'Feedback'}
+                  <span
+                    className="w-6 h-6 grid place-items-center rounded-md text-[10px] font-bold shrink-0"
+                    style={{ background: color.bg, color: color.text }}
+                  >
+                    <Icon name={item.status === 'complete' ? 'check' : 'alert-circle'} size={13} />
                   </span>
-                  <span className="text-[10px] font-mono" style={{ color: 'var(--color-warning)' }}>
-                    {tip.impact}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center justify-between text-xs mb-1.5">
+                      <span className="font-medium text-on-surface truncate">{item.label}</span>
+                      <span className="tabular-nums text-outline shrink-0 ml-3">
+                        {item.pts}/{item.max}
+                      </span>
+                    </div>
+                    <div className="h-1.5 rounded-full bg-surface-container-low overflow-hidden">
+                      <motion.div
+                        className="h-full rounded-full"
+                        style={{ background: color.bar }}
+                        initial={{ width: 0 }}
+                        animate={{ width: `${pct}%` }}
+                        transition={{ delay: 0.2 + idx * 0.04, duration: 0.6 }}
+                      />
+                    </div>
+                  </div>
+                  <span
+                    className="text-[10px] font-medium shrink-0 px-2 py-0.5 rounded-full"
+                    style={{ background: color.bg, color: color.text }}
+                  >
+                    {statusLabel(item.status)}
                   </span>
-                </div>
-                <h4 className="text-xs font-semibold text-[var(--text-primary)] leading-snug relative">
-                  {tip.title}
-                </h4>
-                <p className="text-[11px] text-[var(--text-secondary)] leading-relaxed relative">
-                  {tip.text}
-                </p>
-              </div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
-        </Reveal>
+        </div>
+
+        {/* Keyword Analysis */}
+        <div className="card mb-8">
+          <div className="mb-5">
+            <h3 className="text-sm font-semibold text-on-surface">Keyword Analysis</h3>
+            <p className="text-xs text-outline mt-1">
+              Extracted and missing keywords for {selectedRole}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="text-xs font-semibold text-tertiary uppercase tracking-wider">
+                  Matched ({analysis.matchedSkills.length})
+                </h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {analysis.matchedSkills.length > 0 ? (
+                  analysis.matchedSkills.map((skill, idx) => (
+                    <motion.span
+                      key={`${skill}-${idx}`}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: idx * 0.02 }}
+                      className="chip chip-success"
+                    >
+                      <Icon name="check" size={12} />
+                      {skill}
+                    </motion.span>
+                  ))
+                ) : (
+                  <p className="text-xs text-outline">No matched keywords</p>
+                )}
+              </div>
+            </div>
+
+            <div>
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="text-xs font-semibold text-secondary uppercase tracking-wider">
+                  Missing ({analysis.missingSkills.length})
+                </h4>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                {analysis.missingSkills.length > 0 ? (
+                  analysis.missingSkills.map((skill, idx) => (
+                    <motion.span
+                      key={`${skill}-${idx}`}
+                      initial={{ opacity: 0, scale: 0.9 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      transition={{ delay: idx * 0.02 }}
+                      className="chip chip-warning"
+                    >
+                      <Icon name="plus" size={12} />
+                      {skill}
+                    </motion.span>
+                  ))
+                ) : (
+                  <p className="text-xs text-outline">No missing keywords</p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Charts */}
+        <div className="grid lg:grid-cols-2 gap-6 mb-8">
+          <ChartCard title="Section Scores" description="Points earned per section">
+            <BarChart
+              data={analysis.sections.map((s) => ({
+                label: s.label,
+                value: s.max > 0 ? Math.round((s.pts / s.max) * 100) : 0,
+                color: s.status === 'complete' ? 'var(--tertiary)' : 'var(--secondary)',
+              }))}
+            />
+          </ChartCard>
+
+          <ChartCard title="Skill Match" description="Matched vs missing keywords">
+            <BarChart
+              data={[
+                { label: 'Matched', value: analysis.matchedSkills.length, color: 'var(--tertiary)' },
+                { label: 'Missing', value: analysis.missingSkills.length, color: 'var(--secondary)' },
+              ]}
+              showValues={false}
+            />
+          </ChartCard>
+        </div>
+
+        {/* Feedback */}
+        {analysis.tips && analysis.tips.length > 0 && (
+          <div className="card">
+            <div className="mb-5">
+              <h3 className="text-sm font-semibold text-on-surface">Improvement Suggestions</h3>
+              <p className="text-xs text-outline mt-1">
+                Ranked by impact for the {selectedRole} role
+              </p>
+            </div>
+            <div className="grid md:grid-cols-3 gap-4">
+              {analysis.tips.map((tip, idx) => (
+                <motion.div
+                  key={tip.number}
+                  className="p-4 border border-outline-variant rounded-xl space-y-2 transition-all hover:border-outline"
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 + idx * 0.08 }}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className="badge badge-info">{tip.category || 'Feedback'}</span>
+                    <span className="text-[10px] tabular-nums text-outline">{tip.impact}</span>
+                  </div>
+                  <h4 className="text-sm font-semibold text-on-surface leading-snug">{tip.title}</h4>
+                  <p className="text-xs text-on-surface-variant leading-relaxed">{tip.text}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -42,10 +42,15 @@ class TestATSChecker:
         result = self.checker.check_resume("Python", 'Invalid Role')
         assert 'error' in result
 
-    def test_get_role_suggestions_returns_list(self):
+    def test_get_role_suggestions_returns_all_roles_by_default(self):
         resume_text = "Python Django Flask JavaScript React Node.js SQL PostgreSQL"
         suggestions = self.checker.get_role_suggestions(resume_text)
         assert isinstance(suggestions, list)
+        assert len(suggestions) == len(self.checker.get_available_roles())
+
+    def test_get_role_suggestions_respects_top_n(self):
+        resume_text = "Python Django Flask JavaScript React Node.js SQL PostgreSQL"
+        suggestions = self.checker.get_role_suggestions(resume_text, top_n=5)
         assert len(suggestions) <= 5
 
     def test_get_role_suggestions_sorted_by_match(self):

@@ -2,51 +2,7347 @@
   "Software Engineer": {
     "name": "Software Engineer",
     "category": "Software Engineering",
-    "required_skills": ["Python", "Java", "JavaScript", "SQL", "Git"],
-    "preferred_skills": ["C++", "Go", "Rust", "Docker", "Kubernetes"],
-    "keywords": ["software development", "algorithms", "data structures", "OOP", "design patterns", "API", "testing", "debugging"],
-    "tools": ["Git", "Docker", "Jenkins", "Jira", "VS Code", "IntelliJ"],
-    "frameworks": ["Spring", "Django", "Flask", "Express.js", ".NET"],
-    "certifications": ["AWS Certified Developer", "Oracle Certified Professional", "Google Cloud Professional"]
+    "required_skills": [
+      "Python",
+      "Java",
+      "JavaScript",
+      "SQL",
+      "Git"
+    ],
+    "preferred_skills": [
+      "C++",
+      "Go",
+      "Rust",
+      "Docker",
+      "Kubernetes"
+    ],
+    "keywords": [
+      "software development",
+      "algorithms",
+      "data structures",
+      "OOP",
+      "design patterns",
+      "API",
+      "testing",
+      "debugging",
+      "CI/CD"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "Jenkins",
+      "Jira",
+      "VS Code",
+      "IntelliJ"
+    ],
+    "frameworks": [
+      "Spring",
+      "Django",
+      "Flask",
+      "Express.js",
+      ".NET"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Oracle Certified Professional",
+      "Google Cloud Professional"
+    ]
+  },
+  "Backend Developer": {
+    "name": "Backend Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Python",
+      "Java",
+      "SQL",
+      "Git",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Rust",
+      "Docker",
+      "Kubernetes",
+      "TypeScript"
+    ],
+    "keywords": [
+      "backend",
+      "server-side",
+      "API development",
+      "microservices",
+      "database design",
+      "authentication",
+      "caching",
+      "scalability"
+    ],
+    "tools": [
+      "PostgreSQL",
+      "MySQL",
+      "Redis",
+      "Docker",
+      "Git",
+      "VS Code"
+    ],
+    "frameworks": [
+      "Django",
+      "Flask",
+      "Spring Boot",
+      "Express.js",
+      "FastAPI"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Oracle Certified Professional",
+      "Google Cloud Professional"
+    ]
+  },
+  "Frontend Developer": {
+    "name": "Frontend Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Vue.js",
+      "Angular",
+      "Sass",
+      "Tailwind CSS",
+      "GraphQL"
+    ],
+    "keywords": [
+      "frontend",
+      "UI",
+      "responsive design",
+      "web applications",
+      "SPA",
+      "client-side",
+      "component architecture",
+      "browser APIs"
+    ],
+    "tools": [
+      "VS Code",
+      "Git",
+      "Chrome DevTools",
+      "npm",
+      "Webpack"
+    ],
+    "frameworks": [
+      "React",
+      "Angular",
+      "Vue.js",
+      "Next.js",
+      "Vite"
+    ],
+    "certifications": [
+      "Meta Front-End Developer",
+      "Google Mobile Web Specialist",
+      "AWS Certified Developer"
+    ]
+  },
+  "Full Stack Developer": {
+    "name": "Full Stack Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "Git"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "PostgreSQL",
+      "MongoDB",
+      "GraphQL"
+    ],
+    "keywords": [
+      "full-stack",
+      "frontend",
+      "backend",
+      "web applications",
+      "REST API",
+      "database design",
+      "CI/CD",
+      "server deployment"
+    ],
+    "tools": [
+      "Git",
+      "Docker",
+      "VS Code",
+      "Postman",
+      "npm"
+    ],
+    "frameworks": [
+      "React",
+      "Express.js",
+      "Next.js",
+      "Django",
+      "FastAPI"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Meta Front-End Developer",
+      "MongoDB Certified Developer"
+    ]
+  },
+  "Java Developer": {
+    "name": "Java Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Java",
+      "SQL",
+      "Git",
+      "REST API",
+      "Spring"
+    ],
+    "preferred_skills": [
+      "Kotlin",
+      "Maven",
+      "Gradle",
+      "Docker",
+      "Hibernate"
+    ],
+    "keywords": [
+      "Java",
+      "JVM",
+      "backend",
+      "enterprise",
+      "OOP",
+      "design patterns",
+      "API development",
+      "JDBC"
+    ],
+    "tools": [
+      "IntelliJ IDEA",
+      "Maven",
+      "Gradle",
+      "Git",
+      "Jira",
+      "Postman"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "Spring MVC",
+      "Hibernate",
+      "Jakarta EE",
+      "MyBatis"
+    ],
+    "certifications": [
+      "Oracle Certified Professional",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Python Developer": {
+    "name": "Python Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Git",
+      "REST API",
+      "Flask"
+    ],
+    "preferred_skills": [
+      "Django",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      "Celery"
+    ],
+    "keywords": [
+      "Python",
+      "backend",
+      "API development",
+      "scripting",
+      "automation",
+      "data processing",
+      "web scraping"
+    ],
+    "tools": [
+      "VS Code",
+      "PyCharm",
+      "Git",
+      "Docker",
+      "pip",
+      "Postman"
+    ],
+    "frameworks": [
+      "Django",
+      "Flask",
+      "FastAPI",
+      "Pandas",
+      "SQLAlchemy"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional",
+      "Certified Kubernetes Administrator"
+    ]
+  },
+  "C++ Developer": {
+    "name": "C++ Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C++",
+      "Git",
+      "Linux",
+      "Algorithms",
+      "Data Structures"
+    ],
+    "preferred_skills": [
+      "Python",
+      "CMake",
+      "GDB",
+      "Docker",
+      "SQL"
+    ],
+    "keywords": [
+      "C++",
+      "performance optimization",
+      "embedded",
+      "systems programming",
+      "OOP",
+      "templates",
+      "multithreading",
+      "memory management"
+    ],
+    "tools": [
+      "Visual Studio",
+      "GDB",
+      "Valgrind",
+      "Git",
+      "CMake",
+      "CLion"
+    ],
+    "frameworks": [
+      "Boost",
+      "Qt",
+      "Google Test",
+      "CMake",
+      "Vcpkg"
+    ],
+    "certifications": [
+      ".NET Certified Developer",
+      "Linux Foundation Certified System Administrator",
+      "AWS Certified Developer"
+    ]
+  },
+  ".NET Developer": {
+    "name": ".NET Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C#",
+      ".NET",
+      "SQL Server",
+      "JavaScript",
+      "Git"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Azure",
+      "Docker",
+      "Entity Framework",
+      "PowerShell"
+    ],
+    "keywords": [
+      ".NET",
+      "C#",
+      "backend",
+      "enterprise",
+      "API development",
+      "web applications",
+      "ORM",
+      "Windows"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Azure DevOps",
+      "SQL Server",
+      "IIS",
+      "Postman"
+    ],
+    "frameworks": [
+      ".NET Core",
+      "ASP.NET",
+      "Entity Framework",
+      "Blazor",
+      "SignalR"
+    ],
+    "certifications": [
+      "Microsoft Certified: Azure Developer",
+      "Microsoft Certified: .NET",
+      "AWS Certified Developer"
+    ]
+  },
+  "Go Developer": {
+    "name": "Go Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Go",
+      "SQL",
+      "Git",
+      "REST API",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "gRPC",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "keywords": [
+      "Go",
+      "Golang",
+      "backend",
+      "systems programming",
+      "concurrency",
+      "microservices",
+      "high performance",
+      "cloud-native"
+    ],
+    "tools": [
+      "VS Code",
+      "GoLand",
+      "Git",
+      "Docker",
+      "Postman"
+    ],
+    "frameworks": [
+      "Gin",
+      "Echo",
+      "Fiber",
+      "gRPC",
+      "Beego"
+    ],
+    "certifications": [
+      "Google Cloud Professional",
+      "Certified Kubernetes Administrator",
+      "AWS Certified Developer"
+    ]
+  },
+  "Rust Developer": {
+    "name": "Rust Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Rust",
+      "Git",
+      "Linux",
+      "SQL",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Python",
+      "C++",
+      "Docker",
+      "WebAssembly",
+      "Tokio"
+    ],
+    "keywords": [
+      "Rust",
+      "systems programming",
+      "safety",
+      "performance",
+      "concurrency",
+      "memory safety",
+      "embedded",
+      "WebAssembly"
+    ],
+    "tools": [
+      "VS Code",
+      "RustRover",
+      "Cargo",
+      "Git",
+      "Docker"
+    ],
+    "frameworks": [
+      "Actix",
+      "Rocket",
+      "Tokio",
+      "Diesel",
+      "Axum"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Certified Kubernetes Administrator",
+      "Google Cloud Professional"
+    ]
+  },
+  "Ruby Developer": {
+    "name": "Ruby Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Ruby",
+      "Rails",
+      "SQL",
+      "Git",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "JavaScript",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Sidekiq"
+    ],
+    "keywords": [
+      "Ruby",
+      "Rails",
+      "backend",
+      "web applications",
+      "API",
+      "MVC",
+      "database design",
+      "testing"
+    ],
+    "tools": [
+      "VS Code",
+      "RubyMine",
+      "PostgreSQL",
+      "Redis",
+      "Git"
+    ],
+    "frameworks": [
+      "Ruby on Rails",
+      "RSpec",
+      "Sidekiq",
+      "Devise",
+      "JBuilder"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Heroku Certified Associate",
+      "Google Cloud Professional"
+    ]
+  },
+  "PHP Developer": {
+    "name": "PHP Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "PHP",
+      "MySQL",
+      "JavaScript",
+      "HTML",
+      "Git"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Laravel",
+      "Symfony",
+      "Docker",
+      "WordPress"
+    ],
+    "keywords": [
+      "PHP",
+      "backend",
+      "web applications",
+      "CMS",
+      "API development",
+      "OOP",
+      "database design"
+    ],
+    "tools": [
+      "VS Code",
+      "PHPStorm",
+      "XAMPP",
+      "Composer",
+      "Postman"
+    ],
+    "frameworks": [
+      "Laravel",
+      "Symfony",
+      "WordPress",
+      "CodeIgniter",
+      "Drupal"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "WordPress Certified Developer",
+      "Zend Certified Engineer"
+    ]
+  },
+  "Kotlin Developer": {
+    "name": "Kotlin Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Kotlin",
+      "Android",
+      "Java",
+      "Git",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Jetpack Compose",
+      "Retrofit",
+      "Docker",
+      "Firebase"
+    ],
+    "keywords": [
+      "Kotlin",
+      "Android development",
+      "mobile apps",
+      "JVM",
+      "coroutines",
+      "functional programming"
+    ],
+    "tools": [
+      "Android Studio",
+      "IntelliJ IDEA",
+      "Gradle",
+      "Git",
+      "Firebase Console"
+    ],
+    "frameworks": [
+      "Jetpack Compose",
+      "Retrofit",
+      "Room",
+      "Dagger Hilt",
+      "Ktor"
+    ],
+    "certifications": [
+      "Google Associate Android Developer",
+      "AWS Certified Developer",
+      "Firebase Certified"
+    ]
+  },
+  "Swift Developer": {
+    "name": "Swift Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Swift",
+      "iOS",
+      "Xcode",
+      "Git",
+      "UIKit"
+    ],
+    "preferred_skills": [
+      "SwiftUI",
+      "Core Data",
+      "REST API",
+      "Firebase",
+      "Combine"
+    ],
+    "keywords": [
+      "Swift",
+      "iOS development",
+      "mobile apps",
+      "Apple ecosystem",
+      "UI frameworks",
+      "app architecture"
+    ],
+    "tools": [
+      "Xcode",
+      "Instruments",
+      "Git",
+      "CocoaPods",
+      "Swift Package Manager"
+    ],
+    "frameworks": [
+      "SwiftUI",
+      "UIKit",
+      "Combine",
+      "Core Data",
+      "CloudKit"
+    ],
+    "certifications": [
+      "Apple Certified iOS Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Mobile App Developer": {
+    "name": "Mobile App Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "JavaScript",
+      "React Native",
+      "Git",
+      "REST API",
+      "TypeScript"
+    ],
+    "preferred_skills": [
+      "Flutter",
+      "Swift",
+      "Kotlin",
+      "Firebase",
+      "Docker"
+    ],
+    "keywords": [
+      "mobile apps",
+      "cross-platform",
+      "iOS",
+      "Android",
+      "UI/UX",
+      "push notifications",
+      "app store deployment"
+    ],
+    "tools": [
+      "VS Code",
+      "Xcode",
+      "Android Studio",
+      "Git",
+      "Firebase Console"
+    ],
+    "frameworks": [
+      "React Native",
+      "Flutter",
+      "Expo",
+      "Redux",
+      "NativeBase"
+    ],
+    "certifications": [
+      "Google Associate Android Developer",
+      "Apple Certified Developer",
+      "AWS Certified Developer"
+    ]
+  },
+  "Android Developer": {
+    "name": "Android Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Kotlin",
+      "Android",
+      "Java",
+      "SQL",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Jetpack Compose",
+      "Firebase",
+      "Retrofit",
+      "Docker",
+      "TypeScript"
+    ],
+    "keywords": [
+      "Android",
+      "mobile apps",
+      "Google Play Store",
+      "UI/UX",
+      "push notifications",
+      "app architecture",
+      "material design"
+    ],
+    "tools": [
+      "Android Studio",
+      "IntelliJ IDEA",
+      "Gradle",
+      "Firebase Console",
+      "Git"
+    ],
+    "frameworks": [
+      "Jetpack Compose",
+      "Retrofit",
+      "Room",
+      "Dagger Hilt",
+      "WorkManager"
+    ],
+    "certifications": [
+      "Google Associate Android Developer",
+      "AWS Certified Developer",
+      "Meta Certified"
+    ]
+  },
+  "iOS Developer": {
+    "name": "iOS Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Swift",
+      "iOS",
+      "Xcode",
+      "Git",
+      "UIKit"
+    ],
+    "preferred_skills": [
+      "SwiftUI",
+      "Core Data",
+      "Combine",
+      "REST API",
+      "Firebase"
+    ],
+    "keywords": [
+      "iOS",
+      "Apple",
+      "mobile apps",
+      "App Store",
+      "UI frameworks",
+      "app architecture",
+      "core ML"
+    ],
+    "tools": [
+      "Xcode",
+      "Instruments",
+      "TestFlight",
+      "CocoaPods",
+      "Git"
+    ],
+    "frameworks": [
+      "SwiftUI",
+      "UIKit",
+      "Combine",
+      "Core Data",
+      "CloudKit"
+    ],
+    "certifications": [
+      "Apple Certified iOS Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Flutter Developer": {
+    "name": "Flutter Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Flutter",
+      "Dart",
+      "Git",
+      "REST API",
+      "Firebase"
+    ],
+    "preferred_skills": [
+      "Kotlin",
+      "Swift",
+      "TypeScript",
+      "RxDart",
+      "GetX"
+    ],
+    "keywords": [
+      "Flutter",
+      "cross-platform",
+      "mobile apps",
+      "UI/UX",
+      "state management",
+      "dart",
+      "widget architecture"
+    ],
+    "tools": [
+      "VS Code",
+      "Android Studio",
+      "Xcode",
+      "Firebase Console",
+      "Git"
+    ],
+    "frameworks": [
+      "Flutter",
+      "Bloc",
+      "Provider",
+      "GetX",
+      "Riverpod"
+    ],
+    "certifications": [
+      "Google Associate Android Developer",
+      "Apple Certified Developer",
+      "AWS Certified Developer"
+    ]
+  },
+  "React Native Developer": {
+    "name": "React Native Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "React Native",
+      "JavaScript",
+      "TypeScript",
+      "Git",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Swift",
+      "Kotlin",
+      "Firebase",
+      "Redux",
+      "GraphQL"
+    ],
+    "keywords": [
+      "React Native",
+      "cross-platform",
+      "mobile apps",
+      "UI/UX",
+      "state management",
+      "navigation",
+      "native modules"
+    ],
+    "tools": [
+      "VS Code",
+      "Xcode",
+      "Android Studio",
+      "Expo CLI",
+      "Git"
+    ],
+    "frameworks": [
+      "React Native",
+      "Expo",
+      "Redux",
+      "React Navigation",
+      "AsyncStorage"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Associate Android Developer",
+      "Meta Certified"
+    ]
+  },
+  "Embedded Systems Engineer": {
+    "name": "Embedded Systems Engineer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C",
+      "C++",
+      "Embedded Systems",
+      "Linux",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Rust",
+      "Python",
+      "RTOS",
+      "ARM",
+      "Assembly"
+    ],
+    "keywords": [
+      "embedded",
+      "firmware",
+      "real-time",
+      "IoT",
+      "microcontrollers",
+      "hardware abstraction",
+      "low-level programming"
+    ],
+    "tools": [
+      "JTAG Debugger",
+      "Oscilloscope",
+      "Keil",
+      "IAR",
+      "Git",
+      "Serial Monitor"
+    ],
+    "frameworks": [
+      "FreeRTOS",
+      "Zephyr",
+      "Mbed OS",
+      "Arduino",
+      "ESP-IDF"
+    ],
+    "certifications": [
+      "Embedded Systems Certification (ISCET)",
+      "ARM Accredited Engineer",
+      "AWS Certified Developer"
+    ]
+  },
+  "Firmware Engineer": {
+    "name": "Firmware Engineer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C",
+      "C++",
+      "Assembly",
+      "Embedded Systems",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Rust",
+      "RTOS",
+      "ARM",
+      "Linux"
+    ],
+    "keywords": [
+      "firmware",
+      "bootloader",
+      "BIOS",
+      "device drivers",
+      "hardware",
+      "flash memory",
+      "low-level programming"
+    ],
+    "tools": [
+      "JTAG Debugger",
+      "Logic Analyzer",
+      "Keil",
+      "IAR",
+      "Git"
+    ],
+    "frameworks": [
+      "FreeRTOS",
+      "Mbed OS",
+      "Zephyr",
+      "UEFI",
+      "U-Boot"
+    ],
+    "certifications": [
+      "ARM Accredited Engineer",
+      "Embedded Systems Certification",
+      "Linux Foundation Certified"
+    ]
+  },
+  "Game Developer": {
+    "name": "Game Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C++",
+      "C#",
+      "Unity",
+      "Git",
+      "3D Math"
+    ],
+    "preferred_skills": [
+      "Lua",
+      "Python",
+      "Unreal Engine",
+      "Blender",
+      "DirectX"
+    ],
+    "keywords": [
+      "game development",
+      "game physics",
+      "rendering",
+      "gameplay",
+      "multiplayer",
+      "game optimization",
+      "3D graphics"
+    ],
+    "tools": [
+      "Unity Editor",
+      "Unreal Editor",
+      "Visual Studio",
+      "Perforce",
+      "Blender"
+    ],
+    "frameworks": [
+      "Unity",
+      "Unreal Engine",
+      "Godot",
+      "Phaser",
+      "PixiJS"
+    ],
+    "certifications": [
+      "Unity Certified Developer",
+      "Unreal Engine Authorized Instructor",
+      "AWS Certified Developer"
+    ]
+  },
+  "AR Developer": {
+    "name": "AR Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C#",
+      "Unity",
+      "Git",
+      "3D Math",
+      "C++"
+    ],
+    "preferred_skills": [
+      "Swift",
+      "Kotlin",
+      "ARKit",
+      "ARCore",
+      "Vuforia"
+    ],
+    "keywords": [
+      "augmented reality",
+      "AR",
+      "3D rendering",
+      "spatial computing",
+      "marker tracking",
+      "real-time overlay"
+    ],
+    "tools": [
+      "Unity",
+      "Unreal Engine",
+      "ARKit",
+      "ARCore",
+      "Vuforia SDK"
+    ],
+    "frameworks": [
+      "Unity",
+      "ARKit",
+      "ARCore",
+      "Wikitude",
+      "8th Wall"
+    ],
+    "certifications": [
+      "Unity Certified Developer",
+      "Apple Certified Developer",
+      "Google Certified"
+    ]
+  },
+  "VR Developer": {
+    "name": "VR Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C#",
+      "Unity",
+      "C++",
+      "Git",
+      "3D Math"
+    ],
+    "preferred_skills": [
+      "Unreal Engine",
+      "Blueprint",
+      "Oculus SDK",
+      "SteamVR",
+      "OpenGL"
+    ],
+    "keywords": [
+      "virtual reality",
+      "VR",
+      "immersive",
+      "3D environment",
+      "haptics",
+      "spatial audio",
+      "head tracking"
+    ],
+    "tools": [
+      "Unity",
+      "Unreal Engine",
+      "Oculus Rift/Quest",
+      "HTC Vive",
+      "Visual Studio"
+    ],
+    "frameworks": [
+      "Unity",
+      "Unreal Engine",
+      "OpenXR",
+      "Oculus SDK",
+      "SteamVR"
+    ],
+    "certifications": [
+      "Unity Certified Developer",
+      "Oculus Developer",
+      "AWS Certified Developer"
+    ]
+  },
+  "Blockchain Developer": {
+    "name": "Blockchain Developer",
+    "category": "Blockchain & Web3",
+    "required_skills": [
+      "Solidity",
+      "JavaScript",
+      "Git",
+      "Blockchain",
+      "Cryptography"
+    ],
+    "preferred_skills": [
+      "Rust",
+      "Go",
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "keywords": [
+      "blockchain",
+      "smart contracts",
+      "DeFi",
+      "Web3",
+      "decentralized",
+      "cryptocurrency",
+      "tokenomics"
+    ],
+    "tools": [
+      "Remix IDE",
+      "Hardhat",
+      "Truffle",
+      "Ganache",
+      "Git"
+    ],
+    "frameworks": [
+      "Ethereum",
+      "Solana",
+      "Web3.js",
+      "Ethers.js",
+      "Hardhat"
+    ],
+    "certifications": [
+      "Certified Blockchain Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Web3 Developer": {
+    "name": "Web3 Developer",
+    "category": "Blockchain & Web3",
+    "required_skills": [
+      "JavaScript",
+      "TypeScript",
+      "Solidity",
+      "Git",
+      "React"
+    ],
+    "preferred_skills": [
+      "Rust",
+      "Go",
+      "Node.js",
+      "Hardhat",
+      "IPFS"
+    ],
+    "keywords": [
+      "Web3",
+      "decentralized applications",
+      "dApps",
+      "blockchain",
+      "smart contracts",
+      "DeFi",
+      "NFTs",
+      "DAOs"
+    ],
+    "tools": [
+      "MetaMask",
+      "Remix IDE",
+      "Hardhat",
+      "IPFS",
+      "Alchemy"
+    ],
+    "frameworks": [
+      "Web3.js",
+      "Ethers.js",
+      "Next.js",
+      "React",
+      "Hardhat"
+    ],
+    "certifications": [
+      "Certified Blockchain Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Smart Contract Developer": {
+    "name": "Smart Contract Developer",
+    "category": "Blockchain & Web3",
+    "required_skills": [
+      "Solidity",
+      "Rust",
+      "Git",
+      "Cryptography",
+      "Blockchain"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Go",
+      "JavaScript",
+      "Hardhat",
+      "Anchor"
+    ],
+    "keywords": [
+      "smart contracts",
+      "blockchain",
+      "DeFi",
+      "tokenomics",
+      "audit",
+      "gas optimization",
+      "security patterns"
+    ],
+    "tools": [
+      "Remix IDE",
+      "Hardhat",
+      "Truffle",
+      "Foundry",
+      "Solana CLI"
+    ],
+    "frameworks": [
+      "Ethereum",
+      "Solana",
+      "Anchor",
+      "Hardhat",
+      "OpenZeppelin"
+    ],
+    "certifications": [
+      "Certified Blockchain Developer",
+      "Certified Smart Contract Auditor",
+      "AWS Certified Developer"
+    ]
+  },
+  "AR/VR/XR Developer": {
+    "name": "AR/VR/XR Developer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C#",
+      "Unity",
+      "C++",
+      "Git",
+      "3D Math"
+    ],
+    "preferred_skills": [
+      "Unreal Engine",
+      "Swift",
+      "Kotlin",
+      "Oculus SDK",
+      "OpenXR"
+    ],
+    "keywords": [
+      "augmented reality",
+      "virtual reality",
+      "mixed reality",
+      "XR",
+      "spatial computing",
+      "3D interaction",
+      "immersive experience"
+    ],
+    "tools": [
+      "Unity",
+      "Unreal Engine",
+      "HoloLens",
+      "Oculus Quest",
+      "Visual Studio"
+    ],
+    "frameworks": [
+      "Unity",
+      "Unreal Engine",
+      "OpenXR",
+      "ARKit",
+      "ARCore"
+    ],
+    "certifications": [
+      "Unity Certified Developer",
+      "Microsoft Mixed Reality Certified",
+      "Apple Certified Developer"
+    ]
   },
   "Web Developer": {
     "name": "Web Developer",
     "category": "Web Development",
-    "required_skills": ["JavaScript", "HTML", "CSS", "React", "Node.js"],
-    "preferred_skills": ["TypeScript", "Vue.js", "Angular", "Next.js", "GraphQL"],
-    "keywords": ["frontend", "backend", "responsive design", "web applications", "UI/UX", "REST API", "single page application"],
-    "tools": ["VS Code", "Git", "Webpack", "npm", "Chrome DevTools"],
-    "frameworks": ["React", "Angular", "Vue.js", "Next.js", "Express.js"],
-    "certifications": ["AWS Certified Developer", "Meta Front-End Developer", "Google Cloud Certified"]
+    "required_skills": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Node.js"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Vue.js",
+      "Angular",
+      "Next.js",
+      "GraphQL"
+    ],
+    "keywords": [
+      "frontend",
+      "backend",
+      "responsive design",
+      "web applications",
+      "SPA",
+      "PWA",
+      "SEO",
+      "cross-browser"
+    ],
+    "tools": [
+      "VS Code",
+      "Git",
+      "Webpack",
+      "npm",
+      "Chrome DevTools"
+    ],
+    "frameworks": [
+      "React",
+      "Angular",
+      "Vue.js",
+      "Next.js",
+      "Express.js"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Meta Front-End Developer",
+      "Google Cloud Certified"
+    ]
+  },
+  "WordPress Developer": {
+    "name": "WordPress Developer",
+    "category": "Web Development",
+    "required_skills": [
+      "PHP",
+      "WordPress",
+      "MySQL",
+      "JavaScript",
+      "HTML"
+    ],
+    "preferred_skills": [
+      "CSS",
+      "jQuery",
+      "REST API",
+      "WooCommerce",
+      "SEO"
+    ],
+    "keywords": [
+      "WordPress",
+      "CMS",
+      "themes",
+      "plugins",
+      "PHP",
+      "web development",
+      "e-commerce",
+      "content management"
+    ],
+    "tools": [
+      "WordPress Admin",
+      "WP-CLI",
+      "MySQL",
+      "Git",
+      "cPanel"
+    ],
+    "frameworks": [
+      "WordPress",
+      "WooCommerce",
+      "Elementor",
+      "ACF",
+      "Genesis"
+    ],
+    "certifications": [
+      "WordPress Certified Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Shopify Developer": {
+    "name": "Shopify Developer",
+    "category": "Web Development",
+    "required_skills": [
+      "JavaScript",
+      "Liquid",
+      "HTML",
+      "CSS",
+      "Shopify API"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "Ruby",
+      "GraphQL"
+    ],
+    "keywords": [
+      "Shopify",
+      "e-commerce",
+      "Liquid",
+      "storefront",
+      "checkout",
+      "inventory management",
+      "payment gateway"
+    ],
+    "tools": [
+      "Shopify Admin",
+      "Shopify CLI",
+      "GitHub",
+      "Postman",
+      "Git"
+    ],
+    "frameworks": [
+      "Shopify Polaris",
+      "Shopify Hydrogen",
+      "React",
+      "Remix",
+      "Next.js"
+    ],
+    "certifications": [
+      "Shopify Partner Academy",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Drupal Developer": {
+    "name": "Drupal Developer",
+    "category": "Web Development",
+    "required_skills": [
+      "PHP",
+      "Drupal",
+      "MySQL",
+      "JavaScript",
+      "HTML"
+    ],
+    "preferred_skills": [
+      "Symfony",
+      "Composer",
+      "Docker",
+      "REST API",
+      "CSS"
+    ],
+    "keywords": [
+      "Drupal",
+      "CMS",
+      "PHP",
+      "web applications",
+      "content management",
+      "theming",
+      "module development"
+    ],
+    "tools": [
+      "Drupal Console",
+      "Composer",
+      "Git",
+      "Docker",
+      "Drush"
+    ],
+    "frameworks": [
+      "Drupal",
+      "Symfony",
+      "Twig",
+      "React",
+      "Vue.js"
+    ],
+    "certifications": [
+      "Drupal Certified Developer",
+      "AWS Certified Developer",
+      "Linux Certified"
+    ]
+  },
+  "E-commerce Developer": {
+    "name": "E-commerce Developer",
+    "category": "Web Development",
+    "required_skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "SQL",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Shopify",
+      "Stripe",
+      "PHP",
+      "Python"
+    ],
+    "keywords": [
+      "e-commerce",
+      "online store",
+      "payment gateway",
+      "inventory",
+      "product management",
+      "shopping cart",
+      "checkout flow"
+    ],
+    "tools": [
+      "Shopify",
+      "WooCommerce",
+      "Stripe",
+      "PayPal",
+      "Git",
+      "VS Code"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Shopify Hydrogen",
+      "WooCommerce",
+      "Medusa.js"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional",
+      "Shopify Partner Academy"
+    ]
+  },
+  "Technical Writer": {
+    "name": "Technical Writer",
+    "category": "Web Development",
+    "required_skills": [
+      "Technical Writing",
+      "Markdown",
+      "Git",
+      "HTML",
+      "CSS"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Python",
+      "Swagger",
+      "JSDoc",
+      "REST API"
+    ],
+    "keywords": [
+      "documentation",
+      "API documentation",
+      "user guides",
+      "tutorials",
+      "content management",
+      "knowledge base"
+    ],
+    "tools": [
+      "Confluence",
+      "Notion",
+      "Git",
+      "Docusaurus",
+      "Swagger"
+    ],
+    "frameworks": [
+      "Docusaurus",
+      "ReadMe",
+      "GitBook",
+      "Swagger",
+      "Postman"
+    ],
+    "certifications": [
+      "API Documentation Certification",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "E-commerce Architect": {
+    "name": "E-commerce Architect",
+    "category": "Web Development",
+    "required_skills": [
+      "JavaScript",
+      "Node.js",
+      "React",
+      "SQL",
+      "Microservices"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "AWS",
+      "Kubernetes",
+      "GraphQL"
+    ],
+    "keywords": [
+      "e-commerce",
+      "architecture",
+      "scalability",
+      "payment integration",
+      "inventory management",
+      "distributed systems"
+    ],
+    "tools": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Elasticsearch",
+      "Redis"
+    ],
+    "frameworks": [
+      "Next.js",
+      "Medusa.js",
+      "Commercetools",
+      "Magento",
+      "Shopware"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Google Cloud Professional",
+      "Certified Kubernetes Administrator"
+    ]
   },
   "Data Analyst": {
     "name": "Data Analyst",
-    "category": "Data Science",
-    "required_skills": ["SQL", "Python", "Excel", "Statistics", "Data Analysis"],
-    "preferred_skills": ["Tableau", "Power BI", "R", "Spark", "Machine Learning"],
-    "keywords": ["data analysis", "data visualization", "reporting", "business intelligence", "ETL", "dashboards", "KPI"],
-    "tools": ["Excel", "Tableau", "Power BI", "SQL", "Python", "Jupyter"],
-    "frameworks": ["Pandas", "NumPy", "Matplotlib", "Seaborn"],
-    "certifications": ["Google Data Analytics", "Microsoft Power BI", "Tableau Desktop Specialist"]
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "Excel",
+      "Statistics",
+      "Data Analysis"
+    ],
+    "preferred_skills": [
+      "Tableau",
+      "Power BI",
+      "R",
+      "Spark",
+      "Machine Learning"
+    ],
+    "keywords": [
+      "data analysis",
+      "data visualization",
+      "reporting",
+      "business intelligence",
+      "ETL",
+      "dashboards",
+      "KPI",
+      "metrics"
+    ],
+    "tools": [
+      "Excel",
+      "Tableau",
+      "Power BI",
+      "SQL",
+      "Python",
+      "Jupyter"
+    ],
+    "frameworks": [
+      "Pandas",
+      "NumPy",
+      "Matplotlib",
+      "Seaborn",
+      "Plotly"
+    ],
+    "certifications": [
+      "Google Data Analytics",
+      "Microsoft Power BI",
+      "Tableau Desktop Specialist"
+    ]
+  },
+  "Data Scientist": {
+    "name": "Data Scientist",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "SQL",
+      "Statistics",
+      "Pandas"
+    ],
+    "preferred_skills": [
+      "TensorFlow",
+      "PyTorch",
+      "Deep Learning",
+      "NLP",
+      "Spark"
+    ],
+    "keywords": [
+      "machine learning",
+      "data science",
+      "predictive modeling",
+      "feature engineering",
+      "statistical analysis",
+      "big data",
+      "experimentation"
+    ],
+    "tools": [
+      "Jupyter Notebook",
+      "Python",
+      "R",
+      "SQL",
+      "Git",
+      "AWS"
+    ],
+    "frameworks": [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "Pandas",
+      "Hugging Face"
+    ],
+    "certifications": [
+      "Google Professional ML Engineer",
+      "AWS Machine Learning Specialty",
+      "IBM Data Science Professional"
+    ]
+  },
+  "Data Engineer": {
+    "name": "Data Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Spark",
+      "Docker",
+      "Airflow"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Azure",
+      "Scala",
+      "Java",
+      "dbt"
+    ],
+    "keywords": [
+      "data pipelines",
+      "ETL",
+      "data warehouse",
+      "big data",
+      "streaming",
+      "data lake",
+      "data modeling",
+      "orchestration"
+    ],
+    "tools": [
+      "Airflow",
+      "Spark",
+      "Docker",
+      "AWS Glue",
+      "dbt",
+      "Git"
+    ],
+    "frameworks": [
+      "Apache Spark",
+      "Apache Kafka",
+      "Airflow",
+      "dbt",
+      "Delta Lake"
+    ],
+    "certifications": [
+      "AWS Certified Data Analytics",
+      "Google Professional Data Engineer",
+      "Databricks Certified"
+    ]
+  },
+  "Data Architect": {
+    "name": "Data Architect",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "Data Modeling",
+      "Cloud Computing",
+      "ETL"
+    ],
+    "preferred_skills": [
+      "Spark",
+      "Kafka",
+      "Docker",
+      "Terraform",
+      "NoSQL"
+    ],
+    "keywords": [
+      "data architecture",
+      "data governance",
+      "data modeling",
+      "data warehousing",
+      "master data management",
+      "data strategy"
+    ],
+    "tools": [
+      "SQL Server",
+      "PostgreSQL",
+      "AWS Redshift",
+      "Snowflake",
+      "ER/Studio"
+    ],
+    "frameworks": [
+      "Snowflake",
+      "AWS Redshift",
+      "Databricks",
+      "Informatica",
+      "Tableau"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Google Professional Data Engineer",
+      "Snowflake Certified Architect"
+    ]
+  },
+  "Business Intelligence Analyst": {
+    "name": "Business Intelligence Analyst",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Power BI",
+      "Excel",
+      "Python",
+      "Data Analysis"
+    ],
+    "preferred_skills": [
+      "Tableau",
+      "R",
+      "ETL",
+      "Data Modeling",
+      "Statistics"
+    ],
+    "keywords": [
+      "business intelligence",
+      "BI",
+      "reporting",
+      "dashboards",
+      "data visualization",
+      "KPI tracking",
+      "ad-hoc analysis"
+    ],
+    "tools": [
+      "Power BI",
+      "Tableau",
+      "Excel",
+      "SQL Server",
+      "SSRS"
+    ],
+    "frameworks": [
+      "Power BI",
+      "Tableau",
+      "SSRS",
+      "SSIS",
+      "Looker"
+    ],
+    "certifications": [
+      "Microsoft Certified: Power BI Data Analyst",
+      "Tableau Desktop Specialist",
+      "Google Data Analytics"
+    ]
+  },
+  "Analytics Engineer": {
+    "name": "Analytics Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "dbt",
+      "Git",
+      "Data Modeling"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "Spark",
+      "Docker",
+      "Snowflake",
+      "Terraform"
+    ],
+    "keywords": [
+      "analytics engineering",
+      "data transformation",
+      "dbt",
+      "data warehouse",
+      "metrics layer",
+      "data quality",
+      "documentation"
+    ],
+    "tools": [
+      "dbt",
+      "Snowflake",
+      "BigQuery",
+      "Git",
+      "SQLFluff"
+    ],
+    "frameworks": [
+      "dbt",
+      "Snowflake",
+      "BigQuery",
+      "Looker",
+      "Airflow"
+    ],
+    "certifications": [
+      "dbt Analytics Engineering",
+      "Snowflake Certified",
+      "Google Professional Data Engineer"
+    ]
+  },
+  "Business Analyst": {
+    "name": "Business Analyst",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Excel",
+      "Data Analysis",
+      "Business Analysis",
+      "Requirements Gathering"
+    ],
+    "preferred_skills": [
+      "Tableau",
+      "Power BI",
+      "Python",
+      "Agile",
+      "JIRA"
+    ],
+    "keywords": [
+      "business analysis",
+      "requirements",
+      "stakeholder management",
+      "process improvement",
+      "gap analysis",
+      "user stories",
+      "acceptance criteria"
+    ],
+    "tools": [
+      "Excel",
+      "JIRA",
+      "Confluence",
+      "Visio",
+      "SQL Server"
+    ],
+    "frameworks": [
+      "Tableau",
+      "Power BI",
+      "Microsoft Visio",
+      "JIRA",
+      "ServiceNow"
+    ],
+    "certifications": [
+      "Certified Business Analysis Professional",
+      "PMI-PBA",
+      "IIBA Certification"
+    ]
+  },
+  "BI Developer": {
+    "name": "BI Developer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Power BI",
+      "ETL",
+      "Python",
+      "Data Warehousing"
+    ],
+    "preferred_skills": [
+      "SSIS",
+      "SSRS",
+      "Azure",
+      "Data Modeling",
+      "DAX"
+    ],
+    "keywords": [
+      "business intelligence",
+      "data warehouse",
+      "ETL",
+      "reporting",
+      "dashboards",
+      "OLAP",
+      "dimensional modeling"
+    ],
+    "tools": [
+      "Power BI",
+      "SSRS",
+      "SSIS",
+      "SQL Server",
+      "Azure Data Factory"
+    ],
+    "frameworks": [
+      "Power BI",
+      "SSRS",
+      "SSIS",
+      "Azure Data Factory",
+      "Tableau"
+    ],
+    "certifications": [
+      "Microsoft Certified: Power BI Data Analyst",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "Machine Learning Engineer": {
+    "name": "Machine Learning Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "Docker",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "Kubernetes",
+      "AWS",
+      "MLOps",
+      "Scikit-learn"
+    ],
+    "keywords": [
+      "machine learning",
+      "ML models",
+      "model training",
+      "model deployment",
+      "feature engineering",
+      "MLOps",
+      "pipeline automation"
+    ],
+    "tools": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "MLflow",
+      "AWS SageMaker"
+    ],
+    "frameworks": [
+      "TensorFlow",
+      "PyTorch",
+      "Scikit-learn",
+      "MLflow",
+      "Kubeflow"
+    ],
+    "certifications": [
+      "Google Professional ML Engineer",
+      "AWS Machine Learning Specialty",
+      "Databricks Certified"
+    ]
+  },
+  "MLOps Engineer": {
+    "name": "MLOps Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Azure",
+      "Terraform",
+      "MLflow",
+      "Airflow"
+    ],
+    "keywords": [
+      "MLOps",
+      "machine learning operations",
+      "model deployment",
+      "CI/CD",
+      "model monitoring",
+      "feature store",
+      "retraining pipelines"
+    ],
+    "tools": [
+      "Docker",
+      "Kubernetes",
+      "MLflow",
+      "Airflow",
+      "AWS SageMaker"
+    ],
+    "frameworks": [
+      "MLflow",
+      "Kubeflow",
+      "Kubernetes",
+      "Airflow",
+      "Terraform"
+    ],
+    "certifications": [
+      "AWS Machine Learning Specialty",
+      "Certified Kubernetes Administrator",
+      "Google Professional ML Engineer"
+    ]
+  },
+  "NLP Engineer": {
+    "name": "NLP Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "Deep Learning",
+      "TensorFlow",
+      "PyTorch"
+    ],
+    "preferred_skills": [
+      "Hugging Face",
+      "SpaCy",
+      "BERT",
+      "Transformers",
+      "SQL"
+    ],
+    "keywords": [
+      "natural language processing",
+      "text classification",
+      "NER",
+      "sentiment analysis",
+      "language models",
+      "text generation",
+      "translation"
+    ],
+    "tools": [
+      "Jupyter Notebook",
+      "Python",
+      "Hugging Face",
+      "SpaCy",
+      "NLTK"
+    ],
+    "frameworks": [
+      "Hugging Face Transformers",
+      "TensorFlow",
+      "PyTorch",
+      "SpaCy",
+      "NLTK"
+    ],
+    "certifications": [
+      "Google Professional ML Engineer",
+      "AWS Machine Learning Specialty",
+      "IBM Data Science Professional"
+    ]
+  },
+  "Computer Vision Engineer": {
+    "name": "Computer Vision Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "Computer Vision",
+      "Deep Learning",
+      "OpenCV",
+      "PyTorch"
+    ],
+    "preferred_skills": [
+      "TensorFlow",
+      "CUDA",
+      "C++",
+      "Object Detection",
+      "Image Processing"
+    ],
+    "keywords": [
+      "computer vision",
+      "image processing",
+      "object detection",
+      "image segmentation",
+      "OCR",
+      "video analysis",
+      "3D reconstruction"
+    ],
+    "tools": [
+      "OpenCV",
+      "Python",
+      "PyTorch",
+      "NVIDIA GPUs",
+      "Docker"
+    ],
+    "frameworks": [
+      "OpenCV",
+      "TensorFlow",
+      "PyTorch",
+      "Detectron2",
+      "MMDetection"
+    ],
+    "certifications": [
+      "Google Professional ML Engineer",
+      "AWS Machine Learning Specialty",
+      "NVIDIA Deep Learning Institute"
+    ]
+  },
+  "Data Quality Analyst": {
+    "name": "Data Quality Analyst",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "Python",
+      "Data Analysis",
+      "Data Quality",
+      "Excel"
+    ],
+    "preferred_skills": [
+      "Great Expectations",
+      "dbt",
+      "Airflow",
+      "Tableau",
+      "R"
+    ],
+    "keywords": [
+      "data quality",
+      "data validation",
+      "data cleansing",
+      "data profiling",
+      "data governance",
+      "anomaly detection",
+      "data standards"
+    ],
+    "tools": [
+      "SQL",
+      "Python",
+      "Great Expectations",
+      "Excel",
+      "Talend"
+    ],
+    "frameworks": [
+      "Great Expectations",
+      "dbt",
+      "Talend",
+      "Informatica",
+      "Pandas"
+    ],
+    "certifications": [
+      "Google Data Analytics",
+      "CDMP",
+      "Tableau Desktop Specialist"
+    ]
+  },
+  "Quantitative Analyst": {
+    "name": "Quantitative Analyst",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "R",
+      "Statistics",
+      "SQL",
+      "Financial Modeling"
+    ],
+    "preferred_skills": [
+      "C++",
+      "Machine Learning",
+      "Stochastic Calculus",
+      "Bloomberg",
+      "MATLAB"
+    ],
+    "keywords": [
+      "quantitative finance",
+      "algorithmic trading",
+      "risk modeling",
+      "financial analysis",
+      "time series",
+      "portfolio optimization"
+    ],
+    "tools": [
+      "Python",
+      "R",
+      "Bloomberg Terminal",
+      "MATLAB",
+      "SQL"
+    ],
+    "frameworks": [
+      "NumPy",
+      "Pandas",
+      "Scikit-learn",
+      "QuantLib",
+      "TensorFlow"
+    ],
+    "certifications": [
+      "CFA",
+      "FRM",
+      "CQF",
+      "AWS Certified Developer"
+    ]
+  },
+  "Big Data Engineer": {
+    "name": "Big Data Engineer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Python",
+      "Spark",
+      "Hadoop",
+      "SQL",
+      "Java"
+    ],
+    "preferred_skills": [
+      "Scala",
+      "Kafka",
+      "Hive",
+      "AWS",
+      "Docker"
+    ],
+    "keywords": [
+      "big data",
+      "Hadoop",
+      "Spark",
+      "data lake",
+      "distributed computing",
+      "streaming",
+      "batch processing",
+      "scalable pipelines"
+    ],
+    "tools": [
+      "Apache Spark",
+      "Hadoop",
+      "Hive",
+      "AWS EMR",
+      "Databricks"
+    ],
+    "frameworks": [
+      "Apache Spark",
+      "Hadoop",
+      "Kafka",
+      "Flink",
+      "Presto"
+    ],
+    "certifications": [
+      "AWS Certified Big Data",
+      "Google Professional Data Engineer",
+      "Databricks Certified"
+    ]
+  },
+  "Database Administrator": {
+    "name": "Database Administrator",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Database Management",
+      "Backup & Recovery"
+    ],
+    "preferred_skills": [
+      "Oracle",
+      "SQL Server",
+      "MongoDB",
+      "Redis",
+      "Linux"
+    ],
+    "keywords": [
+      "database administration",
+      "backup",
+      "recovery",
+      "performance tuning",
+      "replication",
+      "security",
+      "high availability"
+    ],
+    "tools": [
+      "MySQL",
+      "PostgreSQL",
+      "Oracle",
+      "SQL Server",
+      "pgAdmin"
+    ],
+    "frameworks": [
+      "MySQL",
+      "PostgreSQL",
+      "Oracle",
+      "SQL Server",
+      "MongoDB"
+    ],
+    "certifications": [
+      "Oracle Certified Professional",
+      "Microsoft Certified",
+      "AWS Certified Database Specialty"
+    ]
+  },
+  "SQL Developer": {
+    "name": "SQL Developer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "SQL",
+      "MySQL",
+      "PostgreSQL",
+      "Database Design",
+      "Stored Procedures"
+    ],
+    "preferred_skills": [
+      "Oracle",
+      "SQL Server",
+      "Python",
+      "ETL",
+      "Data Modeling"
+    ],
+    "keywords": [
+      "SQL",
+      "database development",
+      "stored procedures",
+      "triggers",
+      "views",
+      "query optimization",
+      "data modeling"
+    ],
+    "tools": [
+      "SQL Server Management Studio",
+      "MySQL Workbench",
+      "pgAdmin",
+      "DBeaver",
+      "DataGrip"
+    ],
+    "frameworks": [
+      "SQL Server",
+      "MySQL",
+      "PostgreSQL",
+      "Oracle",
+      "SSIS"
+    ],
+    "certifications": [
+      "Oracle Certified Professional",
+      "Microsoft Certified",
+      "AWS Certified Developer"
+    ]
   },
   "AI Engineer": {
     "name": "AI Engineer",
     "category": "Artificial Intelligence",
-    "required_skills": ["Python", "Machine Learning", "TensorFlow", "PyTorch", "Deep Learning"],
-    "preferred_skills": ["NLP", "Computer Vision", "MLOps", "CUDA", "Docker"],
-    "keywords": ["machine learning", "deep learning", "neural networks", "AI", "model training", "feature engineering", "hyperparameter tuning"],
-    "tools": ["TensorFlow", "PyTorch", "Jupyter", "Docker", "MLflow", "Kubeflow"],
-    "frameworks": ["TensorFlow", "PyTorch", "Keras", "Scikit-learn", "Hugging Face"],
-    "certifications": ["AWS Machine Learning Specialty", "Google Cloud ML Engineer", "Azure AI Engineer"]
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "TensorFlow",
+      "PyTorch",
+      "Deep Learning"
+    ],
+    "preferred_skills": [
+      "NLP",
+      "Computer Vision",
+      "MLOps",
+      "Docker",
+      "Kubernetes"
+    ],
+    "keywords": [
+      "artificial intelligence",
+      "machine learning",
+      "deep learning",
+      "neural networks",
+      "model training",
+      "inference",
+      "deployment",
+      "AI products"
+    ],
+    "tools": [
+      "TensorFlow",
+      "PyTorch",
+      "Jupyter",
+      "Docker",
+      "MLflow"
+    ],
+    "frameworks": [
+      "TensorFlow",
+      "PyTorch",
+      "Keras",
+      "Scikit-learn",
+      "Hugging Face"
+    ],
+    "certifications": [
+      "AWS Machine Learning Specialty",
+      "Google Cloud ML Engineer",
+      "Azure AI Engineer"
+    ]
+  },
+  "AI Research Scientist": {
+    "name": "AI Research Scientist",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "Deep Learning",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "preferred_skills": [
+      "C++",
+      "CUDA",
+      "NLP",
+      "Computer Vision",
+      "Reinforcement Learning"
+    ],
+    "keywords": [
+      "AI research",
+      "paper implementation",
+      "experimentation",
+      "novel architectures",
+      "benchmarking",
+      "scientific method"
+    ],
+    "tools": [
+      "Jupyter Notebook",
+      "Python",
+      "PyTorch",
+      "Weights & Biases",
+      "Linux"
+    ],
+    "frameworks": [
+      "PyTorch",
+      "TensorFlow",
+      "Hugging Face",
+      "Weights & Biases",
+      "Ray"
+    ],
+    "certifications": [
+      "Google Cloud ML Engineer",
+      "NVIDIA Deep Learning Institute",
+      "AWS Machine Learning Specialty"
+    ]
+  },
+  "AI Product Manager": {
+    "name": "AI Product Manager",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Product Management",
+      "AI/ML",
+      "Agile",
+      "Data Analysis",
+      "Requirements Gathering"
+    ],
+    "preferred_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "JIRA",
+      "A/B Testing"
+    ],
+    "keywords": [
+      "AI product management",
+      "ML product lifecycle",
+      "model evaluation",
+      "ethical AI",
+      "product strategy",
+      "stakeholder alignment"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "ProductBoard",
+      "Miro",
+      "Figma"
+    ],
+    "frameworks": [
+      "Scrum",
+      "SAFe",
+      "Kanban",
+      "Notion",
+      "Linear"
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner",
+      "Google Product Management",
+      "AWS Certified Cloud Practitioner"
+    ]
+  },
+  "Prompt Engineer": {
+    "name": "Prompt Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "LLM",
+      "Data Analysis",
+      "API"
+    ],
+    "preferred_skills": [
+      "Machine Learning",
+      "Deep Learning",
+      "SQL",
+      "JavaScript",
+      "FastAPI"
+    ],
+    "keywords": [
+      "prompt engineering",
+      "LLM",
+      "GPT",
+      "Claude",
+      "chain of thought",
+      "few-shot",
+      "fine-tuning",
+      "RAG"
+    ],
+    "tools": [
+      "Jupyter Notebook",
+      "Python",
+      "OpenAI API",
+      "LangChain",
+      "Git"
+    ],
+    "frameworks": [
+      "LangChain",
+      "LlamaIndex",
+      "FastAPI",
+      "Hugging Face",
+      "Streamlit"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional",
+      "OpenAI Certified"
+    ]
+  },
+  "Robotics Engineer": {
+    "name": "Robotics Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "C++",
+      "Python",
+      "ROS",
+      "Machine Learning",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Computer Vision",
+      "SLAM",
+      "Control Systems",
+      "MATLAB",
+      "Docker"
+    ],
+    "keywords": [
+      "robotics",
+      "automation",
+      "control systems",
+      "path planning",
+      "sensor fusion",
+      "kinematics",
+      "perception"
+    ],
+    "tools": [
+      "ROS",
+      "Gazebo",
+      "MATLAB/Simulink",
+      "Python",
+      "Linux"
+    ],
+    "frameworks": [
+      "ROS",
+      "OpenCV",
+      "TensorFlow",
+      "MATLAB",
+      "PyTorch"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "NVIDIA Deep Learning Institute",
+      "Robotics Certification"
+    ]
+  },
+  "AI Infrastructure Engineer": {
+    "name": "AI Infrastructure Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "AWS",
+      "Azure",
+      "NVIDIA",
+      "C++"
+    ],
+    "keywords": [
+      "AI infrastructure",
+      "GPU computing",
+      "model serving",
+      "inference optimization",
+      "distributed training",
+      "ML clusters"
+    ],
+    "tools": [
+      "Docker",
+      "Kubernetes",
+      "NVIDIA Triton",
+      "AWS SageMaker",
+      "Terraform"
+    ],
+    "frameworks": [
+      "NVIDIA Triton",
+      "Kubernetes",
+      "Terraform",
+      "Airflow",
+      "MLflow"
+    ],
+    "certifications": [
+      "AWS Machine Learning Specialty",
+      "Certified Kubernetes Administrator",
+      "NVIDIA Deep Learning Institute"
+    ]
+  },
+  "Data Science Engineer": {
+    "name": "Data Science Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "Spark",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "Airflow",
+      "dbt",
+      "AWS",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "keywords": [
+      "data science engineering",
+      "ML pipelines",
+      "feature engineering",
+      "model deployment",
+      "data infrastructure",
+      "automation"
+    ],
+    "tools": [
+      "Python",
+      "Spark",
+      "Airflow",
+      "Docker",
+      "AWS SageMaker"
+    ],
+    "frameworks": [
+      "Scikit-learn",
+      "TensorFlow",
+      "PyTorch",
+      "Airflow",
+      "dbt"
+    ],
+    "certifications": [
+      "Google Professional Data Engineer",
+      "AWS Machine Learning Specialty",
+      "Databricks Certified"
+    ]
+  },
+  "AI Ethics Researcher": {
+    "name": "AI Ethics Researcher",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Machine Learning",
+      "Python",
+      "Statistics",
+      "Ethics",
+      "Data Analysis"
+    ],
+    "preferred_skills": [
+      "NLP",
+      "Computer Vision",
+      "Fairness Metrics",
+      "Explainable AI",
+      "R"
+    ],
+    "keywords": [
+      "AI ethics",
+      "fairness",
+      "bias detection",
+      "explainability",
+      "responsible AI",
+      "AI governance",
+      "algorithmic audit"
+    ],
+    "tools": [
+      "Jupyter Notebook",
+      "Python",
+      "IBM AI Fairness 360",
+      "LIME",
+      "SHAP"
+    ],
+    "frameworks": [
+      "SHAP",
+      "LIME",
+      "IBM AI Fairness 360",
+      "Fairlearn",
+      "Alibi"
+    ],
+    "certifications": [
+      "Google Cloud Professional",
+      "AWS Certified Developer",
+      "Certified Ethical AI Practitioner"
+    ]
+  },
+  "Conversational AI Engineer": {
+    "name": "Conversational AI Engineer",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "NLP",
+      "LLM",
+      "FastAPI",
+      "Machine Learning"
+    ],
+    "preferred_skills": [
+      "TypeScript",
+      "Docker",
+      "Rasa",
+      "Dialogflow",
+      "AWS"
+    ],
+    "keywords": [
+      "conversational AI",
+      "chatbots",
+      "voice assistants",
+      "dialogue management",
+      "NLU",
+      "intent recognition",
+      "entity extraction"
+    ],
+    "tools": [
+      "Rasa",
+      "Dialogflow",
+      "AWS Lex",
+      "Python",
+      "Docker"
+    ],
+    "frameworks": [
+      "Rasa",
+      "Dialogflow",
+      "LangChain",
+      "FastAPI",
+      "Hugging Face"
+    ],
+    "certifications": [
+      "AWS Certified Developer",
+      "Google Cloud Professional",
+      "Rasa Certified"
+    ]
   },
   "Cloud Engineer": {
     "name": "Cloud Engineer",
-    "category": "Cloud Computing",
-    "required_skills": ["AWS", "Azure", "Docker", "Kubernetes", "Linux"],
-    "preferred_skills": ["Terraform", "Ansible", "Jenkins", "Python", "GCP"],
-    "keywords": ["cloud infrastructure", "DevOps", "CI/CD", "infrastructure as code", "containers", "microservices", "high availability"],
-    "tools": ["AWS Console", "Azure Portal", "Terraform", "Ansible", "Docker", "Kubernetes"],
-    "frameworks": ["Serverless Framework", "Terraform", "CloudFormation", "ARM Templates"],
-    "certifications": ["AWS Solutions Architect", "Azure Administrator", "Google Cloud Engineer", "Kubernetes Administrator"]
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Azure",
+      "GCP",
+      "Ansible",
+      "Jenkins"
+    ],
+    "keywords": [
+      "cloud infrastructure",
+      "cloud architecture",
+      "IaC",
+      "containers",
+      "orchestration",
+      "high availability",
+      "disaster recovery"
+    ],
+    "tools": [
+      "AWS Console",
+      "Azure Portal",
+      "Docker",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "frameworks": [
+      "Serverless Framework",
+      "Terraform",
+      "CloudFormation",
+      "ARM Templates"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Azure Administrator",
+      "Google Cloud Engineer",
+      "Certified Kubernetes Administrator"
+    ]
+  },
+  "AWS Solutions Architect": {
+    "name": "AWS Solutions Architect",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "AWS",
+      "Cloud Architecture",
+      "Networking",
+      "Security",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "CI/CD"
+    ],
+    "keywords": [
+      "AWS",
+      "cloud architecture",
+      "VPC",
+      "EC2",
+      "S3",
+      "Lambda",
+      "RDS",
+      "CloudFront",
+      "high availability"
+    ],
+    "tools": [
+      "AWS Console",
+      "CloudFormation",
+      "Terraform",
+      "AWS CLI",
+      "Git"
+    ],
+    "frameworks": [
+      "CloudFormation",
+      "Terraform",
+      "AWS CDK",
+      "SAM",
+      "ECS"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Associate",
+      "AWS Solutions Architect Professional",
+      "AWS Security Specialty"
+    ]
+  },
+  "Azure Cloud Engineer": {
+    "name": "Azure Cloud Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Azure",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "AWS",
+      "PowerShell",
+      "CI/CD",
+      "C#"
+    ],
+    "keywords": [
+      "Azure",
+      "cloud infrastructure",
+      "Azure DevOps",
+      "ARM templates",
+      "virtual networks",
+      "Azure AD",
+      "storage accounts"
+    ],
+    "tools": [
+      "Azure Portal",
+      "Azure CLI",
+      "Azure DevOps",
+      "Docker",
+      "Terraform"
+    ],
+    "frameworks": [
+      "Azure DevOps",
+      "ARM Templates",
+      "Bicep",
+      "Terraform",
+      "AKS"
+    ],
+    "certifications": [
+      "Azure Administrator",
+      "Azure Solutions Architect",
+      "Azure DevOps Engineer"
+    ]
+  },
+  "Google Cloud Engineer": {
+    "name": "Google Cloud Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Google Cloud",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "AWS",
+      "Bash",
+      "CI/CD",
+      "SQL"
+    ],
+    "keywords": [
+      "Google Cloud",
+      "GCP",
+      "BigQuery",
+      "Cloud Functions",
+      "Compute Engine",
+      "GKE",
+      "Cloud Storage"
+    ],
+    "tools": [
+      "GCP Console",
+      "gcloud CLI",
+      "Docker",
+      "Kubernetes",
+      "Terraform"
+    ],
+    "frameworks": [
+      "Cloud Functions",
+      "GKE",
+      "Terraform",
+      "Cloud Build",
+      "Pulumi"
+    ],
+    "certifications": [
+      "Google Cloud Professional",
+      "Google Cloud Associate",
+      "Certified Kubernetes Administrator"
+    ]
+  },
+  "DevOps Engineer": {
+    "name": "DevOps Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Linux",
+      "Docker",
+      "Kubernetes",
+      "CI/CD",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Ansible",
+      "AWS",
+      "Jenkins",
+      "Bash"
+    ],
+    "keywords": [
+      "DevOps",
+      "CI/CD",
+      "automation",
+      "infrastructure as code",
+      "monitoring",
+      "deployment",
+      "incident response",
+      "post-mortem"
+    ],
+    "tools": [
+      "Jenkins",
+      "GitLab CI",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "Ansible"
+    ],
+    "frameworks": [
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "ArgoCD",
+      "Terraform"
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator",
+      "AWS DevOps Professional",
+      "HashiCorp Terraform Associate"
+    ]
+  },
+  "Site Reliability Engineer": {
+    "name": "Site Reliability Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Linux",
+      "Python",
+      "Kubernetes",
+      "Monitoring",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "AWS"
+    ],
+    "keywords": [
+      "SRE",
+      "reliability engineering",
+      "SLI/SLO",
+      "error budgets",
+      "observability",
+      "incident response",
+      "toil reduction",
+      "post-mortem"
+    ],
+    "tools": [
+      "Prometheus",
+      "Grafana",
+      "PagerDuty",
+      "Kubernetes",
+      "Linux"
+    ],
+    "frameworks": [
+      "Prometheus",
+      "Grafana",
+      "Datadog",
+      "PagerDuty",
+      "Terraform"
+    ],
+    "certifications": [
+      "Google Cloud Professional",
+      "Certified Kubernetes Administrator",
+      "AWS Solutions Architect"
+    ]
+  },
+  "Platform Engineer": {
+    "name": "Platform Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Kubernetes",
+      "Docker",
+      "Go",
+      "Terraform",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Python",
+      "AWS",
+      "CI/CD",
+      "Monitoring",
+      "ArgoCD"
+    ],
+    "keywords": [
+      "platform engineering",
+      "internal developer platform",
+      "IDP",
+      "self-service",
+      "infrastructure abstraction",
+      "golden paths",
+      "developer experience"
+    ],
+    "tools": [
+      "Kubernetes",
+      "ArgoCD",
+      "Terraform",
+      "Crossplane",
+      "Backstage"
+    ],
+    "frameworks": [
+      "Kubernetes",
+      "ArgoCD",
+      "Crossplane",
+      "Backstage",
+      "Terraform"
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator",
+      "AWS Solutions Architect",
+      "HashiCorp Terraform Associate"
+    ]
+  },
+  "Release Engineer": {
+    "name": "Release Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "CI/CD",
+      "Git",
+      "Docker",
+      "Linux",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Jenkins",
+      "Kubernetes",
+      "Terraform",
+      "Bash",
+      "Ansible"
+    ],
+    "keywords": [
+      "release management",
+      "CI/CD pipelines",
+      "deployment",
+      "versioning",
+      "rollback",
+      "release coordination",
+      "change management"
+    ],
+    "tools": [
+      "Jenkins",
+      "GitLab CI",
+      "Docker",
+      "Kubernetes",
+      "Jira"
+    ],
+    "frameworks": [
+      "Jenkins",
+      "GitLab CI",
+      "GitHub Actions",
+      "ArgoCD",
+      "Octopus Deploy"
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator",
+      "AWS Certified Developer",
+      "HashiCorp Terraform Associate"
+    ]
+  },
+  "Infrastructure Engineer": {
+    "name": "Infrastructure Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Linux",
+      "Networking",
+      "Terraform",
+      "Docker",
+      "Python"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Azure",
+      "Ansible",
+      "Kubernetes",
+      "Bash"
+    ],
+    "keywords": [
+      "infrastructure",
+      "data center",
+      "networking",
+      "virtualization",
+      "storage",
+      "server management",
+      "capacity planning",
+      "automation"
+    ],
+    "tools": [
+      "Linux",
+      "VMware",
+      "Terraform",
+      "Ansible",
+      "AWS Console"
+    ],
+    "frameworks": [
+      "Terraform",
+      "Ansible",
+      "VMware",
+      "Proxmox",
+      "Kubernetes"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Azure Administrator",
+      "VMware Certified Professional"
+    ]
+  },
+  "Cloud Security Engineer": {
+    "name": "Cloud Security Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "AWS",
+      "Azure",
+      "Security",
+      "Linux",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "SIEM",
+      "IAM"
+    ],
+    "keywords": [
+      "cloud security",
+      "IAM",
+      "security groups",
+      "encryption",
+      "compliance",
+      "vulnerability scanning",
+      "incident response",
+      "zero trust"
+    ],
+    "tools": [
+      "AWS Console",
+      "Azure Portal",
+      "Terraform",
+      "SIEM tools",
+      "Burp Suite"
+    ],
+    "frameworks": [
+      "AWS Security Hub",
+      "Terraform",
+      "CloudTrail",
+      "GuardDuty",
+      "Prisma Cloud"
+    ],
+    "certifications": [
+      "AWS Security Specialty",
+      "Azure Security Engineer",
+      "Certified Information Systems Security Professional"
+    ]
+  },
+  "DevSecOps Engineer": {
+    "name": "DevSecOps Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Linux",
+      "Docker",
+      "CI/CD",
+      "Python",
+      "Security"
+    ],
+    "preferred_skills": [
+      "Kubernetes",
+      "Terraform",
+      "SAST",
+      "DAST",
+      "SIEM"
+    ],
+    "keywords": [
+      "DevSecOps",
+      "shift-left security",
+      "SAST",
+      "DAST",
+      "container security",
+      "supply chain security",
+      "security automation",
+      "compliance-as-code"
+    ],
+    "tools": [
+      "SonarQube",
+      "Trivy",
+      "Snyk",
+      "OWASP ZAP",
+      "GitHub Advanced Security"
+    ],
+    "frameworks": [
+      "SonarQube",
+      "Trivy",
+      "Snyk",
+      "Checkmarx",
+      "HashiCorp Vault"
+    ],
+    "certifications": [
+      "Certified Kubernetes Security Specialist",
+      "AWS Security Specialty",
+      "CompTIA Security+"
+    ]
+  },
+  "Kubernetes Engineer": {
+    "name": "Kubernetes Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Kubernetes",
+      "Docker",
+      "Linux",
+      "YAML",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Helm",
+      "Istio",
+      "ArgoCD",
+      "Terraform",
+      "Go"
+    ],
+    "keywords": [
+      "Kubernetes",
+      "container orchestration",
+      "microservices",
+      "service mesh",
+      "Helm",
+      "operators",
+      "cluster management",
+      "autoscaling"
+    ],
+    "tools": [
+      "kubectl",
+      "Helm",
+      "ArgoCD",
+      "Lens",
+      "k9s"
+    ],
+    "frameworks": [
+      "Kubernetes",
+      "Helm",
+      "Istio",
+      "ArgoCD",
+      "Crossplane"
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator",
+      "Certified Kubernetes Security Specialist",
+      "AWS Certified Solutions Architect"
+    ]
+  },
+  "Cloud Architect": {
+    "name": "Cloud Architect",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "AWS",
+      "Azure",
+      "Cloud Architecture",
+      "Security",
+      "Networking"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Python",
+      "Microservices"
+    ],
+    "keywords": [
+      "cloud architecture",
+      "multi-cloud",
+      "hybrid cloud",
+      "cost optimization",
+      "governance",
+      "migration",
+      "scalability",
+      "resilience"
+    ],
+    "tools": [
+      "AWS Console",
+      "Azure Portal",
+      "Terraform",
+      "CloudHealth",
+      "AWS Well-Architected Tool"
+    ],
+    "frameworks": [
+      "CloudFormation",
+      "Terraform",
+      "ARM Templates",
+      "AWS CDK",
+      "Pulumi"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Professional",
+      "Azure Solutions Architect",
+      "Google Cloud Professional"
+    ]
+  },
+  "Cyber Security Analyst": {
+    "name": "Cyber Security Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Security",
+      "Networking",
+      "Linux",
+      "SIEM",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Firewall",
+      "IDS/IPS",
+      "Incident Response",
+      "OSINT",
+      "Bash"
+    ],
+    "keywords": [
+      "cybersecurity",
+      "threat analysis",
+      "vulnerability assessment",
+      "risk management",
+      "compliance",
+      "SOC",
+      "incident handling"
+    ],
+    "tools": [
+      "SIEM",
+      "Splunk",
+      "Wireshark",
+      "Nessus",
+      "Linux",
+      "Firewalls"
+    ],
+    "frameworks": [
+      "Splunk",
+      "ELK Stack",
+      "Suricata",
+      "Snort",
+      "OSSEC"
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "Certified Ethical Hacker",
+      "CISSP"
+    ]
+  },
+  "Penetration Tester": {
+    "name": "Penetration Tester",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Penetration Testing",
+      "Linux",
+      "Networking",
+      "Python",
+      "OWASP"
+    ],
+    "preferred_skills": [
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Kali Linux",
+      "Bash"
+    ],
+    "keywords": [
+      "penetration testing",
+      "ethical hacking",
+      "exploitation",
+      "vulnerability scanning",
+      "social engineering",
+      "wireless testing",
+      "web app security"
+    ],
+    "tools": [
+      "Kali Linux",
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Wireshark"
+    ],
+    "frameworks": [
+      "Burp Suite",
+      "Metasploit",
+      "OWASP ZAP",
+      "SQLMap",
+      "Cobalt Strike"
+    ],
+    "certifications": [
+      "Certified Ethical Hacker",
+      "OSCP",
+      "CompTIA PenTest+",
+      "CREST"
+    ]
+  },
+  "Ethical Hacker": {
+    "name": "Ethical Hacker",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Penetration Testing",
+      "Linux",
+      "Python",
+      "Networking",
+      "Web Security"
+    ],
+    "preferred_skills": [
+      "Burp Suite",
+      "Metasploit",
+      "Kali Linux",
+      "OWASP",
+      "Cryptography"
+    ],
+    "keywords": [
+      "ethical hacking",
+      "bug bounty",
+      "exploitation",
+      "reconnaissance",
+      "privilege escalation",
+      "web application security",
+      "network hacking"
+    ],
+    "tools": [
+      "Kali Linux",
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Gobuster"
+    ],
+    "frameworks": [
+      "Metasploit",
+      "Burp Suite",
+      "SQLMap",
+      "Nikto",
+      "Aircrack-ng"
+    ],
+    "certifications": [
+      "Certified Ethical Hacker",
+      "OSCP",
+      "Bugcrowd University",
+      "CompTIA Security+"
+    ]
+  },
+  "SOC Analyst": {
+    "name": "SOC Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "SIEM",
+      "Networking",
+      "Linux",
+      "Security",
+      "Python"
+    ],
+    "preferred_skills": [
+      "Splunk",
+      "Incident Response",
+      "Threat Intelligence",
+      "OSINT",
+      "Bash"
+    ],
+    "keywords": [
+      "SOC",
+      "security operations",
+      "incident detection",
+      "log analysis",
+      "threat hunting",
+      "escalation",
+      "forensics",
+      "playbook execution"
+    ],
+    "tools": [
+      "Splunk",
+      "QRadar",
+      "ArcSight",
+      "Wireshark",
+      "Linux"
+    ],
+    "frameworks": [
+      "Splunk",
+      "ELK Stack",
+      "QRadar",
+      "Cortex XDR",
+      "CrowdStrike"
+    ],
+    "certifications": [
+      "CompTIA Security+",
+      "Splunk Certified Power User",
+      "Certified SOC Analyst"
+    ]
+  },
+  "Security Engineer": {
+    "name": "Security Engineer",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Security",
+      "Python",
+      "Linux",
+      "Networking",
+      "SIEM"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Firewall",
+      "IDS/IPS"
+    ],
+    "keywords": [
+      "security engineering",
+      "security architecture",
+      "firewall management",
+      "IDS/IPS",
+      "hardening",
+      "encryption",
+      "access control",
+      "zero trust"
+    ],
+    "tools": [
+      "SIEM",
+      "Firewall appliances",
+      "Linux",
+      "Docker",
+      "AWS Security Hub"
+    ],
+    "frameworks": [
+      "Splunk",
+      "ELK Stack",
+      "HashiCorp Vault",
+      "CrowdStrike",
+      "Palo Alto"
+    ],
+    "certifications": [
+      "Certified Information Systems Security Professional",
+      "AWS Security Specialty",
+      "CompTIA Security+"
+    ]
+  },
+  "Application Security Engineer": {
+    "name": "Application Security Engineer",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "SAST",
+      "DAST",
+      "Python",
+      "Security",
+      "CI/CD"
+    ],
+    "preferred_skills": [
+      "Java",
+      "JavaScript",
+      "OWASP",
+      "Docker",
+      "Kubernetes"
+    ],
+    "keywords": [
+      "application security",
+      "secure code review",
+      "SAST",
+      "DAST",
+      "vulnerability management",
+      "SDLC",
+      "threat modeling",
+      "security testing"
+    ],
+    "tools": [
+      "SonarQube",
+      "Checkmarx",
+      "Fortify",
+      "OWASP ZAP",
+      "Burp Suite"
+    ],
+    "frameworks": [
+      "SonarQube",
+      "Checkmarx",
+      "Snyk",
+      "OWASP ZAP",
+      "Contrast Security"
+    ],
+    "certifications": [
+      "Certified Application Security Specialist",
+      "AWS Security Specialty",
+      "Certified Secure Software Lifecycle Professional"
+    ]
+  },
+  "Incident Response Analyst": {
+    "name": "Incident Response Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Incident Response",
+      "Forensics",
+      "Linux",
+      "Networking",
+      "Python"
+    ],
+    "preferred_skills": [
+      "SIEM",
+      "Malware Analysis",
+      "OSINT",
+      "Bash",
+      "Windows"
+    ],
+    "keywords": [
+      "incident response",
+      "digital forensics",
+      "malware analysis",
+      "threat hunting",
+      "evidence collection",
+      "chain of custody",
+      "recovery",
+      "post-incident"
+    ],
+    "tools": [
+      "EnCase",
+      "FTK",
+      "Volatility",
+      "Splunk",
+      "Wireshark"
+    ],
+    "frameworks": [
+      "EnCase",
+      "Volatility",
+      "YARA",
+      "Cuckoo Sandbox",
+      "Splunk"
+    ],
+    "certifications": [
+      "Certified Incident Handler",
+      "GIAC Certified Incident Handler",
+      "CompTIA Security+"
+    ]
+  },
+  "Malware Analyst": {
+    "name": "Malware Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Malware Analysis",
+      "Reverse Engineering",
+      "Python",
+      "C",
+      "Assembly"
+    ],
+    "preferred_skills": [
+      "IDA Pro",
+      "Ghidra",
+      "OllyDbg",
+      "Linux",
+      "C++"
+    ],
+    "keywords": [
+      "malware analysis",
+      "reverse engineering",
+      "static analysis",
+      "dynamic analysis",
+      "decompilation",
+      "IOC extraction",
+      "threat intelligence"
+    ],
+    "tools": [
+      "IDA Pro",
+      "Ghidra",
+      "OllyDbg",
+      "Wireshark",
+      "PE Explorer"
+    ],
+    "frameworks": [
+      "IDA Pro",
+      "Ghidra",
+      "Cuckoo Sandbox",
+      "YARA",
+      "PEiD"
+    ],
+    "certifications": [
+      "GIAC Malware Analyst",
+      "Certified Ethical Hacker",
+      "CompTIA Security+"
+    ]
+  },
+  "Threat Intelligence Analyst": {
+    "name": "Threat Intelligence Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Threat Intelligence",
+      "OSINT",
+      "Python",
+      "Networking",
+      "Security"
+    ],
+    "preferred_skills": [
+      "SIEM",
+      "Malware Analysis",
+      "Scripting",
+      "CTI Frameworks",
+      "Bash"
+    ],
+    "keywords": [
+      "threat intelligence",
+      "CTI",
+      "MITRE ATT&CK",
+      "threat modeling",
+      "indicators of compromise",
+      "dark web monitoring",
+      "attribution"
+    ],
+    "tools": [
+      "MISP",
+      "OpenCTI",
+      "VirusTotal",
+      "Shodan",
+      "Splunk"
+    ],
+    "frameworks": [
+      "MISP",
+      "OpenCTI",
+      "STIX/TAXII",
+      "YARA",
+      "Sigma"
+    ],
+    "certifications": [
+      "GIAC Cyber Threat Intelligence",
+      "Certified Threat Intelligence Analyst",
+      "CompTIA Security+"
+    ]
+  },
+  "GRC Analyst": {
+    "name": "GRC Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Compliance",
+      "Risk Management",
+      "Security",
+      "Audit",
+      "Excel"
+    ],
+    "preferred_skills": [
+      "ISO 27001",
+      "SOC 2",
+      "GDPR",
+      "NIST",
+      "SIEM"
+    ],
+    "keywords": [
+      "governance",
+      "risk",
+      "compliance",
+      "audit",
+      "ISO 27001",
+      "SOC 2",
+      "GDPR",
+      "NIST",
+      "policy development",
+      "risk assessment"
+    ],
+    "tools": [
+      "GRC platforms",
+      "Excel",
+      "SharePoint",
+      "ServiceNow",
+      "JIRA"
+    ],
+    "frameworks": [
+      "ServiceNow GRC",
+      "OneTrust",
+      "RSA Archer",
+      "LogicGate",
+      "Hyperproof"
+    ],
+    "certifications": [
+      "Certified Information Systems Auditor",
+      "ISO 27001 Lead Implementer",
+      "Certified Risk Manager"
+    ]
+  },
+  "Cloud Security Architect": {
+    "name": "Cloud Security Architect",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "AWS",
+      "Azure",
+      "Security",
+      "Linux",
+      "Python",
+      "IAM",
+      "Zero Trust Architecture"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "SIEM",
+      "GCP"
+    ],
+    "keywords": [
+      "cloud security",
+      "IAM",
+      "security architecture",
+      "zero trust",
+      "encryption",
+      "compliance",
+      "security design",
+      "risk assessment",
+      "threat modeling"
+    ],
+    "tools": [
+      "AWS Console",
+      "Azure Portal",
+      "Terraform",
+      "SIEM tools",
+      "Palo Alto"
+    ],
+    "frameworks": [
+      "AWS Security Hub",
+      "Terraform",
+      "CloudTrail",
+      "GuardDuty",
+      "Prisma Cloud"
+    ],
+    "certifications": [
+      "AWS Security Specialty",
+      "Azure Security Engineer",
+      "Certified Cloud Security Professional"
+    ]
+  },
+  "Network Engineer": {
+    "name": "Network Engineer",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Networking",
+      "Linux",
+      "TCP/IP",
+      "DNS",
+      "Firewall"
+    ],
+    "preferred_skills": [
+      "Cisco",
+      "Python",
+      "VMware",
+      "Wireless",
+      "VPN"
+    ],
+    "keywords": [
+      "networking",
+      "routing",
+      "switching",
+      "firewall",
+      "network security",
+      "troubleshooting",
+      "VLAN",
+      "load balancing"
+    ],
+    "tools": [
+      "Cisco Router/Switch",
+      "Wireshark",
+      "GNS3",
+      "SolarWinds",
+      "PuTTY"
+    ],
+    "frameworks": [
+      "Cisco IOS",
+      "Juniper JunOS",
+      "Palo Alto",
+      "F5",
+      "pfSense"
+    ],
+    "certifications": [
+      "Cisco CCNA",
+      "CompTIA Network+",
+      "Juniper JNCIA"
+    ]
+  },
+  "Network Administrator": {
+    "name": "Network Administrator",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Networking",
+      "Linux",
+      "Windows Server",
+      "DNS",
+      "DHCP"
+    ],
+    "preferred_skills": [
+      "Cisco",
+      "Firewall",
+      "VMware",
+      "Python",
+      "Monitoring"
+    ],
+    "keywords": [
+      "network administration",
+      "monitoring",
+      "troubleshooting",
+      "configuration management",
+      "upgrades",
+      "patch management",
+      "documentation"
+    ],
+    "tools": [
+      "Cisco",
+      "SolarWinds",
+      "Nagios",
+      "Wireshark",
+      "Active Directory"
+    ],
+    "frameworks": [
+      "Cisco IOS",
+      "Windows Server",
+      "Linux",
+      "VMware",
+      "Nagios"
+    ],
+    "certifications": [
+      "Cisco CCNA",
+      "CompTIA Network+",
+      "CompTIA Server+"
+    ]
+  },
+  "Systems Administrator": {
+    "name": "Systems Administrator",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Linux",
+      "Windows Server",
+      "Networking",
+      "Active Directory",
+      "Shell Scripting"
+    ],
+    "preferred_skills": [
+      "VMware",
+      "Docker",
+      "Python",
+      "Monitoring",
+      "Backup"
+    ],
+    "keywords": [
+      "system administration",
+      "server management",
+      "user management",
+      "backup",
+      "patch management",
+      "security hardening",
+      "monitoring"
+    ],
+    "tools": [
+      "Linux CLI",
+      "Active Directory",
+      "VMware",
+      "Nagios",
+      "Ansible"
+    ],
+    "frameworks": [
+      "VMware",
+      "Docker",
+      "Ansible",
+      "Nagios",
+      "Zabbix"
+    ],
+    "certifications": [
+      "Linux Foundation Certified System Administrator",
+      "CompTIA Server+",
+      "Microsoft Certified"
+    ]
+  },
+  "Linux Administrator": {
+    "name": "Linux Administrator",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Linux",
+      "Shell Scripting",
+      "Networking",
+      "Security",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "Ansible",
+      "Python",
+      "Kubernetes",
+      "Monitoring",
+      "Backup"
+    ],
+    "keywords": [
+      "Linux",
+      "server administration",
+      "shell scripting",
+      "security hardening",
+      "performance tuning",
+      "package management",
+      "systemd",
+      "cron"
+    ],
+    "tools": [
+      "Linux CLI",
+      "Ansible",
+      "Nagios",
+      "Zabbix",
+      "Docker"
+    ],
+    "frameworks": [
+      "Ansible",
+      "Docker",
+      "Kubernetes",
+      "Nagios",
+      "Zabbix"
+    ],
+    "certifications": [
+      "Linux Foundation Certified System Administrator",
+      "Red Hat Certified System Administrator",
+      "CompTIA Linux+"
+    ]
+  },
+  "Windows System Administrator": {
+    "name": "Windows System Administrator",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Windows Server",
+      "Active Directory",
+      "PowerShell",
+      "Networking",
+      "DNS"
+    ],
+    "preferred_skills": [
+      "Azure",
+      "VMware",
+      "Exchange",
+      "Group Policy",
+      "Docker"
+    ],
+    "keywords": [
+      "Windows Server",
+      "Active Directory",
+      "PowerShell",
+      "Group Policy",
+      "IIS",
+      "DNS",
+      "DHCP",
+      "user management"
+    ],
+    "tools": [
+      "Windows Server",
+      "Active Directory",
+      "PowerShell",
+      "VMware",
+      "Azure Portal"
+    ],
+    "frameworks": [
+      "PowerShell",
+      "System Center",
+      "Azure",
+      "VMware",
+      "Exchange"
+    ],
+    "certifications": [
+      "Microsoft Certified: Windows Server",
+      "Azure Administrator",
+      "CompTIA Server+"
+    ]
+  },
+  "System Engineer": {
+    "name": "System Engineer",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Linux",
+      "Windows Server",
+      "Networking",
+      "Cloud Computing",
+      "Security"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "Ansible",
+      "Terraform",
+      "Python"
+    ],
+    "keywords": [
+      "systems engineering",
+      "infrastructure",
+      "integration",
+      "system design",
+      "performance optimization",
+      "automation",
+      "documentation"
+    ],
+    "tools": [
+      "Linux",
+      "Windows Server",
+      "VMware",
+      "AWS",
+      "Docker"
+    ],
+    "frameworks": [
+      "Docker",
+      "Kubernetes",
+      "Ansible",
+      "Terraform",
+      "VMware"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Azure Administrator",
+      "Linux Foundation Certified"
+    ]
+  },
+  "Wireless Network Engineer": {
+    "name": "Wireless Network Engineer",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Wireless",
+      "Networking",
+      "Cisco",
+      "Linux",
+      "Security"
+    ],
+    "preferred_skills": [
+      "Wi-Fi",
+      "Python",
+      "Firewall",
+      "Monitoring",
+      "VLAN"
+    ],
+    "keywords": [
+      "wireless networking",
+      "Wi-Fi",
+      "802.11",
+      "RF planning",
+      "wireless security",
+      "access points",
+      "site survey",
+      "spectrum analysis"
+    ],
+    "tools": [
+      "Cisco WLC",
+      "Ekahau",
+      "Wireshark",
+      "Nmap",
+      "SolarWinds"
+    ],
+    "frameworks": [
+      "Cisco WLC",
+      "Aruba",
+      "Ubiquiti",
+      "Ekahau",
+      "Wireshark"
+    ],
+    "certifications": [
+      "Cisco CCNA Wireless",
+      "CWNA Certified Wireless Network Administrator",
+      "CompTIA Network+"
+    ]
+  },
+  "Telecom Engineer": {
+    "name": "Telecom Engineer",
+    "category": "Networking & Systems",
+    "required_skills": [
+      "Networking",
+      "Telecommunications",
+      "Linux",
+      "Python",
+      "5G"
+    ],
+    "preferred_skills": [
+      "VoIP",
+      "SIP",
+      "Wireless",
+      "Fiber",
+      "Cloud"
+    ],
+    "keywords": [
+      "telecommunications",
+      "VoIP",
+      "5G",
+      "LTE",
+      "fiber optics",
+      "network design",
+      "SIP trunking",
+      "carrier services"
+    ],
+    "tools": [
+      "VoIP Systems",
+      "SIP Servers",
+      "Linux",
+      "Wireshark",
+      "Nmap"
+    ],
+    "frameworks": [
+      "Cisco",
+      "Asterisk",
+      "FreeSWITCH",
+      "Avaya",
+      "Mitel"
+    ],
+    "certifications": [
+      "Cisco CCNA",
+      "CompTIA Network+",
+      "Avaya Certified Support Specialist"
+    ]
+  },
+  "QA Engineer": {
+    "name": "QA Engineer",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Manual Testing",
+      "Test Cases",
+      "Bug Reporting",
+      "SQL",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Selenium",
+      "JIRA",
+      "API Testing",
+      "Python",
+      "Agile"
+    ],
+    "keywords": [
+      "quality assurance",
+      "manual testing",
+      "test planning",
+      "test cases",
+      "defect tracking",
+      "regression testing",
+      "UAT",
+      "exploratory testing"
+    ],
+    "tools": [
+      "JIRA",
+      "TestRail",
+      "Postman",
+      "SQL Server",
+      "Git"
+    ],
+    "frameworks": [
+      "Selenium",
+      "TestRail",
+      "JIRA",
+      "Zephyr",
+      "Postman"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "Certified Software Tester",
+      "AWS Certified Developer"
+    ]
+  },
+  "Automation Tester": {
+    "name": "Automation Tester",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Selenium",
+      "Python",
+      "Java",
+      "Git",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Cypress",
+      "Playwright",
+      "REST API",
+      "Docker",
+      "Jenkins"
+    ],
+    "keywords": [
+      "test automation",
+      "automation framework",
+      "CI/CD testing",
+      "regression testing",
+      "test scripting",
+      "code coverage",
+      "parallel testing"
+    ],
+    "tools": [
+      "Selenium",
+      "PyCharm",
+      "VS Code",
+      "Git",
+      "Jenkins"
+    ],
+    "frameworks": [
+      "Selenium",
+      "Pytest",
+      "JUnit",
+      "TestNG",
+      "Cucumber"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "Selenium Certified Professional",
+      "AWS Certified Developer"
+    ]
+  },
+  "SDET": {
+    "name": "SDET",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Java",
+      "Selenium",
+      "Python",
+      "Git",
+      "API Testing"
+    ],
+    "preferred_skills": [
+      "Cypress",
+      "Playwright",
+      "Docker",
+      "Kubernetes",
+      "Jenkins"
+    ],
+    "keywords": [
+      "SDET",
+      "software development engineer in test",
+      "test automation",
+      "code quality",
+      "performance testing",
+      "test architecture",
+      "CI/CD testing"
+    ],
+    "tools": [
+      "IntelliJ IDEA",
+      "VS Code",
+      "Jenkins",
+      "Selenium Grid",
+      "Git"
+    ],
+    "frameworks": [
+      "Selenium",
+      "TestNG",
+      "Cucumber",
+      "Rest Assured",
+      "JMeter"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "AWS Certified Developer",
+      "Certified Software Test Engineer"
+    ]
+  },
+  "Performance Tester": {
+    "name": "Performance Tester",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "JMeter",
+      "Performance Testing",
+      "SQL",
+      "Linux",
+      "Scripting"
+    ],
+    "preferred_skills": [
+      "LoadRunner",
+      "Gatling",
+      "Python",
+      "Docker",
+      "Monitoring"
+    ],
+    "keywords": [
+      "performance testing",
+      "load testing",
+      "stress testing",
+      "scalability",
+      "bottleneck analysis",
+      "capacity planning",
+      "benchmarking",
+      "profiling"
+    ],
+    "tools": [
+      "JMeter",
+      "LoadRunner",
+      "Gatling",
+      "New Relic",
+      "Grafana"
+    ],
+    "frameworks": [
+      "JMeter",
+      "Gatling",
+      "Locust",
+      "k6",
+      "New Relic"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "HPE ASE LoadRunner",
+      "AWS Certified Developer"
+    ]
+  },
+  "Test Engineer": {
+    "name": "Test Engineer",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Testing",
+      "SQL",
+      "Git",
+      "Python",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "Selenium",
+      "Docker",
+      "API Testing",
+      "JIRA",
+      "CI/CD"
+    ],
+    "keywords": [
+      "test engineering",
+      "test strategy",
+      "test automation",
+      "API testing",
+      "integration testing",
+      "system testing",
+      "test environments"
+    ],
+    "tools": [
+      "Selenium",
+      "Postman",
+      "Git",
+      "JIRA",
+      "Docker"
+    ],
+    "frameworks": [
+      "Selenium",
+      "Rest Assured",
+      "Pytest",
+      "Cypress",
+      "JMeter"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "Certified Software Tester",
+      "AWS Certified Developer"
+    ]
+  },
+  "Mobile QA Engineer": {
+    "name": "Mobile QA Engineer",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Mobile Testing",
+      "Selenium",
+      "SQL",
+      "Git",
+      "Bug Reporting"
+    ],
+    "preferred_skills": [
+      "Appium",
+      "Cypress",
+      "Python",
+      "iOS",
+      "Android"
+    ],
+    "keywords": [
+      "mobile testing",
+      "iOS",
+      "Android",
+      "cross-platform testing",
+      "app testing",
+      "device compatibility",
+      "performance testing",
+      "UI testing"
+    ],
+    "tools": [
+      "Appium",
+      "Xcode",
+      "Android Studio",
+      "Firebase Test Lab",
+      "BrowserStack"
+    ],
+    "frameworks": [
+      "Appium",
+      "Espresso",
+      "XCUITest",
+      "Detox",
+      "Cypress"
+    ],
+    "certifications": [
+      "ISTQB Mobile Tester",
+      "Certified Software Tester",
+      "AWS Certified Developer"
+    ]
+  },
+  "Test Automation Architect": {
+    "name": "Test Automation Architect",
+    "category": "Quality Assurance",
+    "required_skills": [
+      "Selenium",
+      "Java",
+      "Python",
+      "CI/CD",
+      "Git"
+    ],
+    "preferred_skills": [
+      "Cypress",
+      "Playwright",
+      "Docker",
+      "Kubernetes",
+      "Design Patterns"
+    ],
+    "keywords": [
+      "test automation architecture",
+      "framework design",
+      "CI/CD integration",
+      "test strategy",
+      "code quality",
+      "scalability",
+      "governance",
+      "best practices"
+    ],
+    "tools": [
+      "Selenium Grid",
+      "Docker",
+      "Jenkins",
+      "Git",
+      "Allure"
+    ],
+    "frameworks": [
+      "Selenium",
+      "TestNG",
+      "Cucumber",
+      "Allure",
+      "Rest Assured"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "Certified Software Test Architect",
+      "AWS Certified Developer"
+    ]
+  },
+  "UI Designer": {
+    "name": "UI Designer",
+    "category": "Design",
+    "required_skills": [
+      "Figma",
+      "Adobe XD",
+      "HTML",
+      "CSS",
+      "Prototyping"
+    ],
+    "preferred_skills": [
+      "Photoshop",
+      "Illustrator",
+      "Design Systems",
+      "JavaScript",
+      "Accessibility"
+    ],
+    "keywords": [
+      "user interface",
+      "visual design",
+      "layout",
+      "typography",
+      "color theory",
+      "design systems",
+      "UI patterns",
+      "responsive design"
+    ],
+    "tools": [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "Photoshop",
+      "Illustrator"
+    ],
+    "frameworks": [
+      "Figma",
+      "Adobe XD",
+      "Sketch",
+      "Storybook",
+      "Zeplin"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Adobe Certified Professional",
+      "Nielsen Norman UX Certification"
+    ]
+  },
+  "UX Designer": {
+    "name": "UX Designer",
+    "category": "Design",
+    "required_skills": [
+      "User Research",
+      "Wireframing",
+      "Prototyping",
+      "Figma",
+      "Information Architecture"
+    ],
+    "preferred_skills": [
+      "Usability Testing",
+      "Interaction Design",
+      "HTML",
+      "CSS",
+      "Accessibility"
+    ],
+    "keywords": [
+      "user experience",
+      "UX research",
+      "user journey",
+      "wireframing",
+      "prototyping",
+      "usability",
+      "personas",
+      "user testing"
+    ],
+    "tools": [
+      "Figma",
+      "Miro",
+      "UserTesting",
+      "Optimal Workshop",
+      "Hotjar"
+    ],
+    "frameworks": [
+      "Figma",
+      "Sketch",
+      "InVision",
+      "Axure",
+      "Balsamiq"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Nielsen Norman UX Certification",
+      "Certified Usability Analyst"
+    ]
+  },
+  "Product Designer": {
+    "name": "Product Designer",
+    "category": "Design",
+    "required_skills": [
+      "Figma",
+      "User Research",
+      "Prototyping",
+      "Design Systems",
+      "HTML/CSS"
+    ],
+    "preferred_skills": [
+      "React",
+      "JavaScript",
+      "Animation",
+      "Accessibility",
+      "Data Analysis"
+    ],
+    "keywords": [
+      "product design",
+      "end-to-end design",
+      "user research",
+      "wireframing",
+      "prototyping",
+      "design systems",
+      "cross-functional collaboration"
+    ],
+    "tools": [
+      "Figma",
+      "Miro",
+      "Notion",
+      "JIRA",
+      "Storybook"
+    ],
+    "frameworks": [
+      "Figma",
+      "Sketch",
+      "Lottie",
+      "Storybook",
+      "Principle"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Nielsen Norman UX Certification",
+      "Interaction Design Foundation"
+    ]
+  },
+  "Graphic Designer": {
+    "name": "Graphic Designer",
+    "category": "Design",
+    "required_skills": [
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "Typography",
+      "Color Theory"
+    ],
+    "preferred_skills": [
+      "Figma",
+      "After Effects",
+      "Sketch",
+      "Branding",
+      "Print Design"
+    ],
+    "keywords": [
+      "graphic design",
+      "branding",
+      "visual identity",
+      "typography",
+      "layout",
+      "print design",
+      "digital design",
+      "logo design"
+    ],
+    "tools": [
+      "Adobe Creative Suite",
+      "Figma",
+      "Canva",
+      "InVision",
+      "Procreate"
+    ],
+    "frameworks": [
+      "Photoshop",
+      "Illustrator",
+      "InDesign",
+      "After Effects",
+      "Figma"
+    ],
+    "certifications": [
+      "Adobe Certified Professional",
+      "Google UX Design Certificate"
+    ]
+  },
+  "Motion Designer": {
+    "name": "Motion Designer",
+    "category": "Design",
+    "required_skills": [
+      "After Effects",
+      "Cinema 4D",
+      "Premiere Pro",
+      "Animation",
+      "Figma"
+    ],
+    "preferred_skills": [
+      "Blender",
+      "3ds Max",
+      "Lottie",
+      "SVG Animation",
+      "CSS Animation"
+    ],
+    "keywords": [
+      "motion design",
+      "animation",
+      "video production",
+      "motion graphics",
+      "visual effects",
+      "3D animation",
+      "transitions"
+    ],
+    "tools": [
+      "After Effects",
+      "Cinema 4D",
+      "Premiere Pro",
+      "Blender",
+      "Lottie"
+    ],
+    "frameworks": [
+      "After Effects",
+      "Lottie",
+      "Rive",
+      "Principle",
+      "Framer"
+    ],
+    "certifications": [
+      "Adobe Certified Professional",
+      "Apple Motion Certified",
+      "Maxon Certified"
+    ]
+  },
+  "Interaction Designer": {
+    "name": "Interaction Designer",
+    "category": "Design",
+    "required_skills": [
+      "Figma",
+      "Prototyping",
+      "Interaction Design",
+      "User Research",
+      "HTML/CSS"
+    ],
+    "preferred_skills": [
+      "Framer",
+      "React",
+      "JavaScript",
+      "Animation",
+      "Accessibility"
+    ],
+    "keywords": [
+      "interaction design",
+      "micro-interactions",
+      "animation",
+      "prototyping",
+      "usability",
+      "user flows",
+      "wireframing",
+      "specification"
+    ],
+    "tools": [
+      "Figma",
+      "Principle",
+      "Framer",
+      "Framer Motion",
+      "InVision"
+    ],
+    "frameworks": [
+      "Figma",
+      "Framer",
+      "Principle",
+      "ProtoPie",
+      "Framer Motion"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Interaction Design Foundation",
+      "Nielsen Norman Certification"
+    ]
+  },
+  "UX Researcher": {
+    "name": "UX Researcher",
+    "category": "Design",
+    "required_skills": [
+      "User Research",
+      "Usability Testing",
+      "Data Analysis",
+      "Interviews",
+      "Statistics"
+    ],
+    "preferred_skills": [
+      "Figma",
+      "Survey Design",
+      "A/B Testing",
+      "Python",
+      "Excel"
+    ],
+    "keywords": [
+      "UX research",
+      "qualitative research",
+      "quantitative research",
+      "usability testing",
+      "user interviews",
+      "surveys",
+      "card sorting",
+      "A/B testing"
+    ],
+    "tools": [
+      "UserTesting",
+      "Maze",
+      "Optimal Workshop",
+      "Hotjar",
+      "Lookback"
+    ],
+    "frameworks": [
+      "Maze",
+      "UserTesting",
+      "Optimal Workshop",
+      "Hotjar",
+      "Dovetail"
+    ],
+    "certifications": [
+      "Certified Usability Analyst",
+      "Google UX Design Certificate",
+      "Nielsen Norman Certification"
+    ]
+  },
+  "Design System Designer": {
+    "name": "Design System Designer",
+    "category": "Design",
+    "required_skills": [
+      "Figma",
+      "Design Systems",
+      "HTML",
+      "CSS",
+      "Storybook"
+    ],
+    "preferred_skills": [
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "Accessibility",
+      "Animation"
+    ],
+    "keywords": [
+      "design systems",
+      "component library",
+      "tokens",
+      "accessibility",
+      "documentation",
+      "governance",
+      "cross-platform consistency"
+    ],
+    "tools": [
+      "Figma",
+      "Storybook",
+      "ZeroHeight",
+      "Tokens Studio",
+      "GitHub"
+    ],
+    "frameworks": [
+      "Figma",
+      "Storybook",
+      "Design Tokens",
+      "ZeroHeight",
+      "Chromatic"
+    ],
+    "certifications": [
+      "Google UX Design Certificate",
+      "Certified Design System Manager",
+      "Nielsen Norman Certification"
+    ]
+  },
+  "Product Manager": {
+    "name": "Product Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Product Management",
+      "Agile",
+      "Data Analysis",
+      "User Research",
+      "Roadmapping"
+    ],
+    "preferred_skills": [
+      "SQL",
+      "JIRA",
+      "Figma",
+      "A/B Testing",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "product management",
+      "product strategy",
+      "roadmap",
+      "prioritization",
+      "user stories",
+      "KPIs",
+      "go-to-market",
+      "market research"
+    ],
+    "tools": [
+      "JIRA",
+      "ProductBoard",
+      "Aha!",
+      "Miro",
+      "Notion"
+    ],
+    "frameworks": [
+      "Scrum",
+      "SAFe",
+      "Kanban",
+      "Notion",
+      "Linear"
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner",
+      "Pragmatic Institute",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "Technical Product Manager": {
+    "name": "Technical Product Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Product Management",
+      "Technical Understanding",
+      "Agile",
+      "API",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "Python",
+      "JIRA",
+      "Figma",
+      "Data Analysis",
+      "Architecture"
+    ],
+    "keywords": [
+      "technical product management",
+      "API products",
+      "platform products",
+      "technical requirements",
+      "system design",
+      "developer experience",
+      "technical roadmap"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "ProductBoard",
+      "Figma",
+      "Postman"
+    ],
+    "frameworks": [
+      "Scrum",
+      "SAFe",
+      "Technical Writing",
+      "API Design",
+      "System Design"
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner",
+      "AWS Cloud Practitioner",
+      "Google Cloud Professional"
+    ]
+  },
+  "ML Product Manager": {
+    "name": "ML Product Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Product Management",
+      "AI/ML",
+      "Agile",
+      "Data Analysis",
+      "Requirements Gathering"
+    ],
+    "preferred_skills": [
+      "Python",
+      "SQL",
+      "Machine Learning",
+      "JIRA",
+      "A/B Testing"
+    ],
+    "keywords": [
+      "ML product management",
+      "machine learning product lifecycle",
+      "model evaluation",
+      "model governance",
+      "product strategy",
+      "stakeholder alignment",
+      "data-driven decisions"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "ProductBoard",
+      "Miro",
+      "Figma"
+    ],
+    "frameworks": [
+      "Scrum",
+      "SAFe",
+      "Kanban",
+      "Notion",
+      "Linear"
+    ],
+    "certifications": [
+      "Certified Scrum Product Owner",
+      "Google Product Management",
+      "AWS Certified Cloud Practitioner"
+    ]
+  },
+  "Project Manager": {
+    "name": "Project Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Project Management",
+      "Agile",
+      "Scrum",
+      "Risk Management",
+      "Stakeholder Management"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "MS Project",
+      "Budget Management",
+      "Communication",
+      "Leadership"
+    ],
+    "keywords": [
+      "project management",
+      "scheduling",
+      "budgeting",
+      "risk management",
+      "resource allocation",
+      "status reporting",
+      "stakeholder communication"
+    ],
+    "tools": [
+      "JIRA",
+      "MS Project",
+      "Monday.com",
+      "Asana",
+      "Notion"
+    ],
+    "frameworks": [
+      "MS Project",
+      "Smartsheet",
+      "Monday.com",
+      "Asana",
+      "Notion"
+    ],
+    "certifications": [
+      "PMP",
+      "Certified ScrumMaster",
+      "PRINCE2",
+      "CompTIA Project+"
+    ]
+  },
+  "Technical Project Manager": {
+    "name": "Technical Project Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Project Management",
+      "Agile",
+      "Technical Understanding",
+      "Scrum",
+      "Risk Management"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "Confluence",
+      "Python",
+      "SQL",
+      "Cloud Computing"
+    ],
+    "keywords": [
+      "technical project management",
+      "engineering coordination",
+      "release management",
+      "technical risk assessment",
+      "cross-team coordination",
+      "technical debt tracking"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "GitHub",
+      "Slack",
+      "Azure DevOps"
+    ],
+    "frameworks": [
+      "JIRA",
+      "GitHub",
+      "Azure DevOps",
+      "Monday.com",
+      "Notion"
+    ],
+    "certifications": [
+      "PMP",
+      "Certified ScrumMaster",
+      "AWS Cloud Practitioner",
+      "SAFe Agilist"
+    ]
+  },
+  "Program Manager": {
+    "name": "Program Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Program Management",
+      "Agile",
+      "Leadership",
+      "Strategy",
+      "Stakeholder Management"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "Excel",
+      "Communication",
+      "Budget Management",
+      "Risk Management"
+    ],
+    "keywords": [
+      "program management",
+      "cross-program coordination",
+      "strategic alignment",
+      "resource management",
+      "portfolio management",
+      "executive reporting",
+      "OKRs"
+    ],
+    "tools": [
+      "JIRA",
+      "Excel",
+      "PowerPoint",
+      "Monday.com",
+      "Smartsheet"
+    ],
+    "frameworks": [
+      "Smartsheet",
+      "Planview",
+      "Microsoft Project",
+      "Confluence",
+      "Notion"
+    ],
+    "certifications": [
+      "PMP",
+      "SAFe Program Consultant",
+      "Certified ScrumMaster",
+      "PMI-ACP"
+    ]
+  },
+  "Scrum Master": {
+    "name": "Scrum Master",
+    "category": "Product & Management",
+    "required_skills": [
+      "Scrum",
+      "Agile",
+      "Facilitation",
+      "Coaching",
+      "JIRA"
+    ],
+    "preferred_skills": [
+      "Kanban",
+      "SAFe",
+      "Conflict Resolution",
+      "Metrics",
+      "Retrospectives"
+    ],
+    "keywords": [
+      "scrum master",
+      "servant leadership",
+      "facilitation",
+      "impediment removal",
+      "team coaching",
+      "agile adoption",
+      "continuous improvement",
+      "sprint management"
+    ],
+    "tools": [
+      "JIRA",
+      "Miro",
+      "Slack",
+      "Retrium",
+      "Azure DevOps"
+    ],
+    "frameworks": [
+      "JIRA",
+      "Miro",
+      "Retrium",
+      "Slido",
+      "EasyRetro"
+    ],
+    "certifications": [
+      "Certified ScrumMaster",
+      "Professional Scrum Master",
+      "SAFe Scrum Master",
+      "ICAgile"
+    ]
+  },
+  "Delivery Manager": {
+    "name": "Delivery Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Agile",
+      "Project Management",
+      "Leadership",
+      "Stakeholder Management",
+      "Risk Management"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "Scrum",
+      "Kanban",
+      "Azure DevOps",
+      "Excel"
+    ],
+    "keywords": [
+      "delivery management",
+      "on-time delivery",
+      "quality management",
+      "team performance",
+      "process improvement",
+      "release coordination",
+      "vendor management"
+    ],
+    "tools": [
+      "JIRA",
+      "Azure DevOps",
+      "Monday.com",
+      "Power BI",
+      "Excel"
+    ],
+    "frameworks": [
+      "JIRA",
+      "Azure DevOps",
+      "Monday.com",
+      "Smartsheet",
+      "Confluence"
+    ],
+    "certifications": [
+      "PMP",
+      "Certified ScrumMaster",
+      "SAFe Agilist",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "Agile Coach": {
+    "name": "Agile Coach",
+    "category": "Product & Management",
+    "required_skills": [
+      "Agile",
+      "Scrum",
+      "Kanban",
+      "Coaching",
+      "Leadership"
+    ],
+    "preferred_skills": [
+      "SAFe",
+      "LeSS",
+      "Facilitation",
+      "Change Management",
+      "Metrics"
+    ],
+    "keywords": [
+      "agile coaching",
+      "agile transformation",
+      "team development",
+      "organizational change",
+      "scaling agile",
+      "maturity assessment",
+      "culture shift"
+    ],
+    "tools": [
+      "JIRA",
+      "Miro",
+      "Mural",
+      "Confluence",
+      "Retrium"
+    ],
+    "frameworks": [
+      "JIRA",
+      "Miro",
+      "Mural",
+      "Retrium",
+      "Agile Craft"
+    ],
+    "certifications": [
+      "ICAgile Certified Professional",
+      "Certified ScrumMaster",
+      "SAFe Program Consultant"
+    ]
+  },
+  "Delivery Lead": {
+    "name": "Delivery Lead",
+    "category": "Product & Management",
+    "required_skills": [
+      "Agile",
+      "Project Management",
+      "Communication",
+      "Scrum",
+      "Leadership"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "Azure DevOps",
+      "Risk Management",
+      "Budget Management",
+      "Stakeholder Management"
+    ],
+    "keywords": [
+      "delivery leadership",
+      "team management",
+      "project delivery",
+      "cross-functional coordination",
+      "quality assurance",
+      "process optimization",
+      "stakeholder communication"
+    ],
+    "tools": [
+      "JIRA",
+      "Azure DevOps",
+      "Monday.com",
+      "Confluence",
+      "Power BI"
+    ],
+    "frameworks": [
+      "JIRA",
+      "Azure DevOps",
+      "Smartsheet",
+      "Notion",
+      "Confluence"
+    ],
+    "certifications": [
+      "PMP",
+      "Certified ScrumMaster",
+      "SAFe Agilist",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "Release Manager": {
+    "name": "Release Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Release Management",
+      "CI/CD",
+      "Agile",
+      "Communication",
+      "Risk Management"
+    ],
+    "preferred_skills": [
+      "JIRA",
+      "Jenkins",
+      "Docker",
+      "Git",
+      "ServiceNow"
+    ],
+    "keywords": [
+      "release management",
+      "deployment coordination",
+      "change management",
+      "rollback planning",
+      "release documentation",
+      "stakeholder communication",
+      "compliance"
+    ],
+    "tools": [
+      "JIRA",
+      "ServiceNow",
+      "Jenkins",
+      "Azure DevOps",
+      "GitLab"
+    ],
+    "frameworks": [
+      "JIRA",
+      "ServiceNow",
+      "Azure DevOps",
+      "Octopus Deploy",
+      "Jenkins"
+    ],
+    "certifications": [
+      "ITIL Foundation",
+      "PMP",
+      "SAFe Agilist",
+      "Certified ScrumMaster"
+    ]
+  },
+  "Technical Program Manager": {
+    "name": "Technical Program Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Technical Program Management",
+      "Agile",
+      "Stakeholder Management",
+      "Architecture",
+      "Risk Management"
+    ],
+    "preferred_skills": [
+      "Python",
+      "SQL",
+      "JIRA",
+      "Confluence",
+      "Cloud Computing"
+    ],
+    "keywords": [
+      "technical program management",
+      "cross-team coordination",
+      "technical strategy",
+      "dependency management",
+      "milestone tracking",
+      "architecture review",
+      "technical risk management"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "Azure DevOps",
+      "PowerPoint",
+      "Miro"
+    ],
+    "frameworks": [
+      "JIRA",
+      "Azure DevOps",
+      "Notion",
+      "Confluence",
+      "Miro"
+    ],
+    "certifications": [
+      "PMP",
+      "SAFe Program Consultant",
+      "AWS Cloud Practitioner",
+      "Certified ScrumMaster"
+    ]
+  },
+  "Salesforce Developer": {
+    "name": "Salesforce Developer",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "Apex",
+      "Visualforce",
+      "Lightning Web Components",
+      "SOQL",
+      "Salesforce Platform"
+    ],
+    "preferred_skills": [
+      "JavaScript",
+      "TypeScript",
+      "REST API",
+      "SQL",
+      "Git"
+    ],
+    "keywords": [
+      "Salesforce",
+      "CRM",
+      "Apex",
+      "LWC",
+      "trigger",
+      "custom object",
+      "workflow",
+      "process builder",
+      "integration"
+    ],
+    "tools": [
+      "Salesforce Developer Console",
+      "VS Code",
+      "Salesforce CLI",
+      "Workbench",
+      "Git"
+    ],
+    "frameworks": [
+      "Salesforce Platform",
+      "Lightning Web Components",
+      "Apex",
+      "Heroku",
+      "MuleSoft"
+    ],
+    "certifications": [
+      "Salesforce Certified Platform Developer",
+      "Salesforce Certified Administrator",
+      "AWS Certified Developer"
+    ]
+  },
+  "Salesforce Administrator": {
+    "name": "Salesforce Administrator",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "Salesforce",
+      "CRM",
+      "Data Management",
+      "Reporting",
+      "User Management"
+    ],
+    "preferred_skills": [
+      "Apex",
+      "Visualforce",
+      "SOQL",
+      "Excel",
+      "JavaScript"
+    ],
+    "keywords": [
+      "Salesforce administration",
+      "user management",
+      "data management",
+      "reporting",
+      "dashboards",
+      "workflow automation",
+      "security model",
+      "customization"
+    ],
+    "tools": [
+      "Salesforce Admin Portal",
+      "Data Loader",
+      "Excel",
+      "Salesforce CLI",
+      "JIRA"
+    ],
+    "frameworks": [
+      "Salesforce Platform",
+      "Data Loader",
+      "Process Builder",
+      "Flow Builder",
+      "Reports & Dashboards"
+    ],
+    "certifications": [
+      "Salesforce Certified Administrator",
+      "Salesforce Certified Advanced Administrator",
+      "Salesforce Certified Platform App Builder"
+    ]
+  },
+  "SAP Consultant": {
+    "name": "SAP Consultant",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "SAP",
+      "ABAP",
+      "SQL",
+      "Business Process",
+      "Integration"
+    ],
+    "preferred_skills": [
+      "SAP HANA",
+      "SAP Fiori",
+      "SAP BW",
+      "Oracle",
+      "Python"
+    ],
+    "keywords": [
+      "SAP",
+      "ERP",
+      "business process",
+      "configuration",
+      "customization",
+      "integration",
+      "migration",
+      "module implementation"
+    ],
+    "tools": [
+      "SAP GUI",
+      "SAP Fiori",
+      "SAP HANA Studio",
+      "Transaction Codes",
+      "SAP Solution Manager"
+    ],
+    "frameworks": [
+      "SAP Fiori",
+      "SAP HANA",
+      "SAP Integration Suite",
+      "SAP BTP",
+      "ABAP"
+    ],
+    "certifications": [
+      "SAP Certified Application Associate",
+      "SAP Certified Development Professional",
+      "AWS Certified Developer"
+    ]
+  },
+  "SAP Developer": {
+    "name": "SAP Developer",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "ABAP",
+      "SAP",
+      "SQL",
+      "OData",
+      "SAP UI5"
+    ],
+    "preferred_skills": [
+      "Fiori",
+      "CDS Views",
+      "BTP",
+      "HANA",
+      "JavaScript"
+    ],
+    "keywords": [
+      "SAP development",
+      "ABAP",
+      "SAP Fiori",
+      "SAP BTP",
+      "custom reports",
+      "enhancements",
+      "user exits",
+      "BADIs"
+    ],
+    "tools": [
+      "SAP GUI",
+      "Eclipse ADT",
+      "SAP BTP",
+      "SAP HANA Studio",
+      "Git"
+    ],
+    "frameworks": [
+      "SAP Fiori",
+      "SAP UI5",
+      "CDS Views",
+      "SAP BTP",
+      "ABAP RESTful Application Programming"
+    ],
+    "certifications": [
+      "SAP Certified Application Developer",
+      "SAP Certified Development Professional",
+      "AWS Certified Developer"
+    ]
+  },
+  "Oracle Consultant": {
+    "name": "Oracle Consultant",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "Oracle",
+      "SQL",
+      "PL/SQL",
+      "Linux",
+      "Database Administration"
+    ],
+    "preferred_skills": [
+      "Oracle Cloud",
+      "Oracle EBS",
+      "Java",
+      "Shell Scripting",
+      "Docker"
+    ],
+    "keywords": [
+      "Oracle",
+      "database administration",
+      "PL/SQL",
+      "performance tuning",
+      "backup recovery",
+      "Oracle Cloud",
+      "EBS implementation",
+      "migration"
+    ],
+    "tools": [
+      "Oracle Enterprise Manager",
+      "SQL Developer",
+      "Linux",
+      "RMAN",
+      "Data Guard"
+    ],
+    "frameworks": [
+      "Oracle Database",
+      "Oracle EBS",
+      "Oracle Cloud",
+      "Oracle APEX",
+      "GoldenGate"
+    ],
+    "certifications": [
+      "Oracle Certified Professional",
+      "Oracle Cloud Infrastructure Certified",
+      "AWS Certified Developer"
+    ]
+  },
+  "Oracle Developer": {
+    "name": "Oracle Developer",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "PL/SQL",
+      "Oracle",
+      "SQL",
+      "Java",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Oracle APEX",
+      "Oracle Cloud",
+      "JavaScript",
+      "HTML",
+      "Docker"
+    ],
+    "keywords": [
+      "Oracle development",
+      "PL/SQL",
+      "Oracle APEX",
+      "stored procedures",
+      "functions",
+      "packages",
+      "triggers",
+      "reporting"
+    ],
+    "tools": [
+      "Oracle SQL Developer",
+      "Oracle APEX",
+      "Toad",
+      "Oracle Cloud Console",
+      "Git"
+    ],
+    "frameworks": [
+      "Oracle APEX",
+      "Oracle Cloud",
+      "Oracle Forms",
+      "Oracle Reports",
+      "Java"
+    ],
+    "certifications": [
+      "Oracle Certified Professional",
+      "Oracle APEX Certified",
+      "AWS Certified Developer"
+    ]
+  },
+  "SAP Basis Consultant": {
+    "name": "SAP Basis Consultant",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "SAP Basis",
+      "Linux",
+      "Oracle",
+      "SAP HANA",
+      "Networking"
+    ],
+    "preferred_skills": [
+      "Windows Server",
+      "SAP Solution Manager",
+      "Shell Scripting",
+      "Docker",
+      "Monitoring"
+    ],
+    "keywords": [
+      "SAP Basis",
+      "system administration",
+      "installation",
+      "upgrade",
+      "patch management",
+      "performance tuning",
+      "transport management",
+      "system copy"
+    ],
+    "tools": [
+      "SAP GUI",
+      "SAP Solution Manager",
+      "SAP HANA Studio",
+      "Linux",
+      "Oracle Enterprise Manager"
+    ],
+    "frameworks": [
+      "SAP HANA",
+      "SAP Solution Manager",
+      "SAP BTP",
+      "Terraform",
+      "Ansible"
+    ],
+    "certifications": [
+      "SAP Certified Technology Associate",
+      "SAP Certified Technology Professional",
+      "AWS Certified Developer"
+    ]
+  },
+  "Dynamics 365 Developer": {
+    "name": "Dynamics 365 Developer",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "C#",
+      ".NET",
+      "Dynamics 365",
+      "SQL Server",
+      "JavaScript"
+    ],
+    "preferred_skills": [
+      "Azure",
+      "Power Platform",
+      "TypeScript",
+      "REST API",
+      "Docker"
+    ],
+    "keywords": [
+      "Dynamics 365",
+      "CRM",
+      "ERP",
+      "plugin development",
+      "custom workflows",
+      "business process flows",
+      "PCF controls",
+      "integration"
+    ],
+    "tools": [
+      "Visual Studio",
+      "Azure DevOps",
+      "Dynamics 365 Portal",
+      "XrmToolBox",
+      "Postman"
+    ],
+    "frameworks": [
+      "Dynamics 365",
+      "Power Platform",
+      "Dataverse",
+      "Power Apps",
+      "Azure Functions"
+    ],
+    "certifications": [
+      "Microsoft Certified: Power Platform App Maker",
+      "Microsoft Certified: Dynamics 365",
+      "AWS Certified Developer"
+    ]
+  },
+  "Workday Consultant": {
+    "name": "Workday Consultant",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "Workday",
+      "HCM",
+      "Integration",
+      "Security",
+      "Business Process"
+    ],
+    "preferred_skills": [
+      "SQL",
+      "XML",
+      "XSLT",
+      "REST API",
+      "Excel"
+    ],
+    "keywords": [
+      "Workday",
+      "HCM",
+      "payroll",
+      "benefits",
+      "recruiting",
+      "compensation",
+      "reporting",
+      "integration",
+      "security configuration"
+    ],
+    "tools": [
+      "Workday Studio",
+      "Workday Dashboard",
+      "Excel",
+      "Report Writer",
+      "EIB"
+    ],
+    "frameworks": [
+      "Workday HCM",
+      "Workday Payroll",
+      "Workday Recruiting",
+      "Workday Security",
+      "Workday Integration"
+    ],
+    "certifications": [
+      "Workday Certified HCM Consultant",
+      "Workday Certified Integration Consultant",
+      "AWS Certified Developer"
+    ]
+  },
+  "ERP Consultant": {
+    "name": "ERP Consultant",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "ERP",
+      "Business Process",
+      "SQL",
+      "Data Migration",
+      "Integration"
+    ],
+    "preferred_skills": [
+      "SAP",
+      "Oracle",
+      "Dynamics 365",
+      "Python",
+      "Excel"
+    ],
+    "keywords": [
+      "ERP",
+      "enterprise resource planning",
+      "business process",
+      "implementation",
+      "data migration",
+      "customization",
+      "integration",
+      "training"
+    ],
+    "tools": [
+      "ERP Admin Console",
+      "Excel",
+      "SQL",
+      "JIRA",
+      "Visio"
+    ],
+    "frameworks": [
+      "SAP",
+      "Oracle ERP Cloud",
+      "Dynamics 365",
+      "NetSuite",
+      "Odoo"
+    ],
+    "certifications": [
+      "SAP Certified",
+      "Oracle Cloud Certified",
+      "Microsoft Certified"
+    ]
+  },
+  "IoT Engineer": {
+    "name": "IoT Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "Python",
+      "Embedded Systems",
+      "MQTT",
+      "Linux",
+      "Networking"
+    ],
+    "preferred_skills": [
+      "C",
+      "C++",
+      "JavaScript",
+      "Docker",
+      "AWS IoT"
+    ],
+    "keywords": [
+      "IoT",
+      "Internet of Things",
+      "embedded",
+      "sensors",
+      "MQTT",
+      "edge computing",
+      "data acquisition",
+      "protocol"
+    ],
+    "tools": [
+      "Arduino IDE",
+      "Raspberry Pi",
+      "AWS IoT Core",
+      "Node-RED",
+      "Linux"
+    ],
+    "frameworks": [
+      "MQTT",
+      "AWS IoT",
+      "Azure IoT Hub",
+      "Node-RED",
+      "PlatformIO"
+    ],
+    "certifications": [
+      "AWS IoT Specialty",
+      "Certified IoT Professional",
+      "AWS Certified Developer"
+    ]
+  },
+  "Embedded AI Engineer": {
+    "name": "Embedded AI Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "C++",
+      "Python",
+      "Machine Learning",
+      "Embedded Systems",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "TensorFlow Lite",
+      "Rust",
+      "ARM",
+      "RTOS",
+      "CUDA"
+    ],
+    "keywords": [
+      "embedded AI",
+      "edge AI",
+      "TinyML",
+      "model optimization",
+      "quantization",
+      "inference on edge",
+      "neural network deployment"
+    ],
+    "tools": [
+      "STM32CubeIDE",
+      "Arduino",
+      "TensorFlow Lite",
+      "OpenOCD",
+      "Git"
+    ],
+    "frameworks": [
+      "TensorFlow Lite",
+      "Edge Impulse",
+      "OpenVINO",
+      "ONNX Runtime",
+      "PyTorch Mobile"
+    ],
+    "certifications": [
+      "NVIDIA Jetson Certified",
+      "AWS IoT Specialty",
+      "TensorFlow Developer Certificate"
+    ]
+  },
+  "Embedded Linux Engineer": {
+    "name": "Embedded Linux Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "C",
+      "C++",
+      "Linux",
+      "Yocto",
+      "Shell Scripting"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Git",
+      "Networking",
+      "Device Drivers",
+      "Buildroot"
+    ],
+    "keywords": [
+      "embedded Linux",
+      "BSP",
+      "Yocto",
+      "device drivers",
+      "bootloader",
+      "cross-compilation",
+      "kernel configuration",
+      "real-time Linux"
+    ],
+    "tools": [
+      "Yocto Project",
+      "Buildroot",
+      "Git",
+      "Linux Kernel",
+      "QEMU"
+    ],
+    "frameworks": [
+      "Yocto",
+      "Buildroot",
+      "CMake",
+      "Meson",
+      "Ninja"
+    ],
+    "certifications": [
+      "Linux Foundation Certified",
+      "ARM Accredited Engineer",
+      "Certified Embedded Systems Professional"
+    ]
+  },
+  "Embedded Firmware Engineer": {
+    "name": "Embedded Firmware Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "C",
+      "C++",
+      "Assembly",
+      "Embedded Systems",
+      "Git",
+      "RTOS"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Rust",
+      "ARM",
+      "Linux",
+      "Device Drivers"
+    ],
+    "keywords": [
+      "embedded firmware",
+      "firmware development",
+      "device drivers",
+      "bootloader",
+      "RTOS",
+      "hardware-software interface",
+      "low-level programming",
+      "flash memory"
+    ],
+    "tools": [
+      "JTAG Debugger",
+      "Logic Analyzer",
+      "Keil",
+      "IAR",
+      "Git"
+    ],
+    "frameworks": [
+      "FreeRTOS",
+      "Mbed OS",
+      "Zephyr",
+      "UEFI",
+      "U-Boot"
+    ],
+    "certifications": [
+      "ARM Accredited Engineer",
+      "Embedded Systems Certification",
+      "Linux Foundation Certified"
+    ]
+  },
+  "Edge Computing Engineer": {
+    "name": "Edge Computing Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "Python",
+      "Docker",
+      "Kubernetes",
+      "Linux",
+      "Networking"
+    ],
+    "preferred_skills": [
+      "C++",
+      "Rust",
+      "K3s",
+      "Terraform",
+      "MQTT"
+    ],
+    "keywords": [
+      "edge computing",
+      "edge deployment",
+      "edge orchestration",
+      "latency optimization",
+      "offline-first",
+      "edge AI",
+      "fog computing",
+      "distributed computing"
+    ],
+    "tools": [
+      "Docker",
+      "K3s",
+      "Kubernetes",
+      "AWS Greengrass",
+      "Azure IoT Edge"
+    ],
+    "frameworks": [
+      "K3s",
+      "AWS Greengrass",
+      "Azure IoT Edge",
+      "KubeEdge",
+      "Docker"
+    ],
+    "certifications": [
+      "AWS IoT Specialty",
+      "Certified Kubernetes Administrator",
+      "Azure IoT Developer Specialty"
+    ]
+  },
+  "Hardware Test Engineer": {
+    "name": "Hardware Test Engineer",
+    "category": "Embedded & IoT",
+    "required_skills": [
+      "Test Engineering",
+      "C",
+      "Python",
+      "Lab Instruments",
+      "Linux"
+    ],
+    "preferred_skills": [
+      "JTAG",
+      "Oscilloscope",
+      "Signal Analyzer",
+      "Automation",
+      "Git"
+    ],
+    "keywords": [
+      "hardware testing",
+      "PCB testing",
+      "signal analysis",
+      "test automation",
+      "EMC testing",
+      "environmental testing",
+      "quality assurance"
+    ],
+    "tools": [
+      "Oscilloscope",
+      "Multimeter",
+      "Logic Analyzer",
+      "Spectrum Analyzer",
+      "Python"
+    ],
+    "frameworks": [
+      "LabVIEW",
+      "Python",
+      "JIRA",
+      "Git",
+      "MATLAB"
+    ],
+    "certifications": [
+      "ISTQB Certified Tester",
+      "Certified Hardware Test Engineer",
+      "CompTIA A+"
+    ]
+  },
+  "Solutions Architect": {
+    "name": "Solutions Architect",
+    "category": "Architecture",
+    "required_skills": [
+      "Cloud Architecture",
+      "Microservices",
+      "AWS",
+      "Docker",
+      "System Design"
+    ],
+    "preferred_skills": [
+      "Terraform",
+      "Kubernetes",
+      "Python",
+      "Java",
+      "Azure"
+    ],
+    "keywords": [
+      "solutions architecture",
+      "system design",
+      "scalability",
+      "high availability",
+      "cloud migration",
+      "cost optimization",
+      "technical strategy"
+    ],
+    "tools": [
+      "AWS Console",
+      "Azure Portal",
+      "Docker",
+      "Miro",
+      "Draw.io"
+    ],
+    "frameworks": [
+      "CloudFormation",
+      "Terraform",
+      "Kubernetes",
+      "Serverless Framework"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Professional",
+      "Azure Solutions Architect",
+      "Google Cloud Professional"
+    ]
+  },
+  "Enterprise Architect": {
+    "name": "Enterprise Architect",
+    "category": "Architecture",
+    "required_skills": [
+      "Enterprise Architecture",
+      "TOGAF",
+      "Cloud Computing",
+      "Microservices",
+      "Integration"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "API",
+      "Security",
+      "Agile"
+    ],
+    "keywords": [
+      "enterprise architecture",
+      "TOGAF",
+      "technology strategy",
+      "governance",
+      "integration patterns",
+      "reference architecture",
+      "roadmapping",
+      "standards"
+    ],
+    "tools": [
+      "Enterprise Architect Tool",
+      "ArchiMate",
+      "Visio",
+      "Miro",
+      "JIRA"
+    ],
+    "frameworks": [
+      "TOGAF",
+      "ArchiMate",
+      "Zachman",
+      "DoDAF",
+      "UML"
+    ],
+    "certifications": [
+      "TOGAF Certified",
+      "AWS Solutions Architect",
+      "Certified Enterprise Architect"
+    ]
+  },
+  "Integration Engineer": {
+    "name": "Integration Engineer",
+    "category": "Architecture",
+    "required_skills": [
+      "API",
+      "REST",
+      "SOAP",
+      "XML",
+      "SQL"
+    ],
+    "preferred_skills": [
+      "MuleSoft",
+      "Docker",
+      "Python",
+      "Java",
+      "Kafka"
+    ],
+    "keywords": [
+      "integration",
+      "middleware",
+      "API gateway",
+      "ESB",
+      "message queues",
+      "data transformation",
+      "ETL",
+      "webhook orchestration"
+    ],
+    "tools": [
+      "Postman",
+      "SoapUI",
+      "MuleSoft Anypoint",
+      "Docker",
+      "Git"
+    ],
+    "frameworks": [
+      "MuleSoft",
+      "Apache Camel",
+      "Kafka",
+      "RabbitMQ",
+      "Dell Boomi"
+    ],
+    "certifications": [
+      "MuleSoft Certified Developer",
+      "AWS Certified Developer",
+      "Dell Boomi Certified"
+    ]
+  },
+  "Technical Lead": {
+    "name": "Technical Lead",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Java",
+      "Python",
+      "System Design",
+      "Git",
+      "Leadership"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Kubernetes",
+      "AWS",
+      "Agile",
+      "Architecture"
+    ],
+    "keywords": [
+      "technical leadership",
+      "code review",
+      "architecture decisions",
+      "mentoring",
+      "sprint planning",
+      "technical debt management",
+      "design reviews"
+    ],
+    "tools": [
+      "IntelliJ IDEA",
+      "VS Code",
+      "Git",
+      "JIRA",
+      "Confluence"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "Django",
+      "Express.js",
+      "Kubernetes",
+      "AWS"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Google Cloud Professional",
+      "Certified Kubernetes Administrator"
+    ]
+  },
+  "Data Governance Analyst": {
+    "name": "Data Governance Analyst",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "Data Governance",
+      "SQL",
+      "Data Quality",
+      "Excel",
+      "Compliance"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Collibra",
+      "Informatica",
+      "Tableau",
+      "Data Modeling"
+    ],
+    "keywords": [
+      "data governance",
+      "data quality",
+      "data catalog",
+      "data lineage",
+      "master data management",
+      "compliance",
+      "data standards",
+      "metadata management"
+    ],
+    "tools": [
+      "Collibra",
+      "Informatica",
+      "Alation",
+      "SQL",
+      "Excel"
+    ],
+    "frameworks": [
+      "Collibra",
+      "Informatica",
+      "Alation",
+      "Apache Atlas",
+      "DataHub"
+    ],
+    "certifications": [
+      "CDMP",
+      "DAMA-DMBOK",
+      "Google Data Analytics"
+    ]
+  },
+  "Solutions Engineer": {
+    "name": "Solutions Engineer",
+    "category": "Architecture",
+    "required_skills": [
+      "Technical Sales",
+      "Pre-sales",
+      "Solution Design",
+      "Demo",
+      "Communication"
+    ],
+    "preferred_skills": [
+      "Cloud Computing",
+      "API",
+      "Architecture",
+      "SQL",
+      "Python"
+    ],
+    "keywords": [
+      "solutions engineering",
+      "pre-sales",
+      "technical demonstrations",
+      "proof of concept",
+      "RFP response",
+      "customer engagement",
+      "technical consulting"
+    ],
+    "tools": [
+      "PowerPoint",
+      "Visio",
+      "Demo Environments",
+      "AWS Console",
+      "GitHub"
+    ],
+    "frameworks": [
+      "AWS Solutions Architect",
+      "Salesforce",
+      "Postman",
+      "Docker"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Google Cloud Professional",
+      "Azure Solutions Architect"
+    ]
+  },
+  "Platform Architect": {
+    "name": "Platform Architect",
+    "category": "Architecture",
+    "required_skills": [
+      "Kubernetes",
+      "Microservices",
+      "Cloud Computing",
+      "System Design",
+      "Docker"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Python",
+      "Terraform",
+      "Monitoring",
+      "Security"
+    ],
+    "keywords": [
+      "platform architecture",
+      "developer platform",
+      "infrastructure design",
+      "service mesh",
+      "API gateway",
+      "observability",
+      "scalability",
+      "resilience"
+    ],
+    "tools": [
+      "Kubernetes",
+      "Terraform",
+      "Prometheus",
+      "Grafana",
+      "Istio"
+    ],
+    "frameworks": [
+      "Kubernetes",
+      "Istio",
+      "Terraform",
+      "ArgoCD",
+      "Backstage"
+    ],
+    "certifications": [
+      "Certified Kubernetes Administrator",
+      "AWS Solutions Architect",
+      "HashiCorp Terraform Associate"
+    ]
+  },
+  "Site Architect": {
+    "name": "Site Architect",
+    "category": "Architecture",
+    "required_skills": [
+      "Web Architecture",
+      "Cloud Computing",
+      "Performance",
+      "Security",
+      "Scalability"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Docker",
+      "Kubernetes",
+      "CDN",
+      "Caching"
+    ],
+    "keywords": [
+      "site architecture",
+      "performance optimization",
+      "caching",
+      "CDN",
+      "high availability",
+      "scalability",
+      "load balancing",
+      "SEO architecture"
+    ],
+    "tools": [
+      "AWS Console",
+      "Cloudflare",
+      "Nginx",
+      "Redis",
+      "Docker"
+    ],
+    "frameworks": [
+      "AWS",
+      "Cloudflare",
+      "Nginx",
+      "Varnish",
+      "Redis"
+    ],
+    "certifications": [
+      "AWS Solutions Architect",
+      "Google Cloud Professional",
+      "HashiCorp Terraform Associate"
+    ]
+  },
+  "IT Consultant": {
+    "name": "IT Consultant",
+    "category": "Architecture",
+    "required_skills": [
+      "IT Strategy",
+      "Cloud Computing",
+      "Project Management",
+      "Business Analysis",
+      "Agile"
+    ],
+    "preferred_skills": [
+      "AWS",
+      "Azure",
+      "Docker",
+      "JIRA",
+      "SQL"
+    ],
+    "keywords": [
+      "IT consulting",
+      "technology assessment",
+      "digital transformation",
+      "IT strategy",
+      "vendor selection",
+      "implementation planning",
+      "change management"
+    ],
+    "tools": [
+      "JIRA",
+      "Confluence",
+      "PowerPoint",
+      "Visio",
+      "Excel"
+    ],
+    "frameworks": [
+      "AWS Solutions Architect",
+      "Azure Administrator",
+      "Google Cloud Professional"
+    ],
+    "certifications": [
+      "PMP",
+      "TOGAF",
+      "ITIL Foundation",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "PostgreSQL Developer": {
+    "name": "PostgreSQL Developer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "PostgreSQL",
+      "SQL",
+      "Python",
+      "Database Design",
+      "Performance Tuning"
+    ],
+    "preferred_skills": [
+      "Docker",
+      "Linux",
+      "Shell Scripting",
+      "Git",
+      "REST API"
+    ],
+    "keywords": [
+      "PostgreSQL",
+      "database development",
+      "PL/pgSQL",
+      "query optimization",
+      "indexing",
+      "partitioning",
+      "replication",
+      "extensions"
+    ],
+    "tools": [
+      "pgAdmin",
+      "PostgreSQL CLI",
+      "DBeaver",
+      "pg_dump",
+      "Git"
+    ],
+    "frameworks": [
+      "PostgreSQL",
+      "PostGIS",
+      "TimescaleDB",
+      "Citus",
+      "Python"
+    ],
+    "certifications": [
+      "PostgreSQL Certified Professional",
+      "AWS Certified Database Specialty",
+      "Google Cloud Professional"
+    ]
+  },
+  "MongoDB Developer": {
+    "name": "MongoDB Developer",
+    "category": "Data Science & Analytics",
+    "required_skills": [
+      "MongoDB",
+      "JavaScript",
+      "Node.js",
+      "JSON",
+      "REST API"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Docker",
+      "TypeScript",
+      "GraphQL",
+      "Redis"
+    ],
+    "keywords": [
+      "MongoDB",
+      "NoSQL",
+      "document database",
+      "schema design",
+      "aggregation pipeline",
+      "sharding",
+      "replication",
+      "change streams"
+    ],
+    "tools": [
+      "MongoDB Compass",
+      "MongoDB Atlas",
+      "VS Code",
+      "Git",
+      "Postman"
+    ],
+    "frameworks": [
+      "MongoDB Atlas",
+      "Mongoose",
+      "MongoDB Realm",
+      "Express.js",
+      "Next.js"
+    ],
+    "certifications": [
+      "MongoDB Certified Developer",
+      "AWS Certified Developer",
+      "Google Cloud Professional"
+    ]
+  },
+  "IT Operations Manager": {
+    "name": "IT Operations Manager",
+    "category": "IT Operations",
+    "required_skills": [
+      "IT Operations",
+      "ITIL",
+      "Incident Management",
+      "Problem Management",
+      "Service Management"
+    ],
+    "preferred_skills": [
+      "Monitoring",
+      "Cloud Computing",
+      "JIRA",
+      "Excel",
+      "Vendor Management"
+    ],
+    "keywords": [
+      "IT operations",
+      "incident management",
+      "problem management",
+      "change management",
+      "service level management",
+      "ITIL",
+      "capacity planning",
+      "vendor management"
+    ],
+    "tools": [
+      "ServiceNow",
+      "JIRA",
+      "SCCM",
+      "Nagios",
+      "Power BI"
+    ],
+    "frameworks": [
+      "ServiceNow",
+      "JIRA",
+      "SCCM",
+      "Nagios",
+      "Zendesk"
+    ],
+    "certifications": [
+      "ITIL Foundation",
+      "PMP",
+      "Certified Information Systems Manager",
+      "AWS Cloud Practitioner"
+    ]
+  },
+  "IT Service Desk Analyst": {
+    "name": "IT Service Desk Analyst",
+    "category": "IT Operations",
+    "required_skills": [
+      "ITIL",
+      "Windows",
+      "Active Directory",
+      "Troubleshooting",
+      "Communication"
+    ],
+    "preferred_skills": [
+      "ServiceNow",
+      "JIRA",
+      "Networking",
+      "Linux",
+      "Remote Support"
+    ],
+    "keywords": [
+      "IT service desk",
+      "help desk",
+      "ticket management",
+      "user support",
+      "knowledge management",
+      "SLA management",
+      "remote troubleshooting"
+    ],
+    "tools": [
+      "ServiceNow",
+      "JIRA",
+      "SCCM",
+      "TeamViewer",
+      "Active Directory"
+    ],
+    "frameworks": [
+      "ServiceNow",
+      "JIRA",
+      "Zendesk",
+      "Freshdesk",
+      "SCCM"
+    ],
+    "certifications": [
+      "ITIL Foundation",
+      "CompTIA A+",
+      "HDI Support Center Analyst"
+    ]
+  },
+  "Staff Engineer": {
+    "name": "Staff Engineer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "Python",
+      "Java",
+      "System Design",
+      "Architecture",
+      "SQL",
+      "Git",
+      "Microservices"
+    ],
+    "preferred_skills": [
+      "Go",
+      "Rust",
+      "Kubernetes",
+      "Terraform",
+      "C++"
+    ],
+    "keywords": [
+      "staff engineer",
+      "system design",
+      "architecture",
+      "mentoring",
+      "technical leadership",
+      "cross-team",
+      "scalability",
+      "code review"
+    ],
+    "tools": [
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "Jenkins",
+      "GitHub Actions",
+      "Datadog"
+    ],
+    "frameworks": [
+      "Spring Boot",
+      "FastAPI",
+      "React",
+      "Next.js",
+      "Django"
+    ],
+    "certifications": [
+      "AWS Solutions Architect Professional",
+      "Google Cloud Professional Architect",
+      "Azure Solutions Architect"
+    ]
+  },
+  "Data Platform Engineer": {
+    "name": "Data Platform Engineer",
+    "category": "Cloud & DevOps",
+    "required_skills": [
+      "Python",
+      "SQL",
+      "Airflow",
+      "dbt",
+      "Spark",
+      "Kafka",
+      "Cloud Data Warehouses"
+    ],
+    "preferred_skills": [
+      "Java",
+      "Scala",
+      "Terraform",
+      "Kubernetes",
+      "Delta Lake"
+    ],
+    "keywords": [
+      "data platform",
+      "data engineering",
+      "ETL",
+      "ELT",
+      "data pipelines",
+      "data mesh",
+      "lakehouse",
+      "data governance",
+      "real-time analytics"
+    ],
+    "tools": [
+      "Apache Airflow",
+      "dbt",
+      "Snowflake",
+      "BigQuery",
+      "Redshift",
+      "Kafka",
+      "Spark"
+    ],
+    "frameworks": [
+      "Airflow",
+      "dbt",
+      "Spark Structured Streaming",
+      "Delta Lake",
+      "Iceberg"
+    ],
+    "certifications": [
+      "Snowflake SnowPro Core",
+      "Databricks Certified Data Engineer",
+      "Google Cloud Professional Data Engineer"
+    ]
+  },
+  "AI Safety Researcher": {
+    "name": "AI Safety Researcher",
+    "category": "Artificial Intelligence",
+    "required_skills": [
+      "Python",
+      "Machine Learning",
+      "AI Alignment",
+      "Red Teaming",
+      "Research Methods",
+      "LLM Evaluation"
+    ],
+    "preferred_skills": [
+      "PyTorch",
+      "JAX",
+      "Hugging Face",
+      "Weights & Biases",
+      "Kubernetes"
+    ],
+    "keywords": [
+      "AI safety",
+      "alignment",
+      "robustness",
+      "interpretability",
+      "adversarial attacks",
+      "AI governance",
+      "responsible AI",
+      "model evaluation"
+    ],
+    "tools": [
+      "PyTorch",
+      "JAX",
+      "Hugging Face Transformers",
+      "Weights & Biases",
+      "LangChain"
+    ],
+    "frameworks": [
+      "PyTorch",
+      "JAX",
+      "Lit-GPT",
+      "OpenAI Evals",
+      "EleutherAI LM Eval"
+    ],
+    "certifications": [
+      "AI Safety Fundamentals",
+      "CHAI Research Fellowship",
+      "MIT AI Safety"
+    ]
+  },
+  "Digital Forensics Analyst": {
+    "name": "Digital Forensics Analyst",
+    "category": "Cybersecurity",
+    "required_skills": [
+      "Digital Forensics",
+      "Incident Response",
+      "Windows Internals",
+      "Linux Forensics",
+      "Memory Analysis",
+      "EnCase",
+      "FTK"
+    ],
+    "preferred_skills": [
+      "Python",
+      "Volatility",
+      "YARA",
+      "Autopsy",
+      "Network Forensics"
+    ],
+    "keywords": [
+      "digital forensics",
+      "incident response",
+      "memory forensics",
+      "disk forensics",
+      "malware forensics",
+      "evidence acquisition",
+      "chain of custody",
+      "timeline analysis"
+    ],
+    "tools": [
+      "EnCase",
+      "FTK",
+      "Volatility",
+      "Autopsy",
+      "Cellebrite",
+      "X-Ways"
+    ],
+    "frameworks": [
+      "Volatility",
+      "Rekall",
+      "Plaso",
+      "Sleuth Kit",
+      "Autopsy"
+    ],
+    "certifications": [
+      "GCFA",
+      "GCFE",
+      "GASF",
+      "CCFP",
+      "EnCE"
+    ]
+  },
+  "Growth Product Manager": {
+    "name": "Growth Product Manager",
+    "category": "Product & Management",
+    "required_skills": [
+      "Product Strategy",
+      "A/B Testing",
+      "SQL",
+      "Analytics",
+      "User Research",
+      "Agile"
+    ],
+    "preferred_skills": [
+      "Python",
+      "R",
+      "Mixpanel",
+      "Amplitude",
+      "Figma"
+    ],
+    "keywords": [
+      "growth",
+      "product-led growth",
+      "metrics",
+      "conversion",
+      "retention",
+      "A/B testing",
+      "user acquisition",
+      "funnel optimization",
+      "north star metric"
+    ],
+    "tools": [
+      "Amplitude",
+      "Mixpanel",
+      "Google Analytics",
+      "Optimizely",
+      "Notion"
+    ],
+    "frameworks": [
+      "Amplitude",
+      "Mixpanel",
+      "Hotjar",
+      "Segment",
+      "LaunchDarkly"
+    ],
+    "certifications": [
+      "Pragmatic Institute",
+      "Product School Product Manager",
+      "Google Analytics IQ"
+    ]
+  },
+  "Salesforce Lightning Developer": {
+    "name": "Salesforce Lightning Developer",
+    "category": "Enterprise Solutions",
+    "required_skills": [
+      "Salesforce",
+      "Apex",
+      "Lightning Web Components",
+      "SOQL",
+      "JavaScript",
+      "HTML",
+      "CSS"
+    ],
+    "preferred_skills": [
+      "Visualforce",
+      "Aura",
+      "Java",
+      "REST API",
+      "Angular"
+    ],
+    "keywords": [
+      "Salesforce",
+      "Lightning",
+      "Apex",
+      "LWC",
+      "Salesforce integration",
+      "CRM",
+      "custom objects",
+      "triggers",
+      "Salesforce ecosystem"
+    ],
+    "tools": [
+      "Salesforce",
+      "VS Code",
+      "Workbench",
+      "Postman",
+      "Jenkins",
+      "Copado"
+    ],
+    "frameworks": [
+      "Lightning Web Components",
+      "Aura",
+      "Salesforce DX",
+      "Apex",
+      "Visualforce"
+    ],
+    "certifications": [
+      "Salesforce Certified Platform Developer I",
+      "Salesforce Certified Platform Developer II",
+      "Salesforce Administrator"
+    ]
+  },
+  "Developer Experience Engineer": {
+    "name": "Developer Experience Engineer",
+    "category": "Web Development",
+    "required_skills": [
+      "Developer Tools",
+      "API Design",
+      "Documentation",
+      "TypeScript",
+      "Open Source",
+      "Community"
+    ],
+    "preferred_skills": [
+      "React",
+      "Node.js",
+      "GraphQL",
+      "CLI Design",
+      "Marketing"
+    ],
+    "keywords": [
+      "developer experience",
+      "DX",
+      "API design",
+      "SDK",
+      "documentation",
+      "onboarding",
+      "developer productivity",
+      "tooling",
+      "feedback loops"
+    ],
+    "tools": [
+      "VS Code",
+      "GitHub",
+      "Storybook",
+      "Docusaurus",
+      "Postman",
+      "Figma"
+    ],
+    "frameworks": [
+      "React",
+      "Next.js",
+      "Astro",
+      "Vite",
+      "TypeScript",
+      "Turborepo"
+    ],
+    "certifications": [
+      "GitHub Actions Certification",
+      "Vercel Certified",
+      "Netlify Certified"
+    ]
+  },
+  "Game Engine Programmer": {
+    "name": "Game Engine Programmer",
+    "category": "Software Engineering",
+    "required_skills": [
+      "C++",
+      "Game Engines",
+      "3D Math",
+      "Physics",
+      "Graphics Programming",
+      "GPU Programming"
+    ],
+    "preferred_skills": [
+      "C#",
+      "Rust",
+      "HLSL",
+      "GLSL",
+      "Vulkan",
+      "DirectX"
+    ],
+    "keywords": [
+      "game engine",
+      "rendering engine",
+      "physics engine",
+      "graphics programming",
+      "shader programming",
+      "real-time rendering",
+      "GPU optimization",
+      "multiplayer networking"
+    ],
+    "tools": [
+      "Unreal Engine",
+      "Unity",
+      "Visual Studio",
+      "RenderDoc",
+      "PIX",
+      "NSight"
+    ],
+    "frameworks": [
+      "Unreal Engine",
+      "Unity",
+      "Godot",
+      "Custom Engine",
+      "bgfx",
+      "Diligent Engine"
+    ],
+    "certifications": [
+      "Unity Certified Developer",
+      "Unreal Engine Certified Developer",
+      "NVIDIA CUDA Certification"
+    ]
   }
 }

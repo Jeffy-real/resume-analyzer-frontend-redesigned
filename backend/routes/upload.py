@@ -23,9 +23,9 @@ def upload_resume():
         return jsonify({'error': message}), 400
 
     try:
-        original_filename = secure_filename(file.filename)
+        original_filename = secure_filename(file.filename) or file.filename or 'resume.pdf'
+        file_type = get_file_extension(original_filename) or get_file_extension(file.filename)
         stored_filename = generate_unique_filename(original_filename)
-        file_type = get_file_extension(original_filename)
 
         upload_folder = current_app.config.get('UPLOAD_FOLDER', 'uploads')
         os.makedirs(upload_folder, exist_ok=True)

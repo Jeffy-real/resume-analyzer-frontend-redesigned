@@ -41,20 +41,31 @@ class DashboardService:
                 'max': score_data.get('max', 15)
             })
 
+        ai_dict = analysis.to_dict()
+
         dashboard_data = {
             'analysis_id': analysis.id,
             'resume_id': resume.id,
             'resume_name': resume.original_filename,
             'target_role': analysis.target_role,
 
-            'overall_score': analysis.overall_score or 0,
-            'ats_score': analysis.ats_score or 0,
+            'overall_score': ai_dict.get('overall_score', 0),
+            'ats_score': ai_dict.get('ats_score', 0),
+            'skills_score': ai_dict.get('skills_score', 75),
+            'experience_score': ai_dict.get('experience_score', 75),
+            'projects_score': ai_dict.get('projects_score', 75),
+            'education_score': ai_dict.get('education_score', 75),
+            'quality_score': ai_dict.get('quality_score', 75),
 
-            'matched_skills': analysis.get_matched_skills(),
-            'missing_skills': analysis.get_missing_skills(),
+            'matched_skills': ai_dict.get('matched_skills', []),
+            'missing_skills': ai_dict.get('missing_skills', []),
+            'strengths': ai_dict.get('strengths', []),
+            'weaknesses': ai_dict.get('weaknesses', []),
+            'recommendations': ai_dict.get('recommendations', []),
+            'keywords': ai_dict.get('keywords', []),
 
             'sections': sections,
-            'feedback': analysis.get_feedback(),
+            'feedback': ai_dict.get('recommendations', analysis.get_feedback()),
 
             'parsed_data': {
                 'contact_info': parsed_data.get('contact_info', {}),
@@ -63,8 +74,8 @@ class DashboardService:
             },
 
             'analysis_summary': self._generate_summary(
-                analysis.overall_score,
-                analysis.ats_score,
+                ai_dict.get('overall_score', 0),
+                ai_dict.get('ats_score', 0),
                 analysis.target_role
             )
         }

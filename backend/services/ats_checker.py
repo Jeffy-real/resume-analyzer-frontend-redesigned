@@ -86,7 +86,7 @@ class ATSChecker:
         total_score = keyword_score + required_score
         return min(round(total_score), 100)
 
-    def get_role_suggestions(self, resume_text: str) -> List[Dict]:
+    def get_role_suggestions(self, resume_text: str, top_n: int = None) -> List[Dict]:
         suggestions = []
         normalized_text = normalize_text(resume_text)
 
@@ -95,13 +95,28 @@ class ATSChecker:
             matched = sum(1 for k in all_keywords if k.lower() in normalized_text)
             match_percentage = round((matched / len(all_keywords)) * 100, 1) if all_keywords else 0
 
+            required_skills = role_data.get('required_skills', [])
+            missing_required = [s for s in required_skills if s.lower() not in normalized_text]
+            matched_required = len(required_skills) - len(missing_required)
+            ats_score = self._calculate_ats_score(
+                matched,
+                len(all_keywords),
+                matched_required,
+                len(required_skills)
+            )
+
             suggestions.append({
                 'role': role_name,
                 'category': role_data.get('category', 'General'),
                 'match_percentage': match_percentage,
                 'matched_keywords': matched,
-                'total_keywords': len(all_keywords)
+                'total_keywords': len(all_keywords),
+                'ats_score': ats_score,
+                'required_skills': required_skills,
+                'missing_required_skills': missing_required,
             })
 
         suggestions.sort(key=lambda x: x['match_percentage'], reverse=True)
-        return suggestions[:5]
+        if top_n:
+            return suggestions[:top_n]
+        return suggestions
