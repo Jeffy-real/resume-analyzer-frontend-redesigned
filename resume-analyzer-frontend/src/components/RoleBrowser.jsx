@@ -250,7 +250,7 @@ export function RoleBrowser({ allRoles, onSelectRole, selectedRole, onClose, rec
         {/* Header */}
         <div className="px-lg py-md border-b border-outline-variant bg-surface flex items-start justify-between gap-4">
           <div>
-            <h2 id="role-browser-title" className="font-headline-md text-headline-md text-on-surface">Job Role Intelligence</h2>
+            <h2 id="role-browser-title" className="font-headline-md text-headline-md text-on-surface">Browse Job Roles</h2>
             <p className="font-body-md text-body-md text-secondary mt-xs">
               {roleCount} predefined roles to target your analysis.
             </p>

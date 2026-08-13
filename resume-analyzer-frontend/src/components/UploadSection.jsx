@@ -8,8 +8,8 @@ import { Icon } from './Icon';
 const PHASES = [
   { icon: 'check',          title: 'System Ready',             desc: 'Awaiting file input.' },
   { icon: 'upload_file',    title: 'Upload & Extract',         desc: 'Extracting raw text and metadata.' },
-  { icon: 'model_training', title: 'Parse & Analyze',          desc: 'Identifying skills, experience, and education.' },
-  { icon: 'auto_awesome',   title: 'Generate Recommendations', desc: 'Computing ATS fit and generating insights.' },
+  { icon: 'manage_search',   title: 'Parse & Analyze',          desc: 'Identifying skills, experience, and education.' },
+  { icon: 'lightbulb',       title: 'Build Insights',            desc: 'Computing ATS fit and building your report.' },
 ];
 
 function formatTime(ts) {
@@ -89,10 +89,9 @@ export function UploadSection({
     <section className="w-full max-w-container-max mx-auto px-md py-xl md:px-lg flex flex-col gap-lg" id="upload">
       {/* Header */}
       <div className="flex flex-col gap-unit">
-        <h2 className="font-headline-md text-headline-md text-on-surface">Upload Candidate Resume</h2>
+        <h2 className="font-headline-md text-headline-md text-on-surface">Analyze Your Resume</h2>
         <p className="font-body-md text-body-md text-on-surface-variant max-w-2xl">
-          Upload a resume to initiate the JobFirst parsing and analysis workflow.
-          Our system extracts skills, compares against ATS criteria, and generates actionable insights.
+          Upload your resume and choose a target role to get a detailed breakdown of your ATS score, skill gaps, and specific improvement suggestions.
         </p>
       </div>
 
@@ -286,7 +285,7 @@ export function UploadSection({
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                     >
-                      <Icon name="auto_awesome" size={18} />
+                      <Icon name="arrow_forward" size={18} />
                       Analyze Resume
                     </motion.span>
                   )}

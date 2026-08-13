@@ -235,7 +235,7 @@ function App() {
       setIsAnalyzing(false);
       saveToHistory(newAnalysis);
       setView('dashboard');
-      addToast('AI Analysis complete — report generated', 'success');
+      addToast('Analysis complete — report ready', 'success');
     } catch (err) {
       setIsAnalyzing(false);
       addToast(err.message || 'Analysis failed', 'error');
@@ -477,8 +477,8 @@ function App() {
           <div className="card px-8 py-6 rounded-2xl flex flex-col items-center gap-4">
             <LoadingSpinner size={40} />
             <div className="text-center space-y-1">
-              <p className="text-sm font-semibold text-on-surface">Analyzing resume...</p>
-              <p className="text-[11px] text-outline">Comparing against all supported roles</p>
+              <p className="text-sm font-semibold text-on-surface">Analyzing your resume…</p>
+              <p className="text-[11px] text-outline">Comparing against job profiles</p>
             </div>
           </div>
         </div>

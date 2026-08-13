@@ -72,7 +72,7 @@ function RadialScore({ score = 0 }) {
             </span>
           </div>
           <span className="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider font-semibold mt-1">
-            AI Resume Score
+            Resume Score
           </span>
         </div>
       </div>
@@ -130,7 +130,7 @@ export function Dashboard({
         <div className="bg-surface-container-lowest border border-outline-variant rounded-xl text-center py-16 shadow-sm">
           <Icon name="file-text" size={48} className="mx-auto text-outline" />
           <h2 className="mt-4 font-headline-md text-headline-md text-on-surface">No Analysis Yet</h2>
-          <p className="mt-2 font-body-md text-body-md text-on-surface-variant">Upload a resume to view AI evaluation results</p>
+          <p className="mt-2 font-body-md text-body-md text-on-surface-variant">Upload a resume to view your evaluation results</p>
         </div>
       </section>
     );
@@ -170,9 +170,9 @@ export function Dashboard({
       {/* Top Header & Role Selector */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-md border-b border-outline-variant pb-lg">
         <div>
-          <h2 className="font-display-lg text-display-lg text-on-surface">Executive AI Dashboard</h2>
+          <h2 className="font-display-lg text-display-lg text-on-surface">Resume Dashboard</h2>
           <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-            Role-Intelligent Evaluation for <span className="text-primary font-semibold">{targetRole}</span>
+            Evaluated for <span className="text-primary font-semibold">{targetRole}</span>
           </p>
         </div>
 
@@ -217,7 +217,7 @@ export function Dashboard({
         </div>
       </div>
 
-      {/* Grid Row 2: AI Insights (Strengths, Areas to Improve, Skills, Recommendations) */}
+      {/* Grid Row 2: Insights (Strengths, Areas to Improve, Skills, Recommendations) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-lg">
         {/* Left Column: Strengths & Weaknesses */}
         <div className="lg:col-span-6 flex flex-col gap-lg">
@@ -254,7 +254,7 @@ export function Dashboard({
           </div>
         </div>
 
-        {/* Right Column: Missing Skills, Keywords & AI Recommendations */}
+        {/* Right Column: Missing Skills, Keywords & Suggestions */}
         <div className="lg:col-span-6 flex flex-col gap-lg">
           {/* Missing Skills & Recommended Keywords */}
           <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm flex flex-col gap-md">
@@ -293,11 +293,11 @@ export function Dashboard({
             )}
           </div>
 
-          {/* AI Recommendations */}
+          {/* Improvement Suggestions */}
           <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-lg shadow-sm">
             <h3 className="font-headline-sm text-headline-sm text-on-surface flex items-center gap-2 mb-md">
-              <Icon name="auto_awesome" size={22} className="text-tertiary" />
-              AI Recommendations
+              <Icon name="lightbulb" size={22} className="text-tertiary" />
+              Improvement Suggestions
             </h3>
             <ul className="flex flex-col gap-2">
               {recommendationsList.map((rec, idx) => (

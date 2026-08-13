@@ -80,7 +80,7 @@ export const DEFAULT_PROFILE = {
     {
       id: 'proj-1',
       title: 'JobFirst Resume & Career Suite',
-      description: 'AI-driven resume parsing and ATS matching platform with interactive skill gap visualization.',
+      description: 'Resume parsing and ATS matching platform with interactive skill gap visualization.',
       technologies: 'React, Vite, Node.js, TailwindCSS',
       link: 'https://github.com/alexrivers/jobfirst',
     },

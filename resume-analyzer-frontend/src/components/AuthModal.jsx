@@ -146,17 +146,17 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess, addToast }) {
 
               {/* Main Headline & Subtitle */}
               <h2 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white mb-3 leading-snug whitespace-normal">
-                Your AI Career Companion
+                Resume analysis, done right.
               </h2>
-              <p className="text-indigo-100/80 text-sm leading-relaxed mb-6 whitespace-normal">
-                Create impactful resumes, get real-time AI insights, and land your dream job with position-matched ATS optimization.
+              <p className="text-sm text-indigo-200 leading-relaxed mb-6" style={{ maxWidth: '280px' }}>
+                Build stronger resumes, get detailed feedback, and match to roles that fit.
               </p>
 
               {/* Value Pills */}
               <div className="flex flex-wrap gap-2 mb-6 sm:mb-8">
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-medium text-white shrink-0">
                   <Sparkles className="w-3.5 h-3.5 text-indigo-300" />
-                  <span>AI Resume Analysis</span>
+                  <span>Resume Analysis</span>
                 </div>
                 <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-xs font-medium text-white shrink-0">
                   <Target className="w-3.5 h-3.5 text-emerald-300" />
@@ -201,7 +201,7 @@ export function AuthModal({ isOpen, onClose, onAuthSuccess, addToast }) {
                 </h3>
                 <p className="text-sm text-on-surface-variant whitespace-normal" style={{ width: '100%' }}>
                   {mode === 'signup'
-                    ? 'Sign up to analyze your resume and get instant AI feedback'
+                    ? 'Sign up to analyze your resume and get detailed feedback'
                     : 'Sign in to continue to JobFirst'}
                 </p>
               </div>
