@@ -1,0 +1,51 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Environment & Secrets
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+
+# Databases & Uploads
+*.db
+*.sqlite3
+backend/uploads/
+uploads/
+backend/test_resume_analyzer.db
+backend/resume_analyzer.db
+
+# Build outputs & Vercel
+dist/
+resume-analyzer-frontend/dist/
+.vercel/
+.DS_Store
+*.log
