@@ -5,6 +5,14 @@ from pathlib import Path
 BASE_DIR = Path(__file__).parent
 
 def get_database_uri():
+    # 1. Check for explicit database connection URLs (e.g. from PlanetScale, AWS RDS, GCP Cloud SQL, Aiven, Railway)
+    db_uri = os.environ.get('SQLALCHEMY_DATABASE_URI') or os.environ.get('MYSQL_URL') or os.environ.get('DATABASE_URL')
+    if db_uri:
+        if db_uri.startswith('mysql://'):
+            db_uri = db_uri.replace('mysql://', 'mysql+pymysql://', 1)
+        return db_uri
+
+    # 2. Check for MySQL individual component environment variables
     mysql_user = os.environ.get('MYSQL_USER')
     mysql_password = os.environ.get('MYSQL_PASSWORD')
     mysql_host = os.environ.get('MYSQL_HOST', 'localhost')
@@ -14,6 +22,7 @@ def get_database_uri():
     if mysql_user and mysql_password:
         return f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
 
+    # 3. Fallback to SQLite for offline/development environments
     is_vercel = os.environ.get('VERCEL') == '1' or os.environ.get('AWS_LAMBDA_FUNCTION_NAME') is not None
     default_db = os.path.join(tempfile.gettempdir(), 'resume_analyzer.db') if is_vercel else str(BASE_DIR / 'resume_analyzer.db')
 
