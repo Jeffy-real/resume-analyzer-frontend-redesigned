@@ -29,16 +29,16 @@ def extract_text_pypdf2(file_path: str) -> str:
 def parse_pdf(file_path: str) -> str:
     try:
         text = extract_text_pdfplumber(file_path)
-        if text and len(text.strip()) > 50:
+        if text and len(text.strip()) >= 5:
             return text
     except Exception:
         pass
 
     try:
         text = extract_text_pypdf2(file_path)
-        if text and len(text.strip()) > 50:
+        if text and len(text.strip()) >= 5:
             return text
     except Exception:
         pass
 
-    raise ValueError("Failed to extract text from PDF. The file may be corrupted or image-based.")
+    raise ValueError("Failed to extract readable text from PDF. Ensure the file contains text and is not password protected.")
