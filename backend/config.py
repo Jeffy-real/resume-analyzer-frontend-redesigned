@@ -4,6 +4,17 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 
+def is_placeholder(val: str) -> bool:
+    if not val:
+        return True
+    v = str(val).lower().strip()
+    placeholders = [
+        'your_', 'example.com', 'placeholder', 'username:password',
+        'your_mysql_host', 'your_db', 'your_user', 'your_password',
+        'your-db', 'your-app-name', 'undefined', 'null'
+    ]
+    return any(p in v for p in placeholders)
+
 def is_serverless():
     return bool(
         os.environ.get('VERCEL')
@@ -21,7 +32,7 @@ def get_database_uri():
         or os.environ.get('POSTGRES_URL')
         or os.environ.get('MYSQL_URL')
     )
-    if db_uri:
+    if db_uri and not is_placeholder(db_uri):
         if db_uri.startswith('mysql://'):
             db_uri = db_uri.replace('mysql://', 'mysql+pymysql://', 1)
         elif db_uri.startswith('postgres://'):
@@ -33,11 +44,18 @@ def get_database_uri():
     # 2. Check for MySQL individual component environment variables
     mysql_user = os.environ.get('MYSQL_USER')
     mysql_password = os.environ.get('MYSQL_PASSWORD')
-    mysql_host = os.environ.get('MYSQL_HOST', 'localhost')
+    mysql_host = os.environ.get('MYSQL_HOST', '')
     mysql_port = os.environ.get('MYSQL_PORT', '3306')
     mysql_db = os.environ.get('MYSQL_DB', 'jobfirst_db')
 
-    if mysql_user and mysql_password:
+    if (
+        mysql_user
+        and mysql_password
+        and mysql_host
+        and not is_placeholder(mysql_user)
+        and not is_placeholder(mysql_password)
+        and not is_placeholder(mysql_host)
+    ):
         return f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
 
     # 3. Always use writable /tmp SQLite on serverless / Vercel
