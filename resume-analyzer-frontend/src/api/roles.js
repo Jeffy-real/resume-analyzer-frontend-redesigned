@@ -1,9 +1,25 @@
 const BASE = import.meta.env.VITE_API_BASE_URL || '/api';
 
 export async function fetchAllRoles() {
-  const res = await fetch(`${BASE}/roles`);
-  if (!res.ok) throw new Error(`Failed to fetch roles: ${res.status}`);
-  return res.json();
+  try {
+    const res = await fetch(`${BASE}/roles`);
+    if (res.ok) {
+      const data = await res.json();
+      if (data && data.roles && Object.keys(data.roles).length > 0) {
+        return data;
+      }
+    }
+  } catch (err) {
+    console.warn('Backend roles fetch failed, trying local dataset fallback:', err);
+  }
+
+  // Graceful fallback to bundled dataset
+  try {
+    const fallback = await import('../data/roles.json');
+    return { roles: fallback.default || fallback };
+  } catch (e) {
+    throw new Error('Failed to load roles from backend');
+  }
 }
 
 async function getErrorMessage(res, defaultMsg) {
