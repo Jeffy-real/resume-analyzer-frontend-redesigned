@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "npm run dev --prefix resume-analyzer-frontend",
+    "backend": "cd backend && python app.py",
+    "backend:win": "cd backend && .\\venv\\Scripts\\python.exe app.py",
     "build": "npm run build --prefix resume-analyzer-frontend",
     "preview": "npm run preview --prefix resume-analyzer-frontend"
   }

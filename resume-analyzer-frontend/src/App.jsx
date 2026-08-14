@@ -83,6 +83,8 @@ function App() {
 
   const [view, setView] = useState('upload');
   const [allRoles, setAllRoles] = useState({});
+  const [rolesLoading, setRolesLoading] = useState(true);
+  const [rolesError, setRolesError] = useState(null);
   const [selectedRole, setSelectedRole] = useState('');
   const [file, setFile] = useState(null);
   const [isDragging, setIsDragging] = useState(false);
@@ -119,17 +121,32 @@ function App() {
     addToast('Signed out successfully');
   }, [addToast]);
 
+  const loadRoles = useCallback(async (retryCount = 0) => {
+    setRolesLoading(true);
+    setRolesError(null);
+    try {
+      const data = await fetchAllRoles();
+      const roles = data.roles || {};
+      setAllRoles(roles);
+      const roleNames = Object.keys(roles);
+      if (roleNames.length > 0) {
+        setSelectedRole((prev) => prev || roleNames[0]);
+      }
+      setRolesLoading(false);
+    } catch (err) {
+      if (retryCount < 2) {
+        window.setTimeout(() => loadRoles(retryCount + 1), 2000);
+      } else {
+        setRolesLoading(false);
+        setRolesError('Failed to load roles from backend');
+        addToast('Failed to load roles from backend. Ensure backend server is running.', 'error');
+      }
+    }
+  }, [addToast]);
+
   useEffect(() => {
     applyTheme();
-    fetchAllRoles()
-      .then(data => {
-        setAllRoles(data.roles || {});
-        const roleNames = Object.keys(data.roles || {});
-        if (roleNames.length > 0 && !selectedRole) {
-          setSelectedRole(roleNames[0]);
-        }
-      })
-      .catch(() => addToast('Failed to load roles from backend', 'error'));
+    loadRoles();
 
     const storedHistory = localStorage.getItem('resume-analyzer-history');
     if (storedHistory) {
@@ -139,7 +156,7 @@ function App() {
         localStorage.removeItem('resume-analyzer-history');
       }
     }
-  }, []);
+  }, [loadRoles]);
 
   const saveToHistory = useCallback((analysisData) => {
     const newEntry = {
@@ -450,6 +467,9 @@ function App() {
             selectedRole={selectedRole}
             setSelectedRole={handleRoleChange}
             allRoles={allRoles}
+            rolesLoading={rolesLoading}
+            rolesError={rolesError}
+            onRetryRoles={loadRoles}
             recommendations={recommendations}
             recommendationsLoading={recommendationsLoading}
             isAnalyzing={isAnalyzing}

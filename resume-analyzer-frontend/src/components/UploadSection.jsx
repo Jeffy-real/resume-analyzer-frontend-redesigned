@@ -35,6 +35,9 @@ export function UploadSection({
   selectedRole,
   setSelectedRole,
   allRoles,
+  rolesLoading,
+  rolesError,
+  onRetryRoles,
   isAnalyzing,
   analyzeResume,
   setHasAnalysis,
@@ -240,23 +243,39 @@ export function UploadSection({
                     id="upload-target-role"
                     value={selectedRole}
                     onChange={(e) => setSelectedRole(e.target.value)}
-                    className="w-full appearance-none py-2.5 pl-3 pr-10 border border-outline-variant rounded-lg bg-surface-container-lowest text-body-md text-on-surface font-medium focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-colors cursor-pointer"
+                    disabled={roleCount === 0}
+                    className="w-full appearance-none py-2.5 pl-3 pr-10 border border-outline-variant rounded-lg bg-surface-container-lowest text-body-md text-on-surface font-medium focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/15 transition-colors cursor-pointer disabled:opacity-75 disabled:cursor-not-allowed"
                   >
-                    {(allRoles && Object.keys(allRoles).length > 0) ? (
+                    {roleCount > 0 ? (
                       Object.keys(allRoles).map((role) => (
                         <option value={role} key={role}>{role}</option>
                       ))
-                    ) : (
+                    ) : rolesLoading ? (
                       <option value="">Loading roles…</option>
+                    ) : (
+                      <option value="">No roles loaded</option>
                     )}
                   </select>
                   <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none text-on-surface-variant">
                     <Icon name="chevron-down" size={18} />
                   </div>
                 </div>
-                {roleCount > 0 && (
+                {roleCount > 0 ? (
                   <p className="font-label-md text-label-md text-on-surface-variant mt-sm">{roleCount} roles available</p>
-                )}
+                ) : rolesError ? (
+                  <div className="flex items-center justify-between mt-sm">
+                    <p className="font-label-md text-label-md text-error">{rolesError}</p>
+                    {onRetryRoles && (
+                      <button
+                        type="button"
+                        onClick={onRetryRoles}
+                        className="text-xs text-primary font-medium hover:underline cursor-pointer flex items-center gap-1"
+                      >
+                        <Icon name="refresh-cw" size={12} /> Retry
+                      </button>
+                    )}
+                  </div>
+                ) : null}
               </div>
 
               <button
