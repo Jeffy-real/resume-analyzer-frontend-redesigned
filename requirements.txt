@@ -5,5 +5,7 @@ SQLAlchemy==2.0.31
 Werkzeug==3.0.3
 python-dotenv==1.0.1
 PyPDF2==3.0.1
+pdfplumber==0.11.4
 python-docx==1.1.2
 PyMySQL==1.1.0
+Pillow>=10.0.0

@@ -4,12 +4,22 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).parent
 
+def is_serverless():
+    return bool(
+        os.environ.get('VERCEL')
+        or os.environ.get('VERCEL_ENV')
+        or os.environ.get('AWS_LAMBDA_FUNCTION_NAME')
+        or not os.access(str(BASE_DIR), os.W_OK)
+    )
+
 def get_database_uri():
-    # 1. Check for explicit database connection URLs (e.g. from PlanetScale, AWS RDS, GCP Cloud SQL, Aiven, Railway)
+    # 1. Check for explicit database connection URLs (e.g. from PlanetScale, Supabase, Neon, AWS RDS, Cloud SQL)
     db_uri = os.environ.get('SQLALCHEMY_DATABASE_URI') or os.environ.get('MYSQL_URL') or os.environ.get('DATABASE_URL')
     if db_uri:
         if db_uri.startswith('mysql://'):
             db_uri = db_uri.replace('mysql://', 'mysql+pymysql://', 1)
+        elif db_uri.startswith('postgres://'):
+            db_uri = db_uri.replace('postgres://', 'postgresql://', 1)
         return db_uri
 
     # 2. Check for MySQL individual component environment variables
@@ -22,10 +32,8 @@ def get_database_uri():
     if mysql_user and mysql_password:
         return f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
 
-    # 3. Fallback to SQLite for offline/development environments
-    is_vercel = os.environ.get('VERCEL') == '1' or os.environ.get('AWS_LAMBDA_FUNCTION_NAME') is not None
-    default_db = os.path.join(tempfile.gettempdir(), 'resume_analyzer.db') if is_vercel else str(BASE_DIR / 'resume_analyzer.db')
-
+    # 3. Fallback to SQLite (in /tmp for Vercel/serverless, or in BASE_DIR for local)
+    default_db = os.path.join(tempfile.gettempdir(), 'resume_analyzer.db') if is_serverless() else str(BASE_DIR / 'resume_analyzer.db')
     db_path = os.environ.get('DATABASE_PATH', default_db)
     return f"sqlite:///{db_path}"
 
@@ -34,9 +42,7 @@ class Config:
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI') or get_database_uri()
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
-    is_vercel = os.environ.get('VERCEL') == '1' or os.environ.get('AWS_LAMBDA_FUNCTION_NAME') is not None
-    default_upload = os.path.join(tempfile.gettempdir(), 'uploads') if is_vercel else str(BASE_DIR / 'uploads')
-
+    default_upload = os.path.join(tempfile.gettempdir(), 'uploads') if is_serverless() else str(BASE_DIR / 'uploads')
     UPLOAD_FOLDER = os.environ.get('UPLOAD_FOLDER', default_upload)
     MAX_CONTENT_LENGTH = 15 * 1024 * 1024  # 15MB max file size
     ALLOWED_EXTENSIONS = {'pdf', 'docx', 'doc', 'txt', 'rtf', 'png', 'jpg', 'jpeg', 'webp', 'svg'}

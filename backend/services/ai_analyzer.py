@@ -20,10 +20,20 @@ class AIAnalyzer:
         self.roles_data = self._load_roles()
 
     def _load_roles(self) -> Dict[str, Any]:
-        roles_path = Path(__file__).parent.parent / 'data' / 'roles.json'
-        if roles_path.exists():
-            with open(roles_path, 'r', encoding='utf-8') as f:
-                return json.load(f)
+        candidates = [
+            Path(__file__).parent.parent / 'data' / 'roles.json',
+            Path(__file__).parent.parent.parent / 'backend' / 'data' / 'roles.json',
+            Path(__file__).parent.parent.parent / 'resume-analyzer-frontend' / 'src' / 'data' / 'roles.json',
+            Path.cwd() / 'backend' / 'data' / 'roles.json',
+            Path.cwd() / 'data' / 'roles.json',
+        ]
+        for p in candidates:
+            if p.exists():
+                try:
+                    with open(p, 'r', encoding='utf-8') as f:
+                        return json.load(f)
+                except Exception:
+                    pass
         return {}
 
     def get_available_roles(self) -> List[str]:
