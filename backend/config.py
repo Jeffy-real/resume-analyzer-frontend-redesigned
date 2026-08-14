@@ -9,17 +9,25 @@ def is_serverless():
         os.environ.get('VERCEL')
         or os.environ.get('VERCEL_ENV')
         or os.environ.get('AWS_LAMBDA_FUNCTION_NAME')
+        or os.environ.get('LAMBDA_TASK_ROOT')
         or not os.access(str(BASE_DIR), os.W_OK)
     )
 
 def get_database_uri():
     # 1. Check for explicit database connection URLs (e.g. from PlanetScale, Supabase, Neon, AWS RDS, Cloud SQL)
-    db_uri = os.environ.get('SQLALCHEMY_DATABASE_URI') or os.environ.get('MYSQL_URL') or os.environ.get('DATABASE_URL')
+    db_uri = (
+        os.environ.get('SQLALCHEMY_DATABASE_URI')
+        or os.environ.get('DATABASE_URL')
+        or os.environ.get('POSTGRES_URL')
+        or os.environ.get('MYSQL_URL')
+    )
     if db_uri:
         if db_uri.startswith('mysql://'):
             db_uri = db_uri.replace('mysql://', 'mysql+pymysql://', 1)
         elif db_uri.startswith('postgres://'):
-            db_uri = db_uri.replace('postgres://', 'postgresql://', 1)
+            db_uri = db_uri.replace('postgres://', 'postgresql+pg8000://', 1)
+        elif db_uri.startswith('postgresql://') and '+pg8000' not in db_uri and '+psycopg' not in db_uri:
+            db_uri = db_uri.replace('postgresql://', 'postgresql+pg8000://', 1)
         return db_uri
 
     # 2. Check for MySQL individual component environment variables
@@ -32,8 +40,12 @@ def get_database_uri():
     if mysql_user and mysql_password:
         return f"mysql+pymysql://{mysql_user}:{mysql_password}@{mysql_host}:{mysql_port}/{mysql_db}"
 
-    # 3. Fallback to SQLite (in /tmp for Vercel/serverless, or in BASE_DIR for local)
-    default_db = os.path.join(tempfile.gettempdir(), 'resume_analyzer.db') if is_serverless() else str(BASE_DIR / 'resume_analyzer.db')
+    # 3. Always use writable /tmp SQLite on serverless / Vercel
+    if is_serverless():
+        tmp_db = os.path.join(tempfile.gettempdir(), 'resume_analyzer.db')
+        return f"sqlite:///{tmp_db}"
+
+    default_db = str(BASE_DIR / 'resume_analyzer.db')
     db_path = os.environ.get('DATABASE_PATH', default_db)
     return f"sqlite:///{db_path}"
 
